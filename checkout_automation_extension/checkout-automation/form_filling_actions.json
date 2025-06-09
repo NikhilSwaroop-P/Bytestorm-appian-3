@@ -1,0 +1,131 @@
+{
+  "strategy_summary": "Optimal form filling strategy applied by identifying required fields, validating user data, leveraging 'same as shipping' for billing, optimizing coupon usage for maximum savings, and filling fields in a logical order.",
+  "total_actions": 16,
+  "actions": [
+    {
+      "step": 1,
+      "element_id": "email",
+      "action_type": "input",
+      "value": "test@example.com",
+      "description": "Enter user email address"
+    },
+    {
+      "step": 2,
+      "element_id": "shipping_name",
+      "action_type": "input",
+      "value": "Test User",
+      "description": "Enter shipping recipient name"
+    },
+    {
+      "step": 3,
+      "element_id": "shipping_street",
+      "action_type": "input",
+      "value": "123 Test St",
+      "description": "Enter shipping street address"
+    },
+    {
+      "step": 4,
+      "element_id": "shipping_city",
+      "action_type": "input",
+      "value": "Test City",
+      "description": "Enter shipping city"
+    },
+    {
+      "step": 5,
+      "element_id": "shipping_state",
+      "action_type": "input",
+      "value": "CA",
+      "description": "Enter shipping state"
+    },
+    {
+      "step": 6,
+      "element_id": "shipping_zip",
+      "action_type": "input",
+      "value": "12345",
+      "description": "Enter shipping zip code"
+    },
+    {
+      "step": 7,
+      "element_id": "shipping_country",
+      "action_type": "input",
+      "value": "US",
+      "description": "Enter shipping country"
+    },
+    {
+      "step": 8,
+      "element_id": "same_as_shipping",
+      "action_type": "checkbox",
+      "value": "check",
+      "description": "Check checkbox to use shipping address as billing address"
+    },
+    {
+      "step": 9,
+      "element_id": "card_holder",
+      "action_type": "input",
+      "value": "Test User",
+      "description": "Enter cardholder's name"
+    },
+    {
+      "step": 10,
+      "element_id": "card_number",
+      "action_type": "input",
+      "value": "4111111111111111",
+      "description": "Enter credit card number"
+    },
+    {
+      "step": 11,
+      "element_id": "card_expiry",
+      "action_type": "input",
+      "value": "12/25",
+      "description": "Enter card expiry date"
+    },
+    {
+      "step": 12,
+      "element_id": "card_cvv",
+      "action_type": "input",
+      "value": "123",
+      "description": "Enter card CVV"
+    },
+    {
+      "step": 13,
+      "element_id": "newsletter",
+      "action_type": "checkbox",
+      "value": "uncheck",
+      "description": "Uncheck newsletter subscription based on user preference"
+    },
+    {
+      "step": 14,
+      "element_id": "promo_code",
+      "action_type": "input",
+      "value": "WELCOME10",
+      "description": "Enter optimal promo code for maximum discount"
+    },
+    {
+      "step": 15,
+      "element_id": "apply_promo",
+      "action_type": "button",
+      "value": "click",
+      "description": "Click to apply the entered promo code"
+    },
+    {
+      "step": 16,
+      "element_id": "checkout_submit_button",
+      "action_type": "button",
+      "value": "click",
+      "description": "Click to submit the order and proceed to payment"
+    }
+  ],
+  "cost_optimization": {
+    "coupons_available": [
+      "WELCOME10",
+      "FREESHIP",
+      "SAVE20"
+    ],
+    "recommended_coupon": "WELCOME10",
+    "estimated_savings": "₹65.4"
+  },
+  "validation_status": {
+    "is_valid": true,
+    "error_message": ""
+  }
+}

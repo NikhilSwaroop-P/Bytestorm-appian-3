@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - ByteMart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a6cfa;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --background-color: #f8f9fa;
+            --text-color: #343a40;
+            --border-color: #dee2e6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .order-success {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--success-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .success-message {
+            margin-bottom: 1rem;
+        }
+        
+        .order-id {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+        
+        .detail-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .detail-column {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .detail-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .detail-content {
+            padding: 1rem;
+        }
+        
+        .order-status {
+            margin-top: 1rem;
+        }
+        
+        .timeline {
+            display: flex;
+            align-items: flex-start;
+            padding: 0.5rem 0;
+        }
+        
+        .timeline-step {
+            flex: 1;
+            position: relative;
+            text-align: center;
+        }
+        
+        .timeline-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 24px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background-color: var(--border-color);
+            z-index: 1;
+        }
+        
+        .timeline-step.active:not(:last-child):after {
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem auto;
+            position: relative;
+            z-index: 2;
+            color: var(--secondary-color);
+        }
+        
+        .timeline-step.active .timeline-icon {
+            border-color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .timeline-step.inactive .timeline-icon {
+            color: var(--secondary-color);
+        }
+        
+        .timeline-content {
+            font-size: 0.85rem;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .timeline-date {
+            color: var(--secondary-color);
+            font-size: 0.75rem;
+        }
+        
+        .shipping-address {
+            line-height: 1.5;
+        }
+        
+        .product-row {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .product-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 1rem;
+        }
+        
+        .product-details {
+            flex: 1;
+        }
+        
+        .product-title {
+            font-weight: 600;
+        }
+        
+        .product-meta {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+        }
+        
+        .product-price {
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+        
+        .order-summary {
+            margin-top: 1rem;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .summary-row.total {
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .action-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .primary-button {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .primary-button:hover {
+            background-color: #3a5ed9;
+            box-shadow: 0 4px 12px rgba(74, 108, 250, 0.3);
+        }
+        
+        .outline-button {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background-color: white;
+        }
+        
+        .outline-button:hover {
+            background-color: rgba(74, 108, 250, 0.05);
+            box-shadow: 0 2px 8px rgba(74, 108, 250, 0.15);
+        }
+        
+        .recommendation-section {
+            margin-top: 3rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .recommendation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .recommendation-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .recommendation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .recommendation-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .recommendation-details {
+            padding: 0.75rem;
+        }
+        
+        .recommendation-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+            height: 2.4em;
+        }
+        
+        .recommendation-price {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .detail-card {
+                box-shadow: none;
+                border: 1px solid var(--border-color);
+            }
+            
+            .recommendation-section,
+            .action-buttons {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .detail-column {
+                min-width: 100%;
+            }
+            
+            .timeline {
+                flex-direction: column;
+            }
+            
+            .timeline-step {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .timeline-step:after {
+                display: none;
+            }
+            
+            .timeline-icon {
+                margin: 0 1rem 0 0;
+            }
+            
+            .timeline-content {
+                text-align: left;
+            }
+            
+            .recommendation-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="order-success">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h1 class="success-message">Thank You for Your Order!</h1>
+            <p>Your order has been placed successfully and is being processed.</p>
+            <div class="order-id">
+                Order #: {{ order.order_number }}
+            </div>
+        </div>
+        
+        <div class="detail-container">
+            <div class="detail-column">
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <i class="fas fa-info-circle" style="margin-right: 5px;"></i> Order Details
+                    </div>
+                    <div class="detail-content">
+                        <div style="margin-bottom: 0.5rem;"><strong>Date:</strong> {{ order.date }}</div>
+                        <div style="margin-bottom: 0.5rem;"><strong>Status:</strong> {{ order.status }}</div>
+                        <div style="margin-bottom: 0.5rem;"><strong>Payment Method:</strong> {{ order.payment_method }}</div>
+                        <div style="margin-bottom: 0.5rem;"><strong>Shipping Method:</strong> {{ order.shipping_method }}</div>
+                        {% if order.promo_code %}
+                        <div style="margin-bottom: 0.5rem;"><strong>Promo Code:</strong> {{ order.promo_code }}</div>
+                        {% endif %}
+                        
+                        <div class="order-status">
+                            <div style="font-weight: 600; margin-bottom: 0.75rem;">Order Status</div>
+                        </div>
+                        
+                        <div class="timeline">
+                            <div class="timeline-step active">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Confirmed</div>
+                                    <div class="timeline-date">{{ order.date }}</div>
+                                </div>
+                            </div>
+                            <div class="timeline-step active">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Processing</div>
+                                    <div class="timeline-date">{{ order.date }}</div>
+                                </div>
+                            </div>
+                            <div class="timeline-step inactive">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Shipped</div>
+                                    <div class="timeline-date">Pending</div>
+                                </div>
+                            </div>
+                            <div class="timeline-step inactive">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-title">Delivered</div>
+                                    <div class="timeline-date">Estimated {{ delivery_date }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% if shipping %}
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <i class="fas fa-map-marker-alt" style="margin-right: 5px;"></i> Shipping Address
+                    </div>
+                    <div class="detail-content">
+                        <div class="shipping-address">
+                            {{ shipping.name }}<br>
+                            {{ shipping.street }}<br>
+                            {{ shipping.city }}, {{ shipping.state }} {{ shipping.zip }}<br>
+                            {{ shipping.country }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="detail-column">
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <i class="fas fa-shopping-cart" style="margin-right: 5px;"></i> Order Summary
+                    </div>
+                    <div class="detail-content">
+                        {% if product %}
+                        <div class="product-row">
+                            <img src="{{ product.image_url }}" alt="{{ product.title }}" class="product-image" onerror="this.src='/static/img/product-placeholder.svg';">
+                            <div class="product-details">
+                                <div class="product-title">{{ product.title }}</div>
+                                <div class="product-meta">Quantity: 1</div>
+                                <div class="product-price">{{ product.price }}</div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        
+                        <div class="order-summary">
+                            <div class="summary-row">
+                                <div>Subtotal</div>
+                                <div id="summary-subtotal">
+                                    {% if order_summary %}
+                                        {{ order_summary.subtotal }}
+                                    {% else %}
+                                        {{ product.price }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="summary-row">
+                                <div>Shipping</div>
+                                <div id="summary-shipping">
+                                    {% if order_summary %}
+                                        {{ order_summary.shipping }}
+                                    {% else %}
+                                        ₹{{ order.shipping_cost }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% if order_summary and order_summary.discount %}
+                            <div class="summary-row">
+                                <div>Discount</div>
+                                <div id="summary-discount">-{{ order_summary.discount }}</div>
+                            </div>
+                            {% elif order.discount and order.discount > 0 %}
+                            <div class="summary-row">
+                                <div>Discount</div>
+                                <div id="summary-discount">-₹{{ order.discount }}</div>
+                            </div>
+                            {% endif %}
+                            <div class="summary-row">
+                                <div>Tax</div>
+                                <div id="summary-tax">
+                                    {% if order_summary %}
+                                        {{ order_summary.tax }}
+                                    {% else %}
+                                        ₹0
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="summary-row total">
+                                <div>Total</div>
+                                <div id="summary-total">
+                                    {% if order_summary %}
+                                        {{ order_summary.total }}
+                                    {% else %}
+                                        ₹0
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <i class="fas fa-headset" style="margin-right: 5px;"></i> Need Help?
+                    </div>
+                    <div class="detail-content">
+                        <p>If you have any questions about your order, we're here to help!</p>
+                        <div style="margin-top: 15px;">
+                            <div style="display: flex; margin-bottom: 10px;">
+                                <i class="fas fa-envelope" style="width: 20px; margin-right: 10px; color: var(--primary-color);"></i>
+                                <div>support@shopsmart.com</div>
+                            </div>
+                            <div style="display: flex; margin-bottom: 10px;">
+                                <i class="fas fa-phone" style="width: 20px; margin-right: 10px; color: var(--primary-color);"></i>
+                                <div>1-800-SHOP-SMART</div>
+                            </div>
+                            <div style="display: flex;">
+                                <i class="fas fa-comment" style="width: 20px; margin-right: 10px; color: var(--primary-color);"></i>
+                                <div>Live Chat (8am-10pm EST)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <a href="{{ url_for('index') }}" class="action-button primary-button">
+                Continue Shopping
+            </a>
+            <a href="#" class="action-button outline-button" onclick="window.print(); return false;">
+                <i class="fas fa-print" style="margin-right: 5px;"></i> Print Order
+            </a>
+        </div>
+        
+        <div class="recommendation-section">
+            <h2 class="section-title">You Might Also Like</h2>
+            <div class="recommendation-grid">
+                <div class="recommendation-card">
+                    <img src="https://via.placeholder.com/150" alt="Product" class="recommendation-image">
+                    <div class="recommendation-details">
+                        <div class="recommendation-title">Premium Wireless Earbuds</div>
+                        <div class="recommendation-price">₹599</div>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <img src="https://via.placeholder.com/150" alt="Product" class="recommendation-image">
+                    <div class="recommendation-details">
+                        <div class="recommendation-title">Smart Watch with Heart Rate Monitor</div>
+                        <div class="recommendation-price">₹1,299</div>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <img src="https://via.placeholder.com/150" alt="Product" class="recommendation-image">
+                    <div class="recommendation-details">
+                        <div class="recommendation-title">Bluetooth Portable Speaker</div>
+                        <div class="recommendation-price">₹459</div>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <img src="https://via.placeholder.com/150" alt="Product" class="recommendation-image">
+                    <div class="recommendation-details">
+                        <div class="recommendation-title">Wireless Charging Pad</div>
+                        <div class="recommendation-price">₹299</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // In a real app, we would add tracking updates or other dynamic functionality
+            console.log('Order confirmation page loaded');
+        });
+    </script>
+</body>
+</html> 

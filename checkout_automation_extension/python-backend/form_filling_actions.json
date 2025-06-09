@@ -1,0 +1,566 @@
+{
+  "strategy_summary": "Optimized checkout by filling all required fields, selecting standard shipping, and applying 'WELCOME10' (10% off subtotal) and 'FREESHIP' (free shipping) coupons for maximum savings. Billing address is assumed same as shipping.",
+  "total_actions": 15,
+  "actions": [
+    {
+      "step": 1,
+      "element_id": "email",
+      "action_type": "input",
+      "value": "ByteStorm@gmail.com",
+      "description": "Enter customer email address."
+    },
+    {
+      "step": 2,
+      "element_id": "shipping_name",
+      "action_type": "input",
+      "value": "ByteStorm",
+      "description": "Enter shipping recipient's full name."
+    },
+    {
+      "step": 3,
+      "element_id": "shipping_street",
+      "action_type": "input",
+      "value": "ByteStorm street",
+      "description": "Enter shipping street address."
+    },
+    {
+      "step": 4,
+      "element_id": "shipping_city",
+      "action_type": "input",
+      "value": "A City",
+      "description": "Enter shipping city."
+    },
+    {
+      "step": 5,
+      "element_id": "shipping_state",
+      "action_type": "input",
+      "value": "CA",
+      "description": "Enter shipping state."
+    },
+    {
+      "step": 6,
+      "element_id": "shipping_zip",
+      "action_type": "input",
+      "value": "12345",
+      "description": "Enter shipping ZIP code."
+    },
+    {
+      "step": 7,
+      "element_id": "shipping_standard",
+      "action_type": "checkbox",
+      "value": "check",
+      "description": "Select standard shipping method."
+    },
+    {
+      "step": 8,
+      "element_id": "same_as_shipping",
+      "action_type": "checkbox",
+      "value": "check",
+      "description": "Check box to set billing address same as shipping."
+    },
+    {
+      "step": 9,
+      "element_id": "card_holder",
+      "action_type": "input",
+      "value": "ByteStorm",
+      "description": "Enter credit card holder's name."
+    },
+    {
+      "step": 10,
+      "element_id": "card_number",
+      "action_type": "input",
+      "value": "1000000000000000",
+      "description": "Enter credit card number."
+    },
+    {
+      "step": 11,
+      "element_id": "card_expiry",
+      "action_type": "input",
+      "value": "12/25",
+      "description": "Enter credit card expiry date (MM/YY)."
+    },
+    {
+      "step": 12,
+      "element_id": "card_cvv",
+      "action_type": "input",
+      "value": "123",
+      "description": "Enter credit card CVV code."
+    },
+    {
+      "step": 13,
+      "element_id": "promo_code",
+      "action_type": "input",
+      "value": "WELCOME10",
+      "description": "Enter first coupon code 'WELCOME10'."
+    },
+    {
+      "step": 14,
+      "element_id": "apply_promo",
+      "action_type": "button",
+      "value": "click",
+      "description": "Click to apply the entered coupon code."
+    },
+    {
+      "step": 15,
+      "element_id": "promo_code",
+      "action_type": "input",
+      "value": "FREESHIP",
+      "description": "Enter second coupon code 'FREESHIP'."
+    },
+    {
+      "step": 16,
+      "element_id": "apply_promo",
+      "action_type": "button",
+      "value": "click",
+      "description": "Click to apply the entered coupon code."
+    },
+    {
+      "step": 17,
+      "element_id": "checkout-btn",
+      "action_type": "button",
+      "value": "click",
+      "description": "Click the checkout button to finalize the order."
+    }
+  ],
+  "cost_optimization": {
+    "coupons_available": [
+      "WELCOME10",
+      "FREESHIP",
+      "SAVE20"
+    ],
+    "recommended_coupon": "WELCOME10 and FREESHIP (stacked)",
+    "estimated_savings": "₹105.7"
+  },
+  "validation_status": {
+    "is_valid": true,
+    "error_message": null
+  },
+  "metadata": {
+    "interactive_elements_count": 40,
+    "interactive_elements": [
+      {
+        "element_type": "a",
+        "id": null,
+        "name": null,
+        "classes": [
+          "checkout-logo"
+        ],
+        "data_attributes": {},
+        "description": "Logo link to the homepage ('/')."
+      },
+      {
+        "element_type": "a",
+        "id": null,
+        "name": null,
+        "classes": [],
+        "data_attributes": {},
+        "description": "Account & Lists link, likely redirects to the login page."
+      },
+      {
+        "element_type": "a",
+        "id": null,
+        "name": null,
+        "classes": [],
+        "data_attributes": {},
+        "description": "Shopping cart icon link, redirects to the cart page ('/cart')."
+      },
+      {
+        "element_type": "form",
+        "id": "checkout-form",
+        "name": null,
+        "classes": [],
+        "data_attributes": {},
+        "description": "Main checkout form for submitting order details."
+      },
+      {
+        "element_type": "input",
+        "id": "email",
+        "name": "email",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the user's email address for shipping."
+      },
+      {
+        "element_type": "a",
+        "id": null,
+        "name": null,
+        "classes": [
+          "text-link"
+        ],
+        "data_attributes": {},
+        "description": "Link to the login page for existing accounts."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_name",
+        "name": "shipping_name",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the full name for shipping."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_street",
+        "name": "shipping_street",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the street address for shipping."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_city",
+        "name": "shipping_city",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the city for shipping."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_state",
+        "name": "shipping_state",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the state/province for shipping."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_zip",
+        "name": "shipping_zip",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the ZIP/Postal Code for shipping."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_standard",
+        "name": "shipping_method",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Radio button to select standard shipping method."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_express",
+        "name": "shipping_method",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Radio button to select express shipping method."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_next_day",
+        "name": "shipping_method",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Radio button to select next day delivery shipping method."
+      },
+      {
+        "element_type": "input",
+        "id": "same_as_shipping",
+        "name": "same_as_shipping",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Checkbox to indicate if billing address is the same as shipping address. Toggles visibility of billing address form."
+      },
+      {
+        "element_type": "input",
+        "id": "billing_name",
+        "name": "billing_name",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the full name for billing, visible when 'same_as_shipping' is unchecked."
+      },
+      {
+        "element_type": "input",
+        "id": "billing_street",
+        "name": "billing_street",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the street address for billing, visible when 'same_as_shipping' is unchecked."
+      },
+      {
+        "element_type": "input",
+        "id": "billing_city",
+        "name": "billing_city",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the city for billing, visible when 'same_as_shipping' is unchecked."
+      },
+      {
+        "element_type": "input",
+        "id": "billing_state",
+        "name": "billing_state",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the state/province for billing, visible when 'same_as_shipping' is unchecked."
+      },
+      {
+        "element_type": "input",
+        "id": "billing_zip",
+        "name": "billing_zip",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the ZIP/Postal Code for billing, visible when 'same_as_shipping' is unchecked."
+      },
+      {
+        "element_type": "select",
+        "id": "billing_country",
+        "name": "billing_country",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Dropdown to select the country for billing, visible when 'same_as_shipping' is unchecked."
+      },
+      {
+        "element_type": "input",
+        "id": "card_holder",
+        "name": "card_holder",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the name on the credit card."
+      },
+      {
+        "element_type": "input",
+        "id": "card_number",
+        "name": "card_number",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the credit card number."
+      },
+      {
+        "element_type": "span",
+        "id": null,
+        "name": null,
+        "classes": [
+          "cvv-tooltip"
+        ],
+        "data_attributes": {
+          "data-tooltip": "3-digit code on the back of your card"
+        },
+        "description": "Tooltip providing information about the CVV field on hover."
+      },
+      {
+        "element_type": "input",
+        "id": "card_expiry",
+        "name": "card_expiry",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the credit card expiration date (MM/YY)."
+      },
+      {
+        "element_type": "input",
+        "id": "card_cvv",
+        "name": "card_cvv",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for the credit card security code (CVV)."
+      },
+      {
+        "element_type": "input",
+        "id": "newsletter",
+        "name": "newsletter",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Checkbox to subscribe to the newsletter."
+      },
+      {
+        "element_type": "textarea",
+        "id": "order_notes",
+        "name": "order_notes",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Textarea for optional order notes or special instructions."
+      },
+      {
+        "element_type": "button",
+        "id": null,
+        "name": null,
+        "classes": [
+          "btn",
+          "btn-primary",
+          "btn-large",
+          "checkout-btn"
+        ],
+        "data_attributes": {},
+        "description": "Button to submit the checkout form and complete the order."
+      },
+      {
+        "element_type": "a",
+        "id": null,
+        "name": null,
+        "classes": [
+          "text-link"
+        ],
+        "data_attributes": {},
+        "description": "Link to the Terms of Service."
+      },
+      {
+        "element_type": "a",
+        "id": null,
+        "name": null,
+        "classes": [
+          "text-link"
+        ],
+        "data_attributes": {},
+        "description": "Link to the Privacy Policy."
+      },
+      {
+        "element_type": "input",
+        "id": "promo_code",
+        "name": "promo_code",
+        "classes": [
+          "form-control"
+        ],
+        "data_attributes": {},
+        "description": "Input field for entering a promotional code."
+      },
+      {
+        "element_type": "button",
+        "id": "apply_promo",
+        "name": null,
+        "classes": [
+          "btn",
+          "btn-primary"
+        ],
+        "data_attributes": {},
+        "description": "Button to apply the entered promotional code. Has an 'onclick' event listener that calls `applyPromoCode()`."
+      },
+      {
+        "element_type": "div",
+        "id": null,
+        "name": null,
+        "classes": [
+          "coupon-toggle"
+        ],
+        "data_attributes": {},
+        "description": "Clickable div to toggle the visibility of the available coupons list. Has an 'onclick' event listener that calls `toggleCoupons()`."
+      },
+      {
+        "element_type": "div",
+        "id": null,
+        "name": null,
+        "classes": [
+          "coupon-item"
+        ],
+        "data_attributes": {},
+        "description": "Clickable coupon item to apply 'WELCOME10' promo code. Has an 'onclick' event listener that calls `applyCoupon('WELCOME10')`."
+      },
+      {
+        "element_type": "div",
+        "id": null,
+        "name": null,
+        "classes": [
+          "coupon-item"
+        ],
+        "data_attributes": {},
+        "description": "Clickable coupon item to apply 'FREESHIP' promo code. Has an 'onclick' event listener that calls `applyCoupon('FREESHIP')`."
+      },
+      {
+        "element_type": "div",
+        "id": null,
+        "name": null,
+        "classes": [
+          "coupon-item"
+        ],
+        "data_attributes": {},
+        "description": "Clickable coupon item to apply 'SAVE20' promo code. Has an 'onclick' event listener that calls `applyCoupon('SAVE20')`."
+      },
+      {
+        "element_type": "button",
+        "id": null,
+        "name": null,
+        "classes": [
+          "ai-checkout-button"
+        ],
+        "data_attributes": {},
+        "description": "AI Checkout button, likely initiates an automated form filling process."
+      },
+      {
+        "element_type": "button",
+        "id": null,
+        "name": null,
+        "classes": [
+          "ai-close-btn"
+        ],
+        "data_attributes": {},
+        "description": "Button to close the AI Checkout automation panel."
+      },
+      {
+        "element_type": "button",
+        "id": "apply-form-fill-btn",
+        "name": null,
+        "classes": [
+          "ai-success-btn"
+        ],
+        "data_attributes": {},
+        "description": "Button to apply the form fill suggested by the AI checkout."
+      }
+    ],
+    "order_summary_raw": {
+      "order_items": [
+        {
+          "name": "Artica Wooden Warm White led Wall Lamp Brown Decorative Night Lamp Bedroom Lobby Living Room",
+          "quantity": 1,
+          "price": "₹807"
+        }
+      ],
+      "pricing": {
+        "subtotal": "₹807.0",
+        "shipping": "₹25",
+        "tax": "₹65",
+        "total": "₹897.0"
+      },
+      "coupons": [
+        {
+          "code": "WELCOME10",
+          "description": "10% off your first order",
+          "discount_amount": "10%"
+        },
+        {
+          "code": "FREESHIP",
+          "description": "Free shipping on your order",
+          "discount_amount": "Free shipping"
+        },
+        {
+          "code": "SAVE20",
+          "description": "₹20 off orders over ₹100",
+          "discount_amount": "₹20"
+        }
+      ]
+    },
+    "strategy_response_raw": "Strategic Thinking:\n\n1.  **Identify Required Fields:** Based on the common structure of checkout forms and the provided descriptions, the following fields are generally required for a successful checkout:\n    *   Email (`email`)\n    *   Shipping Name (`shipping_name`)\n    *   Shipping Street (`shipping_street`)\n    *   Shipping City (`shipping_city`)\n    *   Shipping State (`shipping_state`)\n    *   Shipping ZIP (`shipping_zip`)\n    *   Shipping Method (at least one of `shipping_standard`, `shipping_express`, `shipping_next_day` must be selected)\n    *   Card Holder Name (`card_holder`)\n    *   Card Number (`card_number`)\n    *   Card Expiry (`card_expiry`)\n    *   Card CVV (`card_cvv`)\n    *   Assuming billing address is the same as shipping, which is the most common and convenient. If not, the billing fields would also be required. The form provides `same_as_shipping` checkbox.\n\n2.  **Check Data Completeness:**\n    *   `email`: Available (ByteStorm@gmail.com)\n    *   `shipping_name`: Available (ByteStorm - from `name`)\n    *   `shipping_street`: Available (ByteStorm street - from `address`)\n    *   `shipping_city`: Available (A City - from `city`)\n    *   `shipping_state`: Available (CA - from `state`)\n    *   `shipping_zip`: Available (12345 - from `zip`)\n    *   `shipping_method`: Not explicitly provided in user data, but standard shipping is usually the default and lowest cost. I'll select standard.\n    *   `card_holder`: Available (ByteStorm - from `name`)\n    *   `card_number`: Available (1000000000000000)\n    *   `card_expiry`: Available (12/25)\n    *   `card_cvv`: Available (123)\n\n    All essential fields can be filled with the provided user data.\n\n3.  **Optimize Coupon Usage:**\n    *   Order Subtotal: ₹807.0\n    *   Shipping: ₹25\n    *   Tax: ₹65\n    *   Total: ₹897.0\n    *   Coupons:\n        *   `WELCOME10`: 10% off your first order. 10% of ₹807 = ₹80.7.\n        *   `FREESHIP`: Free shipping. Saves ₹25.\n        *   `SAVE20`: ₹20 off orders over ₹100. Saves ₹20.\n\n    *   **Evaluation:**\n        *   Applying `WELCOME10` (saves ₹80.7) and `FREESHIP` (saves ₹25) simultaneously would give a total saving of ₹80.7 + ₹25 = ₹105.7.\n        *   Applying `SAVE20` (saves ₹20) would save less than `WELCOME10`.\n        *   The optimal strategy is to apply `WELCOME10` for the largest percentage discount on the subtotal and `FREESHIP` for shipping. These are typically stackable if the form allows (assuming it does since no conflicting rules are specified). `SAVE20` is redundant if `WELCOME10` is applied as ₹80.7 is greater than ₹20.\n\n    *   **Decision:** Apply `WELCOME10` first (as it's a percentage off subtotal) and then `FREESHIP` (as it targets shipping cost).\n\n4.  **Form Filling Order:**\n    *   Start with email and shipping details.\n    *   Select shipping method (standard/cheapest if no preference).\n    *   Check \"same as shipping\" for billing.\n    *   Fill payment details.\n    *   Apply coupons.\n    *   (Optional: Newsletter, Order notes - not specified, so skip)\n    *   Finalize by clicking the checkout button.\n\n5.  **Specific Element Handling:**\n    *   `email`, `shipping_name`, `shipping_street`, `shipping_city`, `shipping_state`, `shipping_zip`: Direct fill from user data.\n    *   `shipping_standard`: Select this radio button for standard shipping.\n    *   `same_as_shipping`: Check this box to simplify billing address entry.\n    *   `card_holder`: Fill with `name`.\n    *   `card_number`, `card_expiry`, `card_cvv`: Direct fill from user data.\n    *   `promo_code` & `apply_promo`: Use these to apply coupons. Given the `coupon-item` elements with `applyCoupon()` functions, it's more direct to click those if available and visible. The description says `coupon-toggle` makes them visible.\n    *   `coupon-toggle`: Click to reveal coupons.\n    *   `coupon-item` for `WELCOME10` and `FREESHIP`: Click these to apply the coupons.\n    *   Final `checkout-btn`: Click to submit the form.\n\nOrdered Action List:\n\n1.  email \"ByteStorm@gmail.com\"\n2.  shipping_name \"ByteStorm\"\n3.  shipping_street \"ByteStorm street\"\n4.  shipping_city \"A City\"\n5.  shipping_state \"CA\"\n6.  shipping_zip \"12345\"\n7.  shipping_standard \"|check|\"\n8.  same_as_shipping \"|check|\"\n9.  card_holder \"ByteStorm\"\n10. card_number \"1000000000000000\"\n11. card_expiry \"12/25\"\n12. card_cvv \"123\"\n13. coupon-toggle \"|button|\"\n14. // The following two steps assume applying one coupon does not clear the input for the next, or that the UI supports multiple applications.\n15. // Given the `coupon-item` elements with `applyCoupon()` functions, it's designed for direct application rather than manual promo code input.\n16. // We will apply the WELCOME10 first as it gives the highest percentage discount on the item itself.\n17. // Then we apply FREESHIP for shipping savings.\n18. // Assuming 'coupon-item' for 'WELCOME10' is clickable.\n19. // Assuming 'coupon-item' for 'FREESHIP' is clickable.\n20. // (Simulating clicks on the divs that call `applyCoupon()` based on their description)\n21. // The analysis provides separate `coupon-item` entries for each coupon.\n22. // There isn't an ID for specific coupon items, so we describe it based on the description of the element.\n23. // As the instructions ask for `element_id`, and these don't have IDs, I'll refer to them by their descriptive string.\n24. // If the system only accepts IDs, this might need adjustment. For now, I'll use a descriptive approach for these.\n25. // If the system strictly requires `element_id`, and `coupon-item` elements lack unique IDs, applying them via `promo_code` input field is the fallback.\n26. // Given `applyCoupon` functions are tied to `coupon-item` divs, it's implied these are the direct way to apply.\n27. // Re-evaluating: The output format expects `<element_id>`. The coupon items don't have unique IDs.\n28. // Therefore, the `promo_code` input field and `apply_promo` button are the only\n29. // ID-addressable way to apply coupons based on the given interactive elements list.\n30. // I will use the `promo_code` input and `apply_promo` button.\n\n31. promo_code \"WELCOME10\"\n32. apply_promo \"|button|\"\n33. promo_code \"FREESHIP\"\n34. apply_promo \"|button|\"\n35. checkout-btn \"|button|\""
+  }
+}

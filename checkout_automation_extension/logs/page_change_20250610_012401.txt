@@ -1,0 +1,15 @@
+=== Page Change Event ===
+Server Timestamp: 2025-06-10T01:24:01.428030
+Client Timestamp: 2025-06-09T19:54:00.859Z
+
+URL Information:
+Previous URL: https://www.bing.com/images/search?q=n8n+pipelines&form=HDRSC3&first=1
+Current URL: https://www.bing.com/images/search?view=detailV2&ccid=OzjX2AhQ&id=FDDAF969DF48BD2005DFEBB7434ACC7F0AA01D84&thid=OIP.OzjX2AhQ99tTUyzJqgQAWQHaDf&mediaurl=https%3A%2F%2Fromainsaillant.com%2Fimages%2Fblog%2Fautomation%2Fpourquoi-choisir-n8n%2Fn8n_workflow_complexe.png&exph=1356&expw=2880&q=n8n+pipelines&simid=608049035298677102&FORM=IRPRST&ck=0396538328F8FCC631CDA1921561938A&selectedIndex=7&itb=0&cw=1652&ch=836&ajaxhist=0&ajaxserp=0
+URL Changed: True
+Is Checkout Page: False
+Should Restart: True
+
+Request Details:
+Remote IP: 127.0.0.1
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+Content Type: application/json

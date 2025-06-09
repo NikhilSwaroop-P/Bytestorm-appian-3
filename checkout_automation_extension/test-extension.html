@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page Test - AI Automation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        .submit-btn {
+            background: #007cba;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background: #005a87;
+        }
+        .test-info {
+            background: #e7f3ff;
+            border: 1px solid #b3d7ff;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="test-info">
+            <h3>🤖 Extension Test Page</h3>
+            <p>This page simulates a checkout form to test the AI automation extension. The extension should detect this as a checkout page and show the automation overlay.</p>
+        </div>
+
+        <h1>Complete Your Order</h1>
+        
+        <form id="checkout-form">
+            <h2>Contact Information</h2>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <h2>Shipping Address</h2>
+            <div class="form-group">
+                <label for="shipping_name">Full Name</label>
+                <input type="text" id="shipping_name" name="shipping_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="shipping_street">Street Address</label>
+                <input type="text" id="shipping_street" name="shipping_street" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="shipping_city">City</label>
+                    <input type="text" id="shipping_city" name="shipping_city" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping_state">State</label>
+                    <input type="text" id="shipping_state" name="shipping_state" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping_zip">ZIP Code</label>
+                    <input type="text" id="shipping_zip" name="shipping_zip" required>
+                </div>
+            </div>
+
+            <h2>Payment Information</h2>
+            <div class="form-group">
+                <label for="card_holder">Cardholder Name</label>
+                <input type="text" id="card_holder" name="card_holder" required>
+            </div>
+
+            <div class="form-group">
+                <label for="card_number">Card Number</label>
+                <input type="text" id="card_number" name="card_number" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="card_expiry">Expiry Date</label>
+                    <input type="text" id="card_expiry" name="card_expiry" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="card_cvv">CVV</label>
+                    <input type="text" id="card_cvv" name="card_cvv" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    Subscribe to newsletter for updates and offers
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="promo_code">Promo Code (Optional)</label>
+                <input type="text" id="promo_code" name="promo_code" placeholder="Enter promo code">
+            </div>
+
+            <button type="submit" id="checkout_submit_button" class="submit-btn">Complete Order</button>
+        </form>
+
+        <!-- Test Panel for Extension Debugging -->
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3>Extension Debug Panel</h3>
+            <p>Use these buttons to test extension functionality:</p>
+            
+            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                <button id="test_content_script" style="padding: 8px 15px; background: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                    Test Content Script
+                </button>
+                <button id="test_background" style="padding: 8px 15px; background: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                    Test Background Script
+                </button>
+            </div>
+            
+            <div id="test_result" style="background: #e9ecef; padding: 10px; border-radius: 4px; min-height: 40px; margin-top: 10px; font-family: monospace;">
+                Test results will appear here
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Prevent form submission for testing
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submission prevented - this is a test page');
+        });
+
+        // Extension test functions
+        document.getElementById('test_content_script').addEventListener('click', function() {
+            const resultEl = document.getElementById('test_result');
+            resultEl.textContent = 'Testing content script...';
+            
+            // This will be intercepted by the content script if it's loaded
+            window.dispatchEvent(new CustomEvent('test_content_script', { 
+                detail: { message: 'Hello from test page' } 
+            }));
+            
+            // Update with result
+            resultEl.textContent += '\nEvent dispatched. Check console for response.';
+        });
+        
+        document.getElementById('test_background').addEventListener('click', function() {
+            const resultEl = document.getElementById('test_result');
+            resultEl.textContent = 'Testing background script...';
+            
+            // Try to access the chrome API if extension is active
+            if (typeof chrome !== 'undefined' && chrome.runtime) {
+                try {
+                    chrome.runtime.sendMessage(
+                        { action: 'testMessage', data: 'Hello from test page' },
+                        function(response) {
+                            if (chrome.runtime.lastError) {
+                                resultEl.textContent = 'Error: ' + chrome.runtime.lastError.message;
+                                return;
+                            }
+                            
+                            resultEl.textContent = 'Response received: ' + JSON.stringify(response);
+                        }
+                    );
+                } catch (error) {
+                    resultEl.textContent = 'Error: ' + error.message;
+                }
+            } else {
+                resultEl.textContent = 'Chrome API not available. Extension not loaded or test page not loaded through extension.';
+            }
+        });
+
+        console.log('Test checkout page loaded');
+        console.log('Extension should detect this as a checkout page');
+    </script>
+</body>
+</html>

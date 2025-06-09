@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ByteMart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="amazon-header">
+        <div class="header-logo">
+            <a href="/" style="text-decoration:none; color:inherit;"><h1>ByteMart</h1></a>
+        </div>
+        <div class="header-nav-right">
+            <div class="nav-item">
+                <span class="nav-line-1">Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Guest{% endif %}</span>
+                <span class="nav-line-2">
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('profile') }}">Your Account</a>
+                    {% else %}
+                        <a href="{{ url_for('login') }}">Account & Lists</a>
+                    {% endif %}
+                </span>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-auth">
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('logout') }}" class="nav-button">Sign Out</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="nav-button">Sign In</a>
+                    <a href="{{ url_for('register') }}" class="nav-button register-button">Register</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <div class="container cart-page">
+        <div class="cart-container">
+            <h1 class="cart-title">Your Shopping Cart</h1>
+            
+            <div id="cart-items-container">
+                <!-- Cart items will be loaded here dynamically -->
+                <div class="cart-empty-message" id="emptyCartMessage">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h2>Your cart is empty</h2>
+                    <p>Looks like you haven't added any items to your cart yet.</p>
+                    <a href="/" class="continue-shopping-btn">Continue Shopping</a>
+                </div>
+            </div>
+
+            <div class="cart-summary" id="cartSummary" style="display: none;">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="cart-shipping">₹25.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span id="cart-tax">₹0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="cart-total">₹0.00</span>
+                </div>
+                <button id="checkoutButton" class="checkout-button">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+
+        <div class="cart-suggestions" id="cartSuggestions">
+            <h2>Recommended For You</h2>
+            <div class="suggestions-container" id="suggestionsContainer">
+                <!-- Suggested products will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- First load cart.js to define the Cart class and initialize the cart -->
+    <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+    
+    <!-- Then load cartPage.js which depends on cart.js -->
+    <script src="{{ url_for('static', filename='js/cartPage.js') }}"></script>
+    
+    <!-- Add a script to ensure everything is working properly -->
+    <script>
+        // Check if cart is properly initialized
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded');
+            if (!window.shopsmartCart) {
+                console.error('Cart not initialized! Attempting to recreate...');
+                try {
+                    window.shopsmartCart = new Cart();
+                    console.log('Cart recreated successfully');
+                } catch (e) {
+                    console.error('Failed to recreate cart:', e);
+                }
+            } else {
+                console.log('Cart is available:', window.shopsmartCart);
+            }
+        });
+    </script>
+</body>
+</html> 

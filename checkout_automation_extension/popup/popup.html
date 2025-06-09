@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Checkout Automation</title>
+  <style>
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      padding: 16px;
+      margin: 0;
+    }
+    
+    h1 {
+      font-size: 18px;
+      color: #343a40;
+      margin-top: 0;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .section {
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #495057;
+    }
+    
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    
+    .toggle-label {
+      font-size: 14px;
+      color: #495057;
+    }
+    
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+    
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .3s;
+      border-radius: 24px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: #4a6fa5;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px 16px;
+      background: #4a6fa5;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    
+    .btn:hover {
+      background: #3a5980;
+    }
+    
+    .btn-outline {
+      background: none;
+      border: 1px solid #4a6fa5;
+      color: #4a6fa5;
+    }
+    
+    .btn-outline:hover {
+      background: #f8f9fa;
+    }
+      .profile-info {
+      padding: 12px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    
+    .profile-row {
+      display: flex;
+      margin-bottom: 6px;
+    }
+    
+    .profile-label {
+      width: 80px;
+      font-weight: 500;
+      color: #6c757d;
+    }
+    
+    .profile-value {
+      color: #343a40;
+      flex: 1;
+    }
+    
+    .current-tab {
+      background: #e9f5ff;
+      border-radius: 4px;
+      padding: 8px 12px;
+      margin: 8px 0;
+      font-size: 12px;
+      color: #495057;
+      border-left: 3px solid #4a6fa5;
+      word-break: break-all;
+    }
+    
+    .current-tab-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+      .current-tab-url {
+      color: #6c757d;
+      font-size: 11px;
+    }
+    
+    .status-section {
+      background: #f8f9fa;
+      border-radius: 4px;
+      padding: 12px;
+      margin: 8px 0;
+      font-size: 13px;
+    }
+    
+    .status-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .status-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .status-label {
+      font-weight: 500;
+      color: #495057;
+    }
+    
+    .status-value {
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 500;
+    }
+    
+    .status-connected {
+      background: #d4edda;
+      color: #155724;
+    }
+    
+    .status-error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+    
+    .status-warning {
+      background: #fff3cd;
+      color: #856404;
+    }
+    
+    .status-checking {
+      background: #e2e3e5;
+      color: #6c757d;
+    }
+      .btn-small {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    /* Advanced settings styles */
+    .setting-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .setting-input {
+      width: 100px;
+      padding: 4px 8px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    select.setting-input {
+      background-color: white;
+    }
+
+    .collapsible {
+      cursor: pointer;
+      color: #4a6fa5;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .collapsible:after {
+      content: '▼';
+      font-size: 10px;
+      margin-left: 5px;
+    }
+
+    .collapsed:after {
+      content: '►';
+    }
+
+    /* Modal styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      width: 90%;
+      max-width: 500px;
+      max-height: 90vh;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      padding: 16px;
+      border-bottom: 1px solid #e9ecef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .close-modal {
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #6c757d;
+    }
+
+    .close-modal:hover {
+      color: #343a40;
+    }
+
+    .modal-body {
+      padding: 16px;
+      overflow-y: auto;
+      max-height: calc(90vh - 120px);
+    }
+
+    .modal-footer {
+      padding: 12px 16px;
+      border-top: 1px solid #e9ecef;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    /* Form styles */
+    .form-section {
+      margin-bottom: 20px;
+    }
+
+    .form-section h3 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #4a6fa5;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: border-color 0.15s ease-in-out;
+    }
+
+    .form-control:focus {
+      border-color: #4a6fa5;
+      outline: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+      color: #495057;
+    }
+
+    /* API Management styles */
+    .api-key-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 8px;
+      margin-bottom: 4px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      border: 1px solid #e9ecef;
+    }
+
+    .api-key-text {
+      font-family: monospace;
+      font-size: 11px;
+      color: #495057;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+      margin-right: 8px;
+    }
+
+    .api-key-status {
+      font-size: 10px;
+      padding: 1px 6px;
+      border-radius: 8px;
+      margin-right: 8px;
+    }
+
+    .api-key-active {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .api-key-inactive {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .api-key-pending {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .api-key-remove {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    .api-key-remove:hover {
+      background: #c82333;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(-20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Checkout Automation</h1>
+    <div class="section">
+    <div class="toggle-container">
+      <span class="toggle-label">Enable automation</span>
+      <label class="toggle">
+        <input type="checkbox" id="enable-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <div class="toggle-container">
+      <span class="toggle-label">Auto-detect checkout pages</span>
+      <label class="toggle">
+        <input type="checkbox" id="auto-detect-toggle" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="toggle-container">
+      <span class="toggle-label">Show advanced settings</span>
+      <label class="toggle">
+        <input type="checkbox" id="advanced-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+  
+  <!-- Advanced Settings Section -->
+  <div id="advanced-settings-section" class="section" style="display: none;">
+    <div class="section-title">Advanced Settings</div>
+    
+    <div class="toggle-container">
+      <span class="toggle-label">Fast mode</span>
+      <label class="toggle">
+        <input type="checkbox" id="fast-mode-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    
+    <!-- Fast mode settings -->
+    <div id="fast-mode-settings" style="display: none; margin-left: 10px; padding-left: 10px; border-left: 2px solid #e9ecef;">
+      <div class="setting-row">
+        <label for="model-depth">Model Depth:</label>
+        <select id="model-depth" class="setting-input">
+          <option value="0">Small (1B)</option>
+          <option value="1" selected>Medium (4B)</option>
+          <option value="2">Large (12B)</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <label for="max-chunks">Max Chunks:</label>
+        <input type="number" id="max-chunks" class="setting-input" value="4" min="1" max="10">
+      </div>
+      <div class="setting-row">
+        <label for="min-chunk-size">Min Chunk Size (bytes):</label>
+        <input type="number" id="min-chunk-size" class="setting-input" value="1000" min="500" max="10000" step="100">
+      </div>
+    </div>
+    
+    <!-- Gemini settings -->
+    <div id="gemini-settings">
+      <div class="setting-row">
+        <label for="thinking-budget">Thinking Budget:</label>
+        <input type="number" id="thinking-budget" class="setting-input" value="1024" min="256" max="4096" step="128">
+      </div>
+    </div>
+    
+    <!-- API Management Section -->
+    <div id="api-management-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e9ecef;">
+      <div class="section-title">Gemini API Keys</div>
+      <div class="setting-row">
+        <label for="retry-count">Max Retry Count:</label>
+        <input type="number" id="retry-count" class="setting-input" value="30" min="1" max="100">
+      </div>
+      <div style="margin-bottom: 8px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+          <span style="font-size: 13px; font-weight: 500;">API Keys:</span>
+          <button id="add-api-key-btn" class="btn-small" style="background: #4a6fa5; color: white; border: none; padding: 4px 8px; border-radius: 3px; font-size: 11px;">Add Key</button>
+        </div>
+        <div id="api-keys-list" style="max-height: 120px; overflow-y: auto; border: 1px solid #ced4da; border-radius: 4px; padding: 8px;">
+          <!-- API keys will be dynamically populated here -->
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px; margin-top: 8px;">
+        <input type="text" id="new-api-key" placeholder="Enter new API key..." style="flex: 1; padding: 4px 8px; border: 1px solid #ced4da; border-radius: 4px; font-size: 12px;">
+        <button id="save-api-key-btn" class="btn-small" style="background: #28a745; color: white; border: none; padding: 4px 12px; border-radius: 3px; font-size: 11px;">Save</button>
+      </div>
+    </div>
+    
+    <!-- Backend URL Configuration -->
+    <div id="backend-url-section" style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e9ecef;">
+      <div class="section-title">Backend Configuration</div>
+      <div class="setting-row">
+        <label for="backend-url">Backend URL:</label>
+        <input type="text" id="backend-url" class="setting-input" placeholder="http://localhost:5000">
+      </div>
+      <div style="display: flex; gap: 8px; margin-top: 8px;">
+        <button id="reset-backend-url-btn" class="btn-small" style="background: #6c757d; color: white; border: none; padding: 4px 12px; border-radius: 3px; font-size: 11px;">Reset to Default</button>
+        <button id="save-backend-url-btn" class="btn-small" style="background: #28a745; color: white; border: none; padding: 4px 12px; border-radius: 3px; font-size: 11px;">Save</button>
+      </div>
+      <div style="margin-top: 10px; font-size: 11px; color: #6c757d;">
+        <p><b>Backend URL</b>: By default, the extension uses a local backend (http://localhost:5000). To use a cloud-based backend, enter the URL of your Vercel deployment.</p>
+      </div>
+    </div>
+    
+    <div style="margin-top: 10px; font-size: 11px; color: #6c757d;">
+      <p><b>Fast mode</b>: Use smaller models for quicker processing. Choose depth based on complexity.</p>
+      <p><b>Thinking Budget</b>: Higher values give more thorough analysis but take longer.</p>
+      <p><b>API Keys</b>: Multiple keys enable automatic failover when rate limits are hit. Keys are cycled automatically on errors.</p>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">User Profile</div>
+    <div class="profile-info">
+      <div class="profile-row">
+        <div class="profile-label">Name:</div>
+        <div class="profile-value">Test User</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">Email:</div>
+        <div class="profile-value">test@example.com</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">Phone:</div>
+        <div class="profile-value" id="profile-phone-display">555-123-4567</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">Address:</div>
+        <div class="profile-value">123 Test St</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">City:</div>
+        <div class="profile-value" id="profile-city-display">Test City</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">State/ZIP:</div>
+        <div class="profile-value" id="profile-state-zip-display">CA 12345</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">Country:</div>
+        <div class="profile-value" id="profile-country-display">US</div>
+      </div>
+    </div>
+    <button class="btn btn-outline" id="edit-profile-btn" style="margin-top: 12px;">Edit Profile</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Card Details <button id="toggle-card-visibility" class="btn-small" style="float: right; padding: 2px 8px; font-size: 11px; background: none; border: 1px solid #4a6fa5; color: #4a6fa5; border-radius: 3px;">Show</button></div>
+    <div class="profile-info">
+      <div class="profile-row">
+        <div class="profile-label">Card:</div>
+        <div class="profile-value">•••• •••• •••• 1111</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">Expires:</div>
+        <div class="profile-value" id="card-expiry-display">12/25</div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-label">CVV:</div>
+        <div class="profile-value" id="card-cvv-display">•••</div>
+      </div>
+    </div>
+  </div>
+    
+  <div class="section">
+    <div class="section-title">Connection Status</div>
+    <div id="connection-status" class="status-section">
+      <div class="status-item">
+        <div class="status-label">Extension:</div>
+        <div class="status-value" id="extension-status">Checking...</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">Backend Server:</div>
+        <div class="status-value" id="backend-status">Checking...</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">Content Script:</div>
+        <div class="status-value" id="content-script-status">Checking...</div>
+      </div>
+    </div>
+    <button class="btn btn-outline btn-small" id="test-connection-btn">Test All Connections</button>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Current Tab</div>
+    <div class="current-tab">
+      <div class="current-tab-title" id="current-tab-title">Loading...</div>
+      <div class="current-tab-url" id="current-tab-url">Loading...</div>
+    </div>
+  </div>
+  
+  <button class="btn" id="automate-current-btn">Automate Current Page</button>
+  
+  <!-- Edit Profile Modal -->
+  <div id="edit-profile-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Profile</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="form-section">
+          <h3>Personal Information</h3>
+          <div class="form-group">
+            <label for="profile-name">Full Name</label>
+            <input type="text" id="profile-name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="profile-email">Email</label>
+            <input type="email" id="profile-email" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="profile-phone">Phone</label>
+            <input type="tel" id="profile-phone" class="form-control" placeholder="555-123-4567">
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3>Address</h3>
+          <div class="form-group">
+            <label for="profile-address">Street Address</label>
+            <input type="text" id="profile-address" class="form-control">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="profile-city">City</label>
+              <input type="text" id="profile-city" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="profile-state">State/Province</label>
+              <input type="text" id="profile-state" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="profile-zip">ZIP/Postal Code</label>
+              <input type="text" id="profile-zip" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="profile-country">Country</label>
+              <input type="text" id="profile-country" class="form-control">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h3>Payment Information</h3>
+          <div class="form-group">
+            <label for="profile-card-number">Card Number</label>
+            <input type="text" id="profile-card-number" class="form-control" placeholder="XXXX XXXX XXXX XXXX">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="profile-card-expiry">Expiration Date</label>
+              <input type="text" id="profile-card-expiry" class="form-control" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+              <label for="profile-card-cvv">CVV</label>
+              <input type="text" id="profile-card-cvv" class="form-control" placeholder="123">
+            </div>
+          </div>
+          <div class="form-group" style="margin-top: 16px;">
+            <div class="security-note" style="font-size: 12px; color: #6c757d; margin-bottom: 8px;">
+              <strong>Security Note:</strong> Your card details are stored locally in your browser and are only shared with checkout pages you explicitly automate.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="cancel-profile-btn">Cancel</button>
+        <button class="btn" id="save-profile-btn">Save Profile</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Message Notification -->
+  <div id="success-notification" style="display: none; position: fixed; top: 20px; right: 20px; background-color: #d4edda; color: #155724; padding: 12px 16px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1100; max-width: 300px; font-size: 14px; animation: fadeInOut 5s ease-in-out;">
+    Profile saved successfully!
+  </div>
+
+  <script src="popup_enhanced.js"></script>
+</body>
+</html>

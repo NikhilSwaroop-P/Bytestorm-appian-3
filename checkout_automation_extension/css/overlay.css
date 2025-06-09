@@ -1,0 +1,316 @@
+/**
+ * Overlay styles for AI Checkout Automation
+ */
+
+/* Main overlay container */
+.ai-checkout-overlay {
+  position: fixed;
+  z-index: 9999;
+  bottom: 20px;
+  right: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  pointer-events: none;
+}
+
+/* Automation button */
+.ai-checkout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10000;
+  pointer-events: auto;
+}
+
+.ai-checkout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ai-checkout-button .ai-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Automation panel */
+.ai-checkout-panel {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  z-index: 10000;
+}
+
+/* Panel header */
+.ai-checkout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  pointer-events: auto;
+}
+
+.ai-checkout-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.ai-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer !important;
+  color: #6c757d;
+  position: relative;
+  z-index: 10001;
+  pointer-events: auto !important;
+}
+
+.ai-close-btn:hover {
+  color: #343a40;
+}
+
+/* Panel content */
+.ai-checkout-content {
+  padding: 16px;
+  pointer-events: auto;
+}
+
+.ai-checkout-content p {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: #495057;
+}
+
+/* Buttons */
+.ai-primary-btn, .ai-success-btn, .ai-close-btn {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.ai-primary-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.ai-primary-btn:hover {
+  background: #3a5980;
+}
+
+.ai-success-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer !important;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 10001;
+  pointer-events: auto !important;
+}
+
+.ai-success-btn:hover {
+  background: #218838;
+}
+
+/* Status area */
+#automation-status {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ai-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e9ecef;
+  border-top: 2px solid #4a6fa5;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#status-message {
+  font-size: 13px;
+  color: #495057;
+}
+
+/* Visual cursor and animation effects */
+#ai-visual-cursor-container {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 99999;
+  transition: transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  will-change: transform;
+}
+
+#ai-visual-cursor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ai-cursor-pulse {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(74, 111, 165, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: cursor-pulse 1.5s infinite;
+}
+
+@keyframes cursor-pulse {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0.7; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
+  100% { transform: translate(-50%, -50%) scale(0.5); opacity: 0.7; }
+}
+
+.ai-cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(74, 111, 165, 0.5);
+  border-radius: 50%;
+  z-index: 99998;
+  pointer-events: none;
+  animation: fade-out 0.8s forwards;
+}
+
+@keyframes fade-out {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.3); }
+}
+
+.ai-cursor-click {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(74, 111, 165, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: click-pulse 0.5s forwards;
+}
+
+@keyframes click-pulse {
+  0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.ai-click-ripple {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(74, 111, 165, 0.3);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 99997;
+  animation: click-ripple 0.5s ease-out forwards;
+}
+
+.ai-completion-message, .ai-navigation-message {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #4a6fa5;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #4a6fa5;
+  font-weight: bold;
+  z-index: 99996;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  animation: message-fade 0.3s ease-in;
+}
+
+@keyframes message-fade {
+  0% { opacity: 0; transform: translate(-50%, -20px); }
+  100% { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.ai-typing-indicator {
+  position: absolute;
+  background: rgba(74, 111, 165, 0.1);
+  border: 1px solid #4a6fa5;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #4a6fa5;
+  z-index: 99998;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ai-progress-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  border: 1px solid #4a6fa5;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #4a6fa5;
+  z-index: 99999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,15 @@
+=== Page Change Event ===
+Server Timestamp: 2025-06-10T01:23:55.091960
+Client Timestamp: 2025-06-09T19:53:54.520Z
+
+URL Information:
+Previous URL: https://www.bing.com/search?qs=SC&pq=airconti&sk=CSYN1&sc=16-8&pglt=425&q=air+conditioner&cvid=8b931c25be244c35a7c878e2ee4b0795&gs_lcrp=EgRlZGdlKgYIARAAGEAyBggAEEUYOTIGCAEQABhAMgYIAhAuGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQg0NjgzajBqMagCCLACAQ&FORM=ANNTA1&adppc=EDGEBRV&PC=EDGEBRV
+Current URL: https://www.bing.com/search?q=n8n%20pipelines&qs=n&form=QBRE&sp=-1&ghc=1&lq=0&pq=n8n%20pipelines&sc=6-13&sk=&cvid=F978A1C3048C462DB607AF72C5283B39
+URL Changed: True
+Is Checkout Page: False
+Should Restart: True
+
+Request Details:
+Remote IP: 127.0.0.1
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+Content Type: application/json

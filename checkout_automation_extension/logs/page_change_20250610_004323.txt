@@ -1,0 +1,15 @@
+=== Page Change Event ===
+Server Timestamp: 2025-06-10T00:43:23.498040
+Client Timestamp: 2025-06-09T19:13:23.493Z
+
+URL Information:
+Previous URL: https://www.bing.com/images/search?view=detailV2&ccid=iotili0K&id=E49F1BC28103DF19184CF6213554C79F47AC6446&thid=OIP.iotili0K0u6b_ywXP8HiLgHaFj&mediaurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.8a8b62962d0ad2ee9bff2c173fc1e22e%3Frik%3DRmSsR5%252fHVDUh9g%26riu%3Dhttp%253a%252f%252fwww.meenumixworld.com%252fwp-content%252fuploads%252f2015%252f05%252f1088.jpg%26ehk%3Dmn3nZIKkAkXtUM5plSnF1UgRDsQAycvWfjS7%252f4OvwDY%253d%26risl%3D%26pid%3DImgRaw%26r%3D0&exph=1696&expw=2262&q=ironbox&simid=608007992595986111&FORM=IRPRST&ck=CA4031C498CB3C15D7C769B4255EDDEC&selectedIndex=10&itb=0&cw=1652&ch=836&ajaxhist=0&ajaxserp=0
+Current URL: https://www.bing.com/images/search?q=ironbox&qs=HS&form=QBIR&sp=1&lq=0&pq=iron&sc=10-4&cvid=1A29850B187D4B09884EB33DDAC8E8B1&first=1
+URL Changed: True
+Is Checkout Page: False
+Should Restart: True
+
+Request Details:
+Remote IP: 127.0.0.1
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+Content Type: application/json

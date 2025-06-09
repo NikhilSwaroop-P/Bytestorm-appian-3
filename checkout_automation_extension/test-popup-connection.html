@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Popup Connection - AI Checkout Extension</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .test-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .status {
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status.info {
+            background: #e2e3e5;
+            color: #6c757d;
+            border: 1px solid #d1d3d4;
+        }
+        
+        button {
+            background: #4a6fa5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background: #3a5980;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        .code {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔧 AI Checkout Extension - Connection Test</h1>
+        <p>This page is designed to test the connection functionality of the AI Checkout Extension popup.</p>
+        <div class="instructions">
+            <strong>Instructions:</strong>
+            <ol>
+                <li>Make sure the AI Checkout Extension is loaded in your browser</li>
+                <li>Click the extension icon in the toolbar to open the popup</li>
+                <li>Check the "Connection Status" section in the popup</li>
+                <li>Click "Test All Connections" button to verify all components</li>
+                <li>Try the "Automate Current Page" button</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Expected Popup Features</h2>
+        <p>When you open the extension popup, you should see:</p>
+        <ul>
+            <li><strong>Connection Status Section:</strong> Shows status of Extension, Backend Server, and Content Script</li>
+            <li><strong>Current Tab Section:</strong> Displays the title and URL of this page</li>
+            <li><strong>Test All Connections Button:</strong> Manually trigger connection tests</li>
+            <li><strong>Automate Current Page Button:</strong> Start automation (with pre-flight checks)</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Connection Test Results</h2>
+        <div id="test-results">
+            <div class="status info">
+                Open the extension popup to see connection test results
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Sample Form Elements</h2>
+        <p>These elements can be used to test the automation functionality:</p>
+        
+        <form id="test-form">
+            <div style="margin: 10px 0;">
+                <label>Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter email address" style="width: 200px; padding: 5px;">
+            </div>
+            
+            <div style="margin: 10px 0;">
+                <label>Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter full name" style="width: 200px; padding: 5px;">
+            </div>
+            
+            <div style="margin: 10px 0;">
+                <label>Address:</label><br>
+                <input type="text" id="address" name="address" placeholder="Enter address" style="width: 300px; padding: 5px;">
+            </div>
+            
+            <div style="margin: 10px 0;">
+                <label>Credit Card:</label><br>
+                <input type="text" id="creditcard" name="creditcard" placeholder="1234 5678 9012 3456" style="width: 200px; padding: 5px;">
+            </div>
+            
+            <div style="margin: 10px 0;">
+                <button type="button" onclick="showFormData()">Submit Test Form</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="test-section">
+        <h2>Debug Information</h2>
+        <div class="code">
+            <strong>Current Page:</strong><br>
+            Title: <span id="page-title"></span><br>
+            URL: <span id="page-url"></span><br>
+            Ready State: <span id="ready-state"></span><br>
+            Content Script: <span id="content-script-status">Checking...</span>
+        </div>
+        
+        <button onclick="testContentScript()">Test Content Script</button>
+        <button onclick="clearDebugInfo()">Clear Debug Info</button>
+    </div>
+
+    <script>
+        // Update page info
+        document.getElementById('page-title').textContent = document.title;
+        document.getElementById('page-url').textContent = window.location.href;
+        document.getElementById('ready-state').textContent = document.readyState;
+
+        // Test content script communication
+        function testContentScript() {
+            console.log('Testing content script communication...');
+            
+            // Check if content script is loaded by trying to trigger a message
+            if (typeof chrome !== 'undefined' && chrome.runtime) {
+                try {
+                    chrome.runtime.sendMessage({action: 'testFromPage'}, function(response) {
+                        console.log('Response from extension:', response);
+                        updateStatus('content-script-status', response ? 'Loaded' : 'Not responding');
+                    });
+                } catch (error) {
+                    console.error('Error testing content script:', error);
+                    updateStatus('content-script-status', 'Error: ' + error.message);
+                }
+            } else {
+                updateStatus('content-script-status', 'Extension not available');
+            }
+        }
+
+        function updateStatus(elementId, status) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.textContent = status;
+            }
+        }
+
+        function showFormData() {
+            const formData = {
+                email: document.getElementById('email').value,
+                fullname: document.getElementById('fullname').value,
+                address: document.getElementById('address').value,
+                creditcard: document.getElementById('creditcard').value
+            };
+            
+            alert('Test Form Data:\n' + JSON.stringify(formData, null, 2));
+            console.log('Form data collected:', formData);
+        }
+
+        function clearDebugInfo() {
+            // Clear any debug overlays that might have been added by content script
+            const debugElements = document.querySelectorAll('[style*="position: fixed"][style*="z-index: 10000"]');
+            debugElements.forEach(el => el.remove());
+            console.log('Cleared debug elements');
+        }
+
+        // Test content script on page load
+        window.addEventListener('load', () => {
+            setTimeout(testContentScript, 1000);
+        });
+
+        // Listen for messages from content script (if any)
+        window.addEventListener('message', (event) => {
+            if (event.data && event.data.type === 'CONTENT_SCRIPT_TEST') {
+                console.log('Received message from content script:', event.data);
+                updateStatus('content-script-status', 'Active');
+            }
+        });
+    </script>
+</body>
+</html>

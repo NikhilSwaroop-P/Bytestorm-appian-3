@@ -1,0 +1,244 @@
+{
+  "strategy_summary": "Automated checkout form filling with default values and no promo code.",
+  "total_actions": 13,
+  "actions": [
+    {
+      "step": 1,
+      "element_id": "email",
+      "action_type": "input",
+      "value": "jane.doe@example.com",
+      "description": "Enter email address."
+    },
+    {
+      "step": 2,
+      "element_id": "shipping_name",
+      "action_type": "input",
+      "value": "Jane Doe",
+      "description": "Enter shipping name."
+    },
+    {
+      "step": 3,
+      "element_id": "shipping_street",
+      "action_type": "input",
+      "value": "456 Oak St",
+      "description": "Enter shipping street address."
+    },
+    {
+      "step": 4,
+      "element_id": "shipping_city",
+      "action_type": "input",
+      "value": "Anytown",
+      "description": "Enter shipping city."
+    },
+    {
+      "step": 5,
+      "element_id": "shipping_state",
+      "action_type": "input",
+      "value": "CA",
+      "description": "Enter shipping state."
+    },
+    {
+      "step": 6,
+      "element_id": "shipping_zip",
+      "action_type": "input",
+      "value": "90210",
+      "description": "Enter shipping zip code."
+    },
+    {
+      "step": 7,
+      "element_id": "card_holder",
+      "action_type": "input",
+      "value": "Jane Doe",
+      "description": "Enter cardholder name."
+    },
+    {
+      "step": 8,
+      "element_id": "card_number",
+      "action_type": "input",
+      "value": "4222222222222222",
+      "description": "Enter card number."
+    },
+    {
+      "step": 9,
+      "element_id": "card_expiry",
+      "action_type": "input",
+      "value": "01/26",
+      "description": "Enter card expiry date."
+    },
+    {
+      "step": 10,
+      "element_id": "card_cvv",
+      "action_type": "input",
+      "value": "456",
+      "description": "Enter card CVV."
+    },
+    {
+      "step": 11,
+      "element_id": "newsletter",
+      "action_type": "checkbox",
+      "value": "uncheck",
+      "description": "Leave newsletter checkbox unchecked."
+    },
+    {
+      "step": 12,
+      "element_id": "promo_code",
+      "action_type": "input",
+      "value": "(Leave blank)",
+      "description": "Leave promo code field blank."
+    },
+    {
+      "step": 13,
+      "element_id": "checkout_submit_button",
+      "action_type": "button",
+      "value": "click",
+      "description": "Click the checkout submit button."
+    }
+  ],
+  "cost_optimization": {
+    "coupons_available": [],
+    "recommended_coupon": null,
+    "estimated_savings": null
+  },
+  "validation_status": {
+    "is_valid": true,
+    "error_message": null
+  },
+  "metadata": {
+    "interactive_elements_count": 15,
+    "interactive_elements": [
+      {
+        "element_type": "input",
+        "id": "email",
+        "name": "email",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Email address input field for contact information."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_name",
+        "name": "shipping_name",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Full name input field for shipping address."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_street",
+        "name": "shipping_street",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Street address input field for shipping address."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_city",
+        "name": "shipping_city",
+        "classes": [],
+        "data_attributes": {},
+        "description": "City input field for shipping address."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_state",
+        "name": "shipping_state",
+        "classes": [],
+        "data_attributes": {},
+        "description": "State input field for shipping address."
+      },
+      {
+        "element_type": "input",
+        "id": "shipping_zip",
+        "name": "shipping_zip",
+        "classes": [],
+        "data_attributes": {},
+        "description": "ZIP code input field for shipping address."
+      },
+      {
+        "element_type": "input",
+        "id": "card_holder",
+        "name": "card_holder",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Cardholder name input field for payment information."
+      },
+      {
+        "element_type": "input",
+        "id": "card_number",
+        "name": "card_number",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Card number input field for payment information."
+      },
+      {
+        "element_type": "input",
+        "id": "card_expiry",
+        "name": "card_expiry",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Card expiry date input field for payment information."
+      },
+      {
+        "element_type": "input",
+        "id": "card_cvv",
+        "name": "card_cvv",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Card CVV input field for payment information."
+      },
+      {
+        "element_type": "checkbox",
+        "id": "newsletter",
+        "name": "newsletter",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Checkbox to subscribe to newsletter."
+      },
+      {
+        "element_type": "input",
+        "id": "promo_code",
+        "name": "promo_code",
+        "classes": [],
+        "data_attributes": {},
+        "description": "Promo code input field (optional)."
+      },
+      {
+        "element_type": "button",
+        "id": "checkout_submit_button",
+        "name": null,
+        "classes": [
+          "submit-btn"
+        ],
+        "data_attributes": {},
+        "description": "Button to submit the checkout form."
+      },
+      {
+        "element_type": "button",
+        "id": "test_content_script",
+        "name": null,
+        "classes": [],
+        "data_attributes": {},
+        "description": "Button to test the content script."
+      },
+      {
+        "element_type": "button",
+        "id": "test_background",
+        "name": null,
+        "classes": [],
+        "data_attributes": {},
+        "description": "Button to test the background script."
+      }
+    ],
+    "order_summary_raw": {
+      "order_items": [],
+      "pricing": {
+        "subtotal": "$0.00",
+        "shipping": "$0.00",
+        "tax": "$0.00",
+        "total": "$0.00"
+      },
+      "coupons": []
+    },
+    "strategy_response_raw": "Okay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:** Input. Value: `jane.doe@example.com`\n2.  **shipping_name:** Input. Value: `Jane Doe`\n3.  **shipping_street:** Input. Value: `456 Oak St`\n4.  **shipping_city:** Input. Value: `Anytown`\n5.  **shipping_state:** Input. Value: `CA`\n6.  **shipping_zip:** Input. Value: `90210`\n7.  **card_holder:** Input. Value: `Jane Doe` (Assuming card is in Jane Doe's name)\n8.  **card_number:** Input. Value: `4222222222222222`\n9.  **card_expiry:** Input. Value: `01/26`\n10. **card_cvv:** Input. Value: `456`\n11. **newsletter:** Click. (This is a checkbox.  We'll assume the user *doesn't* want to subscribe unless otherwise specified. So, we will *not* click this.)\n12. **promo_code:** Input. Value: `` (Leave blank, as no promo code is provided.)\n13. **checkout_submit_button:** Click. (This submits the form.)\n14. **test_content_script:** Do not interact. (This is a test button and not part of the checkout process.)\n15. **test_background:** Do not interact. (This is a test button and not part of the checkout process.)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:** Input `jane.doe@example.com`\n2.  **shipping_name:** Input `Jane Doe`\n3.  **shipping_street:** Input `456 Oak St`\n4.  **shipping_city:** Input `Anytown`\n5.  **shipping_state:** Input `CA`\n6.  **shipping_zip:** Input `90210`\n7.  **card_holder:** Input `Jane Doe` (Assuming the card is in Jane Doe's name)\n8.  **card_number:** Input `4222222222222222`\n9.  **card_expiry:** Input `01/26`\n10. **card_cvv:** Input `456`\n11. **newsletter:** Click (Check) - Assuming the user doesn't want to subscribe to the newsletter, we will leave this unchecked. If the user *did* want to subscribe, we would click this to check it.\n12. **promo_code:** Leave blank (optional field, no promo code provided)\n13. **checkout_submit_button:** Click - This submits the form.\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1. **email:**\n   - Action: Input\n   - Value: `jane.doe@example.com`\n\n2. **shipping_name:**\n   - Action: Input\n   - Value: `Jane Doe`\n\n3. **shipping_street:**\n   - Action: Input\n   - Value: `456 Oak St`\n\n4. **shipping_city:**\n   - Action: Input\n   - Value: `Anytown`\n\n5. **shipping_state:**\n   - Action: Input\n   - Value: `CA`\n\n6. **shipping_zip:**\n   - Action: Input\n   - Value: `90210`\n\n7. **card_holder:**\n   - Action: Input\n   - Value: `Jane Doe` (Assuming cardholder name is the same as shipping name)\n\n8. **card_number:**\n   - Action: Input\n   - Value: `4222222222222222`\n\n9. **card_expiry:**\n   - Action: Input\n   - Value: `01/26`\n\n10. **card_cvv:**\n    - Action: Input\n    - Value: `456`\n\n11. **newsletter:**\n    - Action: Click (Checkbox - Assuming the user doesn't want to subscribe unless explicitly stated otherwise)\n    - Value: Do not check (leave unchecked)\n\n12. **promo_code:**\n    - Action: Input\n    - Value: (Leave blank - No promo code provided)\n\n13. **checkout_submit_button:**\n    - Action: Click\n    - Value: N/A (This is a button click)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1. **email:**\n   - Action: Input\n   - Value: `jane.doe@example.com`\n\n2. **shipping_name:**\n   - Action: Input\n   - Value: `Jane Doe`\n\n3. **shipping_street:**\n   - Action: Input\n   - Value: `456 Oak St`\n\n4. **shipping_city:**\n   - Action: Input\n   - Value: `Anytown`\n\n5. **shipping_state:**\n   - Action: Input\n   - Value: `CA`\n\n6. **shipping_zip:**\n   - Action: Input\n   - Value: `90210`\n\n7. **card_holder:**\n   - Action: Input\n   - Value: `Jane Doe` (Assuming cardholder is the same as shipping name)\n\n8. **card_number:**\n   - Action: Input\n   - Value: `4222222222222222`\n\n9. **card_expiry:**\n   - Action: Input\n   - Value: `01/26`\n\n10. **card_cvv:**\n    - Action: Input\n    - Value: `456`\n\n11. **newsletter:**\n    - Action: Click (Assuming this is a checkbox, a click will toggle its state.  We'll leave it unchecked for now, as there's no indication to subscribe.)\n\n12. **promo_code:**\n    - Action: Input\n    - Value: `(Leave Blank)` (The field is optional, so we'll leave it empty.)\n\n13. **checkout_submit_button:**\n    - Action: Click\n    - Value: N/A (This is a button click, no value to enter)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming cardholder name is the same as shipping name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming this is a checkbox and we want to leave it unchecked for now)\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: (Leave blank - optional field)\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a button click to submit the form)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming cardholder name is the same as shipping name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming this is a checkbox and we want to leave it unchecked for now)\n    *   Value: (No value needed, just click to toggle if desired)\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: (Leave blank, as no promo code is provided)\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: (No value needed, just click to submit)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **shipping_name:** Action: Input. Value: Jane Doe\n2.  **shipping_street:** Action: Input. Value: 456 Oak St\n3.  **shipping_city:** Action: Input. Value: Anytown\n4.  **shipping_state:** Action: Input. Value: CA\n5.  **shipping_zip:** Action: Input. Value: 90210\n6.  **email:** Action: Input. Value: jane.doe@example.com\n7.  **card_holder:** Action: Input. Value: Jane Doe (Assuming cardholder name is the same as shipping name)\n8.  **card_number:** Action: Input. Value: 4222222222222222\n9.  **card_expiry:** Action: Input. Value: 01/26\n10. **card_cvv:** Action: Input. Value: 456\n11. **newsletter:** Action: Click. (Assuming a click will toggle the checkbox.  If it's already checked, no action is needed. If it's unchecked and the user *doesn't* want to subscribe, skip this step.)\n12. **promo_code:** Action: Input. Value: (Leave blank - no promo code provided in user profile)\n13. **checkout_submit_button:** Action: Click. (This submits the form)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1. **email:**\n   - Action: Input\n   - Value: `jane.doe@example.com`\n\n2. **shipping_name:**\n   - Action: Input\n   - Value: `Jane Doe`\n\n3. **shipping_street:**\n   - Action: Input\n   - Value: `456 Oak St`\n\n4. **shipping_city:**\n   - Action: Input\n   - Value: `Anytown`\n\n5. **shipping_state:**\n   - Action: Input\n   - Value: `CA`\n\n6. **shipping_zip:**\n   - Action: Input\n   - Value: `90210`\n\n7. **card_holder:**\n   - Action: Input\n   - Value: `Jane Doe` (Assuming cardholder name is the same as shipping name)\n\n8. **card_number:**\n   - Action: Input\n   - Value: `4222222222222222`\n\n9. **card_expiry:**\n   - Action: Input\n   - Value: `01/26`\n\n10. **card_cvv:**\n    - Action: Input\n    - Value: `456`\n\n11. **newsletter:**\n    - Action: Click (Checkbox - Assuming user doesn't want to subscribe unless explicitly stated otherwise)\n    - Value: Do not check (leave unchecked)\n\n12. **promo_code:**\n    - Action: Input\n    - Value: (Leave blank - No promo code provided)\n\n13. **checkout_submit_button:**\n    - Action: Click\n    - Value: N/A (This is a button click)\n\n**Important Considerations:**\n\n*   **Error Handling:** This strategy assumes all fields are valid. In a real-world scenario, you'd need to add error handling to check for invalid inputs (e.g., incorrect card number format, invalid expiry date) and provide feedback to the user.\n*   **Security:**  Be extremely cautious when handling sensitive data like card numbers and CVV codes. This example is for demonstration purposes only and should not be used in a production environment without proper security measures.\n*   **Dynamic Content:**  Web pages can change dynamically. This strategy is based on the provided HTML and interactive elements. If the page structure changes, the strategy may need to be updated.\n*   **Accessibility:** Consider accessibility best practices when automating form filling. Ensure that the automation doesn't interfere with assistive technologies.\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **shipping_name:** Input \"Jane Doe\"\n2.  **shipping_street:** Input \"456 Oak St\"\n3.  **shipping_city:** Input \"Anytown\"\n4.  **shipping_state:** Input \"CA\"\n5.  **shipping_zip:** Input \"90210\"\n6.  **card_holder:** Input \"Jane Doe\" (Assuming the cardholder name is the same as the shipping name)\n7.  **card_number:** Input \"4222222222222222\"\n8.  **card_expiry:** Input \"01/26\"\n9.  **card_cvv:** Input \"456\"\n10. **newsletter:** Click (This will check the checkbox, subscribing to the newsletter. If the user *doesn't* want to subscribe, skip this step.)\n11. **promo_code:** Leave blank (Assuming no promo code is available or desired.)\n12. **checkout_submit_button:** Click (This will submit the form.)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming cardholder name is the same as shipping name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming this is a checkbox and we don't have a preference to subscribe)\n    *   Value: Do not click (leave unchecked)\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: (Leave blank - optional field)\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a button click)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming card is in the user's name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click\n    *   Value: The checkbox is already checked, so no action is needed.\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: (Leave blank - optional field, no promo code provided)\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a button click)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, using the provided user profile data.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming the card is in her name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming the user doesn't want to subscribe, we will leave this unchecked. If the user *did* want to subscribe, we would click this.)\n    *   Value: Unchecked\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: (Leave blank - the field is optional)\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a submit button)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form using the provided user profile data.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming the card is in her name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming this is a checkbox and we want to leave it unchecked for now)\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: (Leave blank - optional field)\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a button click to submit the form)\n\n**Note:** The \"test_content_script\" and \"test_background\" buttons are for testing the extension itself and are not part of the checkout process. They should be ignored.\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:** Input. Value: `jane.doe@example.com`\n2.  **shipping_name:** Input. Value: `Jane Doe`\n3.  **shipping_street:** Input. Value: `456 Oak St`\n4.  **shipping_city:** Input. Value: `Anytown`\n5.  **shipping_state:** Input. Value: `CA`\n6.  **shipping_zip:** Input. Value: `90210`\n7.  **card_holder:** Input. Value: `Jane Doe` (Assuming cardholder name is the same as shipping name)\n8.  **card_number:** Input. Value: `4222222222222222`\n9.  **card_expiry:** Input. Value: `01/26`\n10. **card_cvv:** Input. Value: `456`\n11. **newsletter:** Click. (Assuming we don't want to subscribe, we will *not* click. If we *did* want to subscribe, we would click this element.)\n12. **promo_code:** Input. Value: `(Leave Blank)` (Since no promo code is provided, we'll leave this field empty.)\n13. **checkout_submit_button:** Click. (This submits the form.)\n14. **test_content_script:** Do not interact. (This is a test button and not part of the checkout process.)\n15. **test_background:** Do not interact. (This is a test button and not part of the checkout process.)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:** Input `jane.doe@example.com`\n2.  **shipping_name:** Input `Jane Doe`\n3.  **shipping_street:** Input `456 Oak St`\n4.  **shipping_city:** Input `Anytown`\n5.  **shipping_state:** Input `CA`\n6.  **shipping_zip:** Input `90210`\n7.  **card_holder:** Input `Jane Doe` (Assuming the card is in Jane Doe's name)\n8.  **card_number:** Input `4222222222222222`\n9.  **card_expiry:** Input `01/26`\n10. **card_cvv:** Input `456`\n11. **newsletter:** Click (Check) - Assuming the user doesn't want to subscribe to the newsletter, we will leave this unchecked. If the user *did* want to subscribe, we would click this to check it.\n12. **promo_code:** Input (Leave Blank) - Assuming there's no promo code to use.\n13. **checkout_submit_button:** Click - This will submit the form.\n\n**Important Considerations & Notes:**\n\n*   **Form Submission Prevention:** The provided HTML includes JavaScript that prevents the form from submitting. This is likely for testing purposes.  The AI would need to either disable or remove this JavaScript to allow the form to actually submit.\n*   **Error Handling:** This strategy doesn't include error handling. A real-world implementation would need to check for errors after each input and adjust accordingly.\n*   **Cardholder Name:** I've assumed the cardholder name is the same as the shipping name. If this is not always the case, the AI would need to have a separate field for cardholder name.\n*   **Newsletter Opt-in:** I've assumed the user does *not* want to subscribe to the newsletter. If the user *does* want to subscribe, the AI should click the checkbox.\n*   **Promo Code:** I've assumed there is no promo code. If there is a promo code, the AI should input it.\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming the card is in the user's name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming this is a checkbox, a click will toggle it.  We'll leave it unchecked for now, as there's no indication to subscribe.)\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: `(Leave Blank)` - The field is optional, so we'll leave it empty.\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a button click to submit the form)\n\n**Important Considerations & Notes:**\n\n*   **Error Handling:** This strategy assumes all fields are valid. A real-world implementation would need to include error handling to check for invalid data and provide feedback to the user.\n*   **Security:**  This is a simulated environment.  Never hardcode sensitive information like card details in a real application.\n*   **HTML Snippet:** The provided HTML snippet is incomplete and contains errors. This strategy is based on the interactive elements list, not the HTML.\n*   **Cardholder Name:** I've assumed the cardholder name is the same as the shipping name. If there's a separate field for cardholder name, it should be populated accordingly.\n*   **Checkbox State:** The newsletter checkbox is left unchecked. If the user wants to subscribe, the checkbox should be clicked.\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:** Input. Value: `jane.doe@example.com`\n2.  **shipping_name:** Input. Value: `Jane Doe`\n3.  **shipping_street:** Input. Value: `456 Oak St`\n4.  **shipping_city:** Input. Value: `Anytown`\n5.  **shipping_state:** Input. Value: `CA`\n6.  **shipping_zip:** Input. Value: `90210`\n7.  **card_holder:** Input. Value: `Jane Doe` (Assuming cardholder name is the same as shipping name)\n8.  **card_number:** Input. Value: `4222222222222222`\n9.  **card_expiry:** Input. Value: `01/26`\n10. **card_cvv:** Input. Value: `456`\n11. **newsletter:** Click. (Assuming we don't want to subscribe, we will *not* click. If we *did* want to subscribe, we would click this element.)\n12. **promo_code:** Input. Value: (Leave blank - optional field, no promo code provided)\n13. **checkout_submit_button:** Click. (This submits the form)\n14. **test_content_script:** Do not interact. (This is a test button, not part of the checkout process)\n15. **test_background:** Do not interact. (This is a test button, not part of the checkout process)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming the card is in Jane Doe's name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming this is a checkbox, and we'll leave it unchecked for now.  If the user *wanted* to subscribe, we'd click it.)\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: `(Leave Blank)` - The description indicates this is optional.\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a button click, not an input)\n\n**Important Considerations & Notes:**\n\n*   **Error Handling:** This strategy assumes all fields are valid. A real-world implementation would need to include error handling to check for invalid data (e.g., incorrect card number format, invalid expiry date).\n*   **Cardholder Name:** I've assumed the cardholder name is the same as the shipping name. If this is not always the case, you'd need a separate field for cardholder name.\n*   **Checkbox State:** The newsletter checkbox is left unchecked.  You could add logic to check it based on user preferences.\n*   **Promo Code:** The promo code field is left blank.  You could add logic to populate it with a specific code if one is available.\n*   **HTML Content:** The provided HTML content snippet is incomplete and doesn't seem relevant to the form filling process itself. It appears to be related to testing scripts.\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy to fill out the checkout form using the provided user profile data.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming the card is in Jane Doe's name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming this is a checkbox and we want to leave it unchecked for now)\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: (Leave blank - optional field)\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a button click)\n\n\n--- CHUNK BOUNDARY ---\n\nOkay, here's a step-by-step strategy for filling out the checkout form, based on the provided user profile data and interactive elements.\n\n1.  **email:**\n    *   Action: Input\n    *   Value: `jane.doe@example.com`\n\n2.  **shipping_name:**\n    *   Action: Input\n    *   Value: `Jane Doe`\n\n3.  **shipping_street:**\n    *   Action: Input\n    *   Value: `456 Oak St`\n\n4.  **shipping_city:**\n    *   Action: Input\n    *   Value: `Anytown`\n\n5.  **shipping_state:**\n    *   Action: Input\n    *   Value: `CA`\n\n6.  **shipping_zip:**\n    *   Action: Input\n    *   Value: `90210`\n\n7.  **card_holder:**\n    *   Action: Input\n    *   Value: `Jane Doe` (Assuming the card is in Jane Doe's name)\n\n8.  **card_number:**\n    *   Action: Input\n    *   Value: `4222222222222222`\n\n9.  **card_expiry:**\n    *   Action: Input\n    *   Value: `01/26`\n\n10. **card_cvv:**\n    *   Action: Input\n    *   Value: `456`\n\n11. **newsletter:**\n    *   Action: Click (Assuming this is a checkbox, clicking it will check it. If it's already checked, we don't need to do anything.)\n    *   Value: (Leave unchecked unless the user specifically wants to subscribe)\n\n12. **promo_code:**\n    *   Action: Input\n    *   Value: (Leave blank, as there's no promo code provided)\n\n13. **checkout_submit_button:**\n    *   Action: Click\n    *   Value: N/A (This is a button click, not an input)\n"
+  }
+}

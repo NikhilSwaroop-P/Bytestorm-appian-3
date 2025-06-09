@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }} - Shopping Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional styles for product detail page */
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .product-detail-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 1rem;
+        }
+        
+        .product-detail-info h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .product-detail-meta {
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-detail-price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .product-detail-description {
+            margin: 1.5rem 0;
+            line-height: 1.6;
+        }
+        
+        .add-to-cart {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 1rem;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #e59400;
+        }
+        
+        .similar-products {
+            margin-top: 2rem;
+        }
+        
+        .similar-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-gap: 1.5rem;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .quantity-label {
+            margin-right: 10px;
+        }
+        
+        .quantity-input {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            margin: 0 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+        
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .quantity-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .buy-now-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--amazon-yellow);
+            color: var(--amazon-dark-blue);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-left: 1rem;
+        }
+        
+        .buy-now-btn:hover {
+            background-color: var(--amazon-orange);
+        }
+        
+        .cart-icon-container {
+            position: relative;
+            margin-left: 20px;
+        }
+        
+        .cart-icon {
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--amazon-yellow);
+            color: var(--amazon-dark-blue);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            display: none;
+        }
+        
+        .product-added-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .suggestions-container {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .suggestions-container h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .suggestions-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .suggestion-tag {
+            background-color: #e0e0e0;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .suggestion-tag:hover {
+            background-color: #d0d0d0;
+        }
+        
+        @media (max-width: 768px) {
+            .product-detail {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="/" style="text-decoration: none; color: inherit;">Shop<span>AI</span></a>
+            </div>
+            <form id="search-form" class="search-form">
+                <input type="text" id="search-input" class="search-input" placeholder="Search for products..." autocomplete="off">
+            </form>
+            <div class="cart-icon-container">
+                <a href="/cart" style="text-decoration: none;">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Product Detail -->
+        {% if product %}
+        <div class="product-detail">
+            <div class="product-detail-image-container">
+                <img src="{{ product.image_path }}" alt="{{ product.name }}" class="product-detail-image">
+            </div>
+            <div class="product-detail-info">
+                <h1>{{ product.name }}</h1>
+                <div class="product-detail-meta">
+                    <div class="product-category">{{ product.category }} / {{ product.sub_category }}</div>
+                    <div class="product-rating">
+                        <span class="rating-stars">
+                            {% set full_stars = product.rating|int %}
+                            {% set half_star = (product.rating - full_stars) >= 0.5 %}
+                            {% set empty_stars = 5 - full_stars - (1 if half_star else 0) %}
+                            {{ '★' * full_stars }}{{ '½' if half_star else '' }}{{ '☆' * empty_stars }}
+                        </span>
+                        <span class="rating-count">({{ product.rating_count }} reviews)</span>
+                    </div>
+                </div>
+                <div class="product-detail-price">
+                    <span class="discount-price">{{ product.discount_price }}</span>
+                    <span class="actual-price">{{ product.actual_price }}</span>
+                </div>
+                <div class="product-detail-description">
+                    <p>{{ product.description }}</p>
+                </div>
+                
+                <div class="quantity-control">
+                    <span class="quantity-label">Quantity:</span>
+                    <button class="quantity-btn decrease">-</button>
+                    <input type="number" class="quantity-input" id="quantity" min="1" value="1">
+                    <button class="quantity-btn increase">+</button>
+                </div>
+                
+                <div style="display: flex; margin-top: 1rem;">
+                    <button class="add-to-cart" id="addToCartBtn">Add to Cart</button>
+                    <button class="buy-now-btn" id="buyNowBtn">Buy Now</button>
+                </div>
+                
+                <div class="product-added-message" id="addedMessage">
+                    <i class="fas fa-check-circle"></i> Item added to cart!
+                </div>
+                
+                <div class="suggestions-container" id="suggestionsContainer">
+                    <h3>You might also need:</h3>
+                    <div class="suggestions-list" id="suggestionsList">
+                        <!-- Suggestions will be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Similar Products Section -->
+        <div class="similar-products">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="similar-products-grid">
+                {% for product in recommendations %}
+                <div class="product-card" onclick="window.location.href='/product/{{ product.id }}'">
+                    <img src="{{ product.image_path }}" alt="{{ product.name }}" class="product-image">
+                    <div class="product-details">
+                        <h3 class="product-title">{{ product.name }}</h3>
+                        <div class="product-price">
+                            <span class="discount-price">{{ product.discount_price }}</span>
+                            <span class="actual-price">{{ product.actual_price }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <div style="text-align: center; padding: 3rem;">
+            <h2>Product not found</h2>
+            <p>Sorry, we couldn't find the product you were looking for.</p>
+            <a href="/" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; text-decoration: none; border-radius: 4px;">Go Back Home</a>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const quantityInput = document.getElementById('quantity');
+            const decreaseBtn = document.querySelector('.quantity-btn.decrease');
+            const increaseBtn = document.querySelector('.quantity-btn.increase');
+            const addToCartBtn = document.getElementById('addToCartBtn');
+            const buyNowBtn = document.getElementById('buyNowBtn');
+            const addedMessage = document.getElementById('addedMessage');
+            const suggestionsContainer = document.getElementById('suggestionsContainer');
+            const suggestionsList = document.getElementById('suggestionsList');
+            
+            // Update cart count on page load
+            updateCartCount();
+            
+            // Quantity decrease button
+            decreaseBtn.addEventListener('click', function() {
+                let currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            });
+            
+            // Quantity increase button
+            increaseBtn.addEventListener('click', function() {
+                let currentValue = parseInt(quantityInput.value);
+                quantityInput.value = currentValue + 1;
+            });
+            
+            // Add to cart button
+            addToCartBtn.addEventListener('click', function() {
+                const quantity = parseInt(quantityInput.value);
+                
+                // Get product data from current page
+                const product = {
+                    id: '{{ product.id }}',
+                    title: '{{ product.name }}',
+                    price: '{{ product.discount_price }}',
+                    actual_price: '{{ product.actual_price }}',
+                    category: '{{ product.category }}',
+                    sub_category: '{{ product.sub_category }}',
+                    image_path: '{{ product.image_path }}',
+                    description: '{{ product.description }}',
+                    rating: '{{ product.rating }}',
+                    rating_count: '{{ product.rating_count }}'
+                };
+                
+                // Add to cart using the cart.js functionality
+                const suggestions = window.shopsmartCart.addItem(product, quantity);
+                
+                // Show success message
+                addedMessage.style.display = 'block';
+                setTimeout(() => {
+                    addedMessage.style.display = 'none';
+                }, 3000);
+                
+                // Show suggestions
+                displaySuggestions(suggestions);
+                
+                // Update cart count
+                updateCartCount();
+            });
+            
+            // Buy now button
+            buyNowBtn.addEventListener('click', function() {
+                const quantity = parseInt(quantityInput.value);
+                
+                // Get product data
+                const product = {
+                    id: '{{ product.id }}',
+                    title: '{{ product.name }}',
+                    price: '{{ product.discount_price }}',
+                    actual_price: '{{ product.actual_price }}',
+                    category: '{{ product.category }}',
+                    sub_category: '{{ product.sub_category }}',
+                    image_path: '{{ product.image_path }}'
+                };
+                
+                // Add to cart first
+                window.shopsmartCart.addItem(product, quantity);
+                
+                // Redirect to checkout
+                window.location.href = '/cart';
+            });
+            
+            // Display product suggestions
+            function displaySuggestions(suggestions) {
+                // Clear existing suggestions
+                suggestionsList.innerHTML = '';
+                
+                if (suggestions && suggestions.suggestions && suggestions.suggestions.length > 0) {
+                    // Add each suggestion as a tag
+                    suggestions.suggestions.forEach(item => {
+                        const tag = document.createElement('span');
+                        tag.className = 'suggestion-tag';
+                        tag.textContent = item;
+                        tag.addEventListener('click', function() {
+                            // Redirect to search for this item
+                            window.location.href = `/?q=${encodeURIComponent(item)}`;
+                        });
+                        suggestionsList.appendChild(tag);
+                    });
+                    
+                    // Show suggestions container
+                    suggestionsContainer.style.display = 'block';
+                }
+            }
+            
+            // Update cart count badge
+            function updateCartCount() {
+                const cartCountElement = document.getElementById('cart-count');
+                if (window.shopsmartCart) {
+                    const count = window.shopsmartCart.getTotalItems();
+                    cartCountElement.textContent = count;
+                    cartCountElement.style.display = count > 0 ? 'flex' : 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Checkout Extension Tester</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        button {
+            background: #007cba;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #005f8a;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        pre {
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            overflow: auto;
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Checkout Extension Tester</h1>
+    
+    <div class="container">
+        <h2>1. Server Health Check</h2>
+        <p>Check if the Python backend server is running.</p>
+        <button id="check-server">Check Server Health</button>
+        <div id="server-status" class="status pending">Click button to check server status...</div>
+    </div>
+    
+    <div class="container">
+        <h2>2. Content Script Communication</h2>
+        <p>Test if the content script is properly loaded and can receive messages.</p>
+        <button id="test-content-script">Test Content Script</button>
+        <div id="content-status" class="status pending">Click button to test content script...</div>
+    </div>
+    
+    <div class="container">
+        <h2>3. Background Script Communication</h2>
+        <p>Test if the background script is properly running and can receive messages.</p>
+        <button id="test-background">Test Background Script</button>
+        <div id="background-status" class="status pending">Click button to test background script...</div>
+    </div>
+    
+    <div class="container">
+        <h2>4. Full Checkout Test</h2>
+        <p>Test the complete checkout automation process.</p>
+        <button id="test-checkout">Test Checkout Automation</button>
+        <div id="checkout-status" class="status pending">Click button to test checkout automation...</div>
+    </div>
+    
+    <div class="container">
+        <h2>Logs</h2>
+        <pre id="logs">// Logs will appear here...</pre>
+    </div>
+
+    <script>
+        // Helper to log to the screen
+        function log(message) {
+            const logs = document.getElementById('logs');
+            const timestamp = new Date().toLocaleTimeString();
+            logs.textContent = `[${timestamp}] ${message}\n` + logs.textContent;
+        }
+        
+        // Update status element
+        function updateStatus(id, message, type) {
+            const statusEl = document.getElementById(id);
+            statusEl.textContent = message;
+            statusEl.className = `status ${type}`;
+        }
+        
+        // 1. Test server health
+        document.getElementById('check-server').addEventListener('click', async () => {
+            try {
+                updateStatus('server-status', 'Checking server...', 'pending');
+                log('Testing server health...');
+                
+                const response = await fetch('http://localhost:5000/health', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Server responded with status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                log(`Server health response: ${JSON.stringify(data)}`);
+                updateStatus('server-status', '✅ Server is running', 'success');
+            } catch (error) {
+                log(`Server health error: ${error.message}`);
+                updateStatus('server-status', `❌ Server error: ${error.message}`, 'error');
+            }
+        });
+        
+        // 2. Test content script
+        document.getElementById('test-content-script').addEventListener('click', () => {
+            try {
+                updateStatus('content-status', 'Testing content script...', 'pending');
+                log('Testing content script communication...');
+                
+                // This will only work if we're loaded as part of the extension
+                if (typeof chrome === 'undefined' || !chrome.tabs) {
+                    throw new Error('This page needs to be loaded through the extension');
+                }
+                
+                chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+                    if (!tabs || tabs.length === 0) {
+                        updateStatus('content-status', '❌ No active tab found', 'error');
+                        log('No active tab found');
+                        return;
+                    }
+                    
+                    const activeTab = tabs[0];
+                    log(`Active tab: ${activeTab.url}`);
+                    
+                    chrome.tabs.sendMessage(
+                        activeTab.id, 
+                        { action: 'testMessage', data: 'Hello from test page' },
+                        (response) => {
+                            if (chrome.runtime.lastError) {
+                                log(`Error: ${chrome.runtime.lastError.message}`);
+                                updateStatus('content-status', `❌ Error: ${chrome.runtime.lastError.message}`, 'error');
+                                return;
+                            }
+                            
+                            log(`Content script response: ${JSON.stringify(response)}`);
+                            updateStatus('content-status', '✅ Content script is working', 'success');
+                        }
+                    );
+                });
+            } catch (error) {
+                log(`Content script error: ${error.message}`);
+                updateStatus('content-status', `❌ Error: ${error.message}`, 'error');
+            }
+        });
+        
+        // 3. Test background script
+        document.getElementById('test-background').addEventListener('click', () => {
+            try {
+                updateStatus('background-status', 'Testing background script...', 'pending');
+                log('Testing background script communication...');
+                
+                // This will only work if we're loaded as part of the extension
+                if (typeof chrome === 'undefined' || !chrome.runtime) {
+                    throw new Error('This page needs to be loaded through the extension');
+                }
+                
+                chrome.runtime.sendMessage(
+                    { action: 'testMessage', data: 'Hello from test page' },
+                    (response) => {
+                        if (chrome.runtime.lastError) {
+                            log(`Error: ${chrome.runtime.lastError.message}`);
+                            updateStatus('background-status', `❌ Error: ${chrome.runtime.lastError.message}`, 'error');
+                            return;
+                        }
+                        
+                        log(`Background script response: ${JSON.stringify(response)}`);
+                        updateStatus('background-status', '✅ Background script is working', 'success');
+                    }
+                );
+            } catch (error) {
+                log(`Background script error: ${error.message}`);
+                updateStatus('background-status', `❌ Error: ${error.message}`, 'error');
+            }
+        });
+        
+        // 4. Test checkout automation
+        document.getElementById('test-checkout').addEventListener('click', () => {
+            try {
+                updateStatus('checkout-status', 'Testing checkout automation...', 'pending');
+                log('Testing checkout automation...');
+                
+                // This simulates the same behavior as clicking the "Automate with AI" button
+                if (typeof startAutomation === 'function') {
+                    log('Calling startAutomation directly...');
+                    startAutomation();
+                    updateStatus('checkout-status', '✅ Checkout automation started', 'success');
+                } else {
+                    // Try to send a message to the content script
+                    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+                        if (!tabs || tabs.length === 0) {
+                            updateStatus('checkout-status', '❌ No active tab found', 'error');
+                            log('No active tab found');
+                            return;
+                        }
+                        
+                        const activeTab = tabs[0];
+                        log(`Active tab: ${activeTab.url}`);
+                        
+                        chrome.tabs.sendMessage(
+                            activeTab.id, 
+                            { action: 'startAutomation' },
+                            (response) => {
+                                if (chrome.runtime.lastError) {
+                                    log(`Error: ${chrome.runtime.lastError.message}`);
+                                    updateStatus('checkout-status', `❌ Error: ${chrome.runtime.lastError.message}`, 'error');
+                                    return;
+                                }
+                                
+                                log(`Automation response: ${JSON.stringify(response)}`);
+                                updateStatus('checkout-status', '✅ Checkout automation started', 'success');
+                            }
+                        );
+                    });
+                }
+            } catch (error) {
+                log(`Checkout automation error: ${error.message}`);
+                updateStatus('checkout-status', `❌ Error: ${error.message}`, 'error');
+            }
+        });
+        
+        // Initial log
+        log('Extension tester loaded. Click buttons to test functionality.');
+    </script>
+</body>
+</html>

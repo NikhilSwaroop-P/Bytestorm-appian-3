@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteMart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new-style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Cart icon styles */
+        .cart-icon-container {
+            position: relative;
+            margin-left: 20px;
+        }
+        
+        .cart-icon {
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--amazon-yellow);
+            color: var(--amazon-dark-blue);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            display: none;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Sorting control styles */
+        .sorting-container {
+            display: flex;
+            justify-content: flex-end;
+            margin: 15px 0;
+            padding: 0 15px;
+        }
+        
+        .sorting-dropdown {
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 14px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .sorting-dropdown:focus {
+            outline: none;
+            border-color: var(--amazon-yellow);
+            box-shadow: 0 0 0 3px rgba(254, 189, 105, 0.2);
+        }
+
+        /* Hero section styles */
+        .hero-section {
+            background: linear-gradient(to right, var(--hero-gradient-start), var(--hero-gradient-end));
+            color: var(--hero-text-color);
+            padding: 30px;
+            border-radius: var(--rounded);
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background-color: var(--hero-cta-bg);
+            color: var(--hero-cta-text);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-decoration {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 40%;
+            z-index: 1;
+            background-image: url('src\frontend\static\img\hero-pattern.svg');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Category pills */
+        .category-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+            padding: 0 15px;
+            animation: fadeIn 0.5s ease-in-out;
+            animation-delay: 0.2s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        .category-pill {
+            background-color: var(--pill-bg);
+            color: var(--pill-text);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid var(--pill-border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .category-pill:hover {
+            background-color: var(--pill-bg-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-pill i {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header class="amazon-header">
+        <div class="header-logo">
+            <h1>ByteMart</h1>
+        </div>
+        <div class="search-bar">
+            <form class="search-form">
+                <input type="text" placeholder="Search products, brands, and categories..." class="search-input">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button type="button" class="voice-search-button">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </form>
+        </div>
+        <div class="header-nav-right">
+            <div class="nav-item">
+                <span class="nav-line-1">Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Guest{% endif %}</span>
+                <span class="nav-line-2">
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('profile') }}">Your Account</a>
+                    {% else %}
+                        <a href="{{ url_for('login') }}">Account & Lists</a>
+                    {% endif %}
+                </span>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-auth">
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('logout') }}" class="nav-button">Sign Out</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="nav-button">Sign In</a>
+                    <a href="{{ url_for('register') }}" class="nav-button register-button">Register</a>
+                {% endif %}
+            </div>
+            <div class="cart-icon-container">
+                <a href="/cart" style="text-decoration: none;">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Left column: Product display area -->
+        <div class="products-container" id="productsContainer">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover products tailored just for you</h1>
+                    <p class="hero-subtitle">Upload an image or start a conversation to find exactly what you're looking for</p>
+                    <button class="hero-cta" id="startShoppingBtn">
+                        <i class="fas fa-camera"></i> Start with an Image
+                    </button>
+                </div>
+                <div class="hero-decoration"></div>
+            </div>
+            
+            <div class="category-pills">
+                <div class="category-pill"><i class="fas fa-tshirt"></i> Fashion</div>
+                <div class="category-pill"><i class="fas fa-laptop"></i> Electronics</div>
+                <div class="category-pill"><i class="fas fa-home"></i> Home & Kitchen</div>
+                <div class="category-pill"><i class="fas fa-heartbeat"></i> Health</div>
+                <div class="category-pill"><i class="fas fa-gamepad"></i> Gaming</div>
+                <div class="category-pill"><i class="fas fa-book"></i> Books</div>
+            </div>
+            
+            <div class="sorting-container" id="sortingContainer" style="display: none;">
+                <select id="sortingDropdown" class="sorting-dropdown">
+                    <option value="default">Default Sorting</option>
+                    <option value="price_asc">Price: Low to High</option>
+                    <option value="price_desc">Price: High to Low</option>
+                    <option value="rating_desc">Rating: High to Low</option>
+                    <option value="rating_count_desc">Popularity (Most Rated)</option>
+                </select>
+            </div>
+            <div class="empty-state">
+                <div class="empty-state-animation">
+                    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_yvkrcogf.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+                </div>
+                <h3>Ready to discover amazing products?</h3>
+                <p>Upload an image or ask a question to find what you're looking for</p>
+                <div class="empty-state-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Upload a product image</div>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Refine with text queries</div>
+                    </div>
+                    <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Discover perfect matches</div>
+                    </div>
+                </div>
+            </div>
+        </div><!--
+        --><div class="chatbot-container" id="chatbotContainer">
+            <div class="chatbot-collapse-btn" id="collapseBtn">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="chatbot-header">
+                <h2>Product Finder</h2>
+                <p><strong>Image required</strong> - Upload an image to search for products</p>
+                <button id="clearChatBtn" class="clear-chat-btn" title="Clear chat messages">
+                    <i class="fas fa-eraser"></i> Clear Chat
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hello! I need an <strong>image</strong> to help you find products. Please upload an image to start, then you can refine your search with text.
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <form id="chatForm">
+                    <div class="input-area">
+                        <button type="button" class="upload-btn" id="uploadBtn">
+                            <i class="fas fa-image"></i>
+                        </button>
+                        <input type="file" id="imageUpload" accept="image/*" hidden>
+                        <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+                        <button type="submit" class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div id="imagePreview" class="image-preview hidden">
+                    <img src="" id="previewImg">
+                    <button type="button" id="removeImage" class="remove-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Help box -->
+        <div class="help-box" id="helpBox">
+            <div class="help-box-header">
+                <h3>How to Use</h3>
+                <button id="closeHelp" class="close-help">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="help-box-content">
+                <div class="help-item">
+                    <i class="fas fa-image"></i>
+                    <p><strong>1.</strong> Upload an image of a product you're interested in</p>
+                </div>
+                <div class="help-item">
+                    <i class="fas fa-keyboard"></i>
+                    <p><strong>2.</strong> Type additional details to refine your search</p>
+                </div>
+                <div class="help-item">
+                    <i class="fas fa-chevron-right"></i>
+                    <p><strong>3.</strong> Collapse the chat panel to see more products</p>
+                </div>
+                <div class="help-item">
+                    <i class="fas fa-moon"></i>
+                    <p><strong>4.</strong> Toggle between light and dark theme</p>
+                </div>
+                <div class="help-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p><strong>5.</strong> Click "Add to Cart" to purchase a product</p>
+                </div>
+                <div class="help-item">
+                    <i class="fas fa-sort"></i>
+                    <p><strong>6.</strong> Sort products by price</p>
+                </div>
+            </div>
+        </div>
+        
+        <button id="helpButton" class="help-button">
+            <i class="fas fa-question"></i>
+        </button>
+        
+        <!-- Recently viewed section (initially hidden) -->
+        <div class="recently-viewed-section" id="recentlyViewedSection" style="display: none;">
+            <h3 class="section-title"><i class="fas fa-history"></i> Recently Viewed</h3>
+            <div class="recently-viewed-products" id="recentlyViewedProducts"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update cart count on page load
+            updateCartCount();
+            
+            // Function to update cart count badge
+            function updateCartCount() {
+                const cartCountElement = document.getElementById('cart-count');
+                if (window.shopsmartCart) {
+                    const count = window.shopsmartCart.getTotalItems();
+                    cartCountElement.textContent = count;
+                    cartCountElement.style.display = count > 0 ? 'flex' : 'none';
+                }
+            }
+            
+            // Connect start shopping button to image upload
+            const startShoppingBtn = document.getElementById('startShoppingBtn');
+            const uploadBtn = document.getElementById('uploadBtn');
+            const imageUpload = document.getElementById('imageUpload');
+            
+            console.log("Debug elements:", { 
+                startShoppingBtn: startShoppingBtn, 
+                uploadBtn: uploadBtn, 
+                imageUpload: imageUpload 
+            });
+            
+            if (startShoppingBtn && uploadBtn) {
+                startShoppingBtn.addEventListener('click', function(e) {
+                    console.log("Start shopping button clicked!");
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Directly trigger the file input
+                    if (imageUpload) {
+                        console.log("Triggering imageUpload.click()");
+                        imageUpload.click();
+                    } else {
+                        console.log("Triggering uploadBtn.click()");
+                        uploadBtn.click();
+                    }
+                });
+            }
+            
+            // Add click handlers for category pills
+            document.querySelectorAll('.category-pill').forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Only do something if image is already uploaded
+                    const imagePreview = document.getElementById('imagePreview');
+                    if (!imagePreview.classList.contains('hidden')) {
+                        const category = this.textContent.trim();
+                        document.getElementById('userInput').value = `Show me ${category} products`;
+                        document.getElementById('chatForm').dispatchEvent(new Event('submit'));
+                    } else {
+                        // Prompt to upload image first
+                        const chatMessages = document.getElementById('chatMessages');
+                        const messageElement = document.createElement('div');
+                        messageElement.className = 'message bot-message';
+                        messageElement.innerHTML = `
+                            <div class="message-content">
+                                Please upload an image first, then I can help you find ${this.textContent.trim()} products.
+                            </div>
+                        `;
+                        chatMessages.appendChild(messageElement);
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                        
+                        // Highlight the upload button
+                        const uploadBtn = document.getElementById('uploadBtn');
+                        uploadBtn.classList.add('pulse-animation');
+                        setTimeout(() => {
+                            uploadBtn.classList.remove('pulse-animation');
+                        }, 2000);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

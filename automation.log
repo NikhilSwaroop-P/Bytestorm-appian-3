@@ -1,0 +1,1549 @@
+2025-06-07 20:45:57,023 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.29.86:3000
+2025-06-07 20:45:57,024 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 20:45:57,027 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 20:46:02,472 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 20:46:02,491 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 20:46:39,906 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:39] "GET / HTTP/1.1" 200 -
+2025-06-07 20:46:40,094 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:40] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-07 20:46:40,184 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:40] "GET /static/js/cart.js HTTP/1.1" 200 -
+2025-06-07 20:46:40,198 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:40] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-07 20:46:41,866 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:41] "GET / HTTP/1.1" 200 -
+2025-06-07 20:46:41,880 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 20:46:41,884 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:41] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 20:46:41,886 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 20:46:42,953 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:46:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-07 20:47:04,712 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:47:04,715 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 20:47:04,722 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 20:47:08,535 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 20:47:08,555 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 20:47:08,590 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:47:10,944 - main_pipeline - DEBUG - Image description extracted: back_bone='Dry Iron Appliance - Iron appliance for clothing and fabrics. - Appliance', current_text='Prestige Dry Iron Home Appliance - Prestige dry iron is designed for ironing various fabrics. White and blue color. - Prestige White, Blue Appliance'
+2025-06-07 20:47:10,946 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:47:11,039 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:47:11] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 20:48:14,201 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.29.86:3000
+2025-06-07 20:48:14,202 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 20:48:14,204 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 20:48:20,022 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 20:48:20,042 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 20:48:31,607 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:48:31] "GET / HTTP/1.1" 200 -
+2025-06-07 20:48:31,903 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:48:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 20:48:31,919 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:48:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 20:48:31,926 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:48:31] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 20:48:42,219 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:48:42,225 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 20:48:42,231 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 20:48:44,811 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 20:48:44,812 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 20:48:44,813 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:48:46,925 - main_pipeline - DEBUG - Image description extracted: back_bone='Dry Clothes Iron - Home appliance for ironing clothes, adjustable temperature. - Appliance', current_text='Prestige Dry Iron Lightweight Appliance - This Prestige dry iron features adjustable temperature settings in a white and blue design. - Prestige White, Blue Appliance'
+2025-06-07 20:48:46,927 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:48:49,934 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 20:48:49,935 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 20:48:49,936 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 20:48:53,547 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 20:48:54,778 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 20:48:54,786 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 20:48:54,787 - main_pipeline - DEBUG - Extracting tags from current text: 'Prestige Dry Iron Lightweight Appliance - This Prestige dry iron features adjustable temperature settings in a white and blue design. - Prestige White, Blue Appliance'
+2025-06-07 20:48:57,331 - main_pipeline - DEBUG - Extracted tags: ['Dry Iron', 'Lightweight', 'Adjustable Temperature', 'White', 'Blue', 'Prestige']
+2025-06-07 20:48:57,333 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 20:48:57,335 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:48:57] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 20:49:47,811 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:49:47] "GET /cart HTTP/1.1" 200 -
+2025-06-07 20:49:47,918 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:49:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 20:49:47,927 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:49:47] "GET /static/css/cart.css HTTP/1.1" 200 -
+2025-06-07 20:49:47,932 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:49:47] "GET /static/js/cartPage.js HTTP/1.1" 200 -
+2025-06-07 20:49:47,935 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:49:47] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 20:49:56,909 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:49:56] "GET / HTTP/1.1" 200 -
+2025-06-07 20:50:01,777 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:50:01] "GET / HTTP/1.1" 200 -
+2025-06-07 20:50:01,802 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:50:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 20:50:01,811 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:50:01] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 20:50:01,814 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:50:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 20:50:06,995 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:50:06] "[33mPOST /api/reset HTTP/1.1[0m" 404 -
+2025-06-07 20:55:13,822 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:55:13,825 - main_pipeline - DEBUG - Initial state: current_text='Prestige Dry Iron Lightweight Appliance - This Prestige dry iron features adjustable temperature settings in a white and blue design. - Prestige White, Blue Appliance', back_bone='Dry Clothes Iron - Home appliance for ironing clothes, adjustable temperature. - Appliance'
+2025-06-07 20:55:13,838 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 20:55:17,405 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 20:55:17,407 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 20:55:17,412 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:55:20,000 - main_pipeline - DEBUG - Image description extracted: back_bone='Clothes Dry Iron - Electric iron for removing wrinkles. - Iron', current_text='Prestige Dry Iron Lightweight Home Appliance - Prestige dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - Prestige White Iron'
+2025-06-07 20:55:20,011 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:55:23,968 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 20:55:23,970 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 20:55:23,978 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 20:55:29,245 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 20:55:30,882 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 20:55:30,884 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 20:55:30,885 - main_pipeline - DEBUG - Extracting tags from current text: 'Prestige Dry Iron Lightweight Home Appliance - Prestige dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - Prestige White Iron'
+2025-06-07 20:55:31,805 - main_pipeline - DEBUG - Extracted tags: ['Prestige', 'Dry Iron', 'Lightweight', 'Home Appliance', 'Adjustable Temperature', 'White']
+2025-06-07 20:55:31,806 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 20:55:31,808 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:55:31] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 20:55:49,178 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='philips brand', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:55:49,181 - main_pipeline - DEBUG - Initial state: current_text='Prestige Dry Iron Lightweight Home Appliance - Prestige dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - Prestige White Iron', back_bone='Clothes Dry Iron - Electric iron for removing wrinkles. - Iron'
+2025-06-07 20:55:49,185 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:55:49,192 - main_pipeline - DEBUG - Modified query: 'philips brand'
+2025-06-07 20:55:51,615 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'philips brand', 'special': ''}
+2025-06-07 20:55:51,616 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 20:55:51,617 - main_pipeline - DEBUG - Updating current_text with general query: 'philips brand'
+2025-06-07 20:55:52,593 - main_pipeline - DEBUG - Text updated: 'Prestige Dry Iron Lightweight Home Appliance - Prestige dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - Prestige White Iron' -> 'Philips Dry Iron Lightweight Home Appliance - Philips dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - Philips White Iron'
+2025-06-07 20:55:52,604 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 20:55:53,446 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 20:55:53,448 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 20:55:53,449 - main_pipeline - DEBUG - Extracting tags from current text: 'Philips Dry Iron Lightweight Home Appliance - Philips dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - Philips White Iron'
+2025-06-07 20:55:55,740 - main_pipeline - DEBUG - Extracted tags: ['Philips', 'Dry Iron', 'Lightweight', 'Home Appliance', 'Adjustable Temperature', 'White']
+2025-06-07 20:55:55,743 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 20:55:55,756 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:55:55] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 20:55:55,823 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:55:55] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 20:56:20,291 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='philips optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:56:20,293 - main_pipeline - DEBUG - Initial state: current_text='Philips Dry Iron Lightweight Home Appliance - Philips dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - Philips White Iron', back_bone='Clothes Dry Iron - Electric iron for removing wrinkles. - Iron'
+2025-06-07 20:56:20,297 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:56:20,299 - main_pipeline - DEBUG - Modified query: 'philips optional'
+2025-06-07 20:56:22,658 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'philips optional', 'special': ''}
+2025-06-07 20:56:22,661 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 20:56:22,662 - main_pipeline - DEBUG - Updating current_text with general query: 'philips optional'
+2025-06-07 20:56:23,682 - main_pipeline - DEBUG - Text updated: 'Philips Dry Iron Lightweight Home Appliance - Philips dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - Philips White Iron' -> 'Dry Iron Lightweight Home Appliance - Philips dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - White Iron'
+2025-06-07 20:56:23,684 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 20:56:24,535 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 20:56:24,541 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 20:56:24,543 - main_pipeline - DEBUG - Extracting tags from current text: 'Dry Iron Lightweight Home Appliance - Philips dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - White Iron'
+2025-06-07 20:56:25,892 - main_pipeline - DEBUG - Extracted tags: ['Dry Iron', 'Lightweight', 'Home Appliance', 'Philips', 'Adjustable Temperature Dial', 'White', 'Iron']
+2025-06-07 20:56:25,896 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 20:56:25,907 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:56:25] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 20:56:25,947 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:56:25] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 20:56:56,737 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='philips brand is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:56:56,738 - main_pipeline - DEBUG - Initial state: current_text='Dry Iron Lightweight Home Appliance - Philips dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - White Iron', back_bone='Clothes Dry Iron - Electric iron for removing wrinkles. - Iron'
+2025-06-07 20:56:56,740 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:56:56,742 - main_pipeline - DEBUG - Modified query: 'philips brand is optional'
+2025-06-07 20:57:01,333 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'philips brand is optional', 'special': ''}
+2025-06-07 20:57:01,340 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 20:57:01,346 - main_pipeline - DEBUG - Updating current_text with general query: 'philips brand is optional'
+2025-06-07 20:57:02,746 - main_pipeline - DEBUG - Text updated: 'Dry Iron Lightweight Home Appliance - Philips dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - White Iron' -> 'Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - White Iron'
+2025-06-07 20:57:02,751 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 20:57:04,430 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 20:57:04,433 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 20:57:04,435 - main_pipeline - DEBUG - Extracting tags from current text: 'Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - White Iron'
+2025-06-07 20:57:06,845 - main_pipeline - DEBUG - Extracted tags: ['Dry iron', 'Lightweight', 'Adjustable temperature', 'White']
+2025-06-07 20:57:06,846 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 20:57:06,847 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:57:06] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 20:57:06,876 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:57:06] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 20:57:47,342 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='no white color negated', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:57:47,349 - main_pipeline - DEBUG - Initial state: current_text='Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - White Iron', back_bone='Clothes Dry Iron - Electric iron for removing wrinkles. - Iron'
+2025-06-07 20:57:47,356 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:57:47,365 - main_pipeline - DEBUG - Modified query: 'no white color negated'
+2025-06-07 20:57:49,991 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'no white color negated', 'special': ''}
+2025-06-07 20:57:49,992 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 20:57:49,994 - main_pipeline - DEBUG - Updating current_text with general query: 'no white color negated'
+2025-06-07 20:57:50,986 - main_pipeline - DEBUG - Text updated: 'Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial. - White Iron' -> 'Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial - no white color negated'
+2025-06-07 20:57:50,996 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 20:57:52,349 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 20:57:52,355 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 20:57:52,362 - main_pipeline - DEBUG - Extracting tags from current text: 'Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial - no white color negated'
+2025-06-07 20:57:54,701 - main_pipeline - DEBUG - Extracted tags: ['Dry Iron', 'Lightweight', 'Home Appliance', 'Adjustable Temperature']
+2025-06-07 20:57:54,705 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 20:57:54,708 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:57:54] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 20:57:54,764 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:57:54] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 20:58:38,640 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='no black color', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:58:38,643 - main_pipeline - DEBUG - Initial state: current_text='Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial - no white color negated', back_bone='Clothes Dry Iron - Electric iron for removing wrinkles. - Iron'
+2025-06-07 20:58:38,656 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 20:58:38,660 - main_pipeline - DEBUG - Modified query: 'no black color'
+2025-06-07 20:58:41,670 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'no black color', 'special': ''}
+2025-06-07 20:58:41,674 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 20:58:41,679 - main_pipeline - DEBUG - Updating current_text with general query: 'no black color'
+2025-06-07 20:58:43,239 - main_pipeline - DEBUG - Text updated: 'Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial - no white color negated' -> 'Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial - no white color negated, no black color'
+2025-06-07 20:58:43,240 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 20:58:43,945 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 20:58:43,946 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 20:58:43,946 - main_pipeline - DEBUG - Extracting tags from current text: 'Dry Iron Lightweight Home Appliance - dry iron for clothes, a household essential, lightweight with adjustable temperature dial - no white color negated, no black color'
+2025-06-07 20:58:46,212 - main_pipeline - DEBUG - Extracted tags: ['Dry iron', 'Lightweight', 'Home appliance', 'Adjustable temperature dial']
+2025-06-07 20:58:46,214 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 20:58:46,217 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:58:46] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 20:58:46,320 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 20:58:46] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 21:02:28,409 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.29.86:3000
+2025-06-07 21:02:28,409 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 21:02:28,413 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 21:02:33,876 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 21:02:33,895 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 21:04:29,705 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:04:29] "GET / HTTP/1.1" 200 -
+2025-06-07 21:04:29,918 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:04:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 21:04:29,919 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:04:29] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 21:04:29,986 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:04:29] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-07 21:04:40,498 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:04:40,501 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 21:04:40,516 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:04:40,543 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 21:04:43,973 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 21:04:43,974 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 21:04:44,000 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:04:44] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 21:05:02,904 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:05:02,905 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 21:05:02,922 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:05:02,940 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 21:05:04,088 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 21:05:04,098 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 21:05:04,145 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:05:04] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 21:05:35,135 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:05:35] "GET / HTTP/1.1" 200 -
+2025-06-07 21:05:35,238 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:05:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 21:05:35,252 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:05:35] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 21:05:35,256 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:05:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 21:05:37,858 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:05:37] "[33mPOST /api/reset HTTP/1.1[0m" 404 -
+2025-06-07 21:05:43,719 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:05:43,723 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 21:05:43,736 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 21:05:49,499 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 21:05:49,503 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 21:05:49,508 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:05:51,793 - main_pipeline - DEBUG - Image description extracted: back_bone='Dry Iron - Appliance for removing wrinkles from clothes. - Appliance', current_text='Prestige Dry Iron Home Appliance - Prestige dry iron with adjustable temperature settings. Features include a power light, in white/aqua. - Prestige White/Aqua Appliance'
+2025-06-07 21:05:51,795 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:05:55,513 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 21:05:55,517 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 21:05:55,519 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 21:05:58,586 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 21:06:00,447 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 21:06:00,448 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 21:06:00,449 - main_pipeline - DEBUG - Extracting tags from current text: 'Prestige Dry Iron Home Appliance - Prestige dry iron with adjustable temperature settings. Features include a power light, in white/aqua. - Prestige White/Aqua Appliance'
+2025-06-07 21:06:02,979 - main_pipeline - DEBUG - Extracted tags: ['Prestige', 'Dry Iron', 'Home Appliance', 'Adjustable Temperature', 'Power Light', 'White', 'Aqua']
+2025-06-07 21:06:02,979 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 21:06:02,981 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:06:02] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 21:10:02,834 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 21:10:05,848 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 21:10:12,689 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 21:10:12,711 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 21:10:21,508 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 21:10:22,195 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 21:10:28,745 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 21:10:28,767 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 21:22:13,349 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 21:22:14,183 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 21:22:20,880 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 21:22:20,902 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 21:22:24,361 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:22:24] "GET / HTTP/1.1" 200 -
+2025-06-07 21:22:24,683 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:22:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 21:22:24,689 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:22:24] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 21:22:24,767 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:22:24] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-07 21:22:26,057 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:22:26] "[33mPOST /api/reset HTTP/1.1[0m" 404 -
+2025-06-07 21:22:33,886 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:22:33,888 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 21:22:33,890 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 21:22:37,199 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 21:22:37,201 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 21:22:37,202 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:22:39,262 - main_pipeline - DEBUG - Image description extracted: back_bone='Basic Dry Iron - An appliance to smooth clothing. - Appliance', current_text='Prestige Dry Iron - The Prestige dry iron is white and turquoise for wrinkle-free clothes. - Prestige White, Turquoise Appliance'
+2025-06-07 21:22:39,264 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 21:22:42,838 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 21:22:42,842 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 21:22:42,844 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 21:22:47,524 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 21:22:49,611 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 21:22:49,613 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 21:22:49,616 - main_pipeline - DEBUG - Extracting tags from current text: 'Prestige Dry Iron - The Prestige dry iron is white and turquoise for wrinkle-free clothes. - Prestige White, Turquoise Appliance'
+2025-06-07 21:22:50,912 - main_pipeline - DEBUG - Extracted tags: ['Prestige', 'White', 'Turquoise', 'Dry Iron']
+2025-06-07 21:22:50,919 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 21:22:50,946 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:22:50] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 21:25:01,050 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:01] "GET /cart HTTP/1.1" 200 -
+2025-06-07 21:25:01,081 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 21:25:01,092 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:01] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-07 21:25:01,097 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:01] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 21:25:01,098 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:01] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-07 21:25:36,157 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:36] "GET / HTTP/1.1" 200 -
+2025-06-07 21:25:36,209 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 21:25:36,238 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:36] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 21:25:36,244 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 21:25:43,671 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:43] "[33mPOST /api/reset HTTP/1.1[0m" 404 -
+2025-06-07 21:25:46,643 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:46] "GET /cart HTTP/1.1" 200 -
+2025-06-07 21:25:46,671 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 21:25:46,684 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:46] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-07 21:25:46,689 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:46] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 21:25:46,692 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:25:46] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-07 21:44:05,742 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:05] "POST /api/checkout HTTP/1.1" 200 -
+2025-06-07 21:44:05,826 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:05] "GET /checkout/bec69920-7c12-4b3b-8a84-54d43fb9d1c2 HTTP/1.1" 200 -
+2025-06-07 21:44:05,894 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 21:44:05,912 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:05] "[33mGET /static/css/checkout.css HTTP/1.1[0m" 404 -
+2025-06-07 21:44:05,920 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:05] "GET /static/css/ai-checkout.css HTTP/1.1" 200 -
+2025-06-07 21:44:05,921 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:05] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 21:44:17,979 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:17] "GET / HTTP/1.1" 200 -
+2025-06-07 21:44:18,028 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 21:44:18,044 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:18] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 21:44:18,047 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:44:18] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 21:44:37,961 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 21:44:37,963 - main_pipeline - DEBUG - Initial state: current_text='Prestige Dry Iron - The Prestige dry iron is white and turquoise for wrinkle-free clothes. - Prestige White, Turquoise Appliance', back_bone='Basic Dry Iron - An appliance to smooth clothing. - Appliance'
+2025-06-07 21:44:37,968 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 21:44:41,936 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 21:44:41,939 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 21:44:41,941 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 21:44:44,586 - main_pipeline - DEBUG - Image description extracted: back_bone='Shield Emblem - Decorative shield design with abstract fire effect. - Art', current_text='MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with blue and orange fire elements. - MSI Blue, Orange Art'
+2025-06-07 21:44:44,588 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 21:44:48,746 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 21:44:48,749 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 21:44:48,752 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 21:45:05,842 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 21:45:06,630 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 21:45:06,630 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 21:45:06,631 - main_pipeline - DEBUG - Extracting tags from current text: 'MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with blue and orange fire elements. - MSI Blue, Orange Art'
+2025-06-07 21:45:08,953 - main_pipeline - DEBUG - Extracted tags: ['MSI', 'Dragon', 'Blue', 'Orange']
+2025-06-07 21:45:08,956 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 21:45:08,963 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:45:08] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 21:45:29,687 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='MSI is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 21:45:29,688 - main_pipeline - DEBUG - Initial state: current_text='MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with blue and orange fire elements. - MSI Blue, Orange Art', back_bone='Shield Emblem - Decorative shield design with abstract fire effect. - Art'
+2025-06-07 21:45:29,691 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 21:45:29,693 - main_pipeline - DEBUG - Modified query: 'MSI is optional'
+2025-06-07 21:45:32,333 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'MSI', 'special': 'is optional'}
+2025-06-07 21:45:32,338 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 21:45:32,342 - main_pipeline - DEBUG - Updating current_text with general query: 'MSI'
+2025-06-07 21:45:33,211 - main_pipeline - DEBUG - Text updated: 'MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with blue and orange fire elements. - MSI Blue, Orange Art' -> 'MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with blue and orange fire elements. - MSI Blue, Orange Art'
+2025-06-07 21:45:33,213 - main_pipeline - DEBUG - Processing special case from query: is optional
+2025-06-07 21:45:33,219 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:45:33] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 21:45:55,252 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='Blue is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 21:45:55,255 - main_pipeline - DEBUG - Initial state: current_text='MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with blue and orange fire elements. - MSI Blue, Orange Art', back_bone='Shield Emblem - Decorative shield design with abstract fire effect. - Art'
+2025-06-07 21:45:55,260 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 21:45:55,263 - main_pipeline - DEBUG - Modified query: 'Blue is optional'
+2025-06-07 21:45:58,548 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Blue is optional', 'special': ''}
+2025-06-07 21:45:58,553 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 21:45:58,562 - main_pipeline - DEBUG - Updating current_text with general query: 'Blue is optional'
+2025-06-07 21:45:59,554 - main_pipeline - DEBUG - Text updated: 'MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with blue and orange fire elements. - MSI Blue, Orange Art' -> 'MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with orange fire elements. - MSI Orange Art'
+2025-06-07 21:45:59,558 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 21:46:00,664 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 21:46:00,679 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 21:46:00,701 - main_pipeline - DEBUG - Extracting tags from current text: 'MSI Dragon Shield Emblem Design - MSI gaming logo emblem featuring a dragon with orange fire elements. - MSI Orange Art'
+2025-06-07 21:46:03,184 - main_pipeline - DEBUG - Extracted tags: ['MSI', 'Dragon', 'Orange', 'Emblem', 'Gaming Logo']
+2025-06-07 21:46:03,187 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 21:46:03,194 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:46:03] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 21:46:07,464 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 21:46:07] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 21:48:02,588 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\src\\frontend\\app.py', reloading
+2025-06-07 21:48:05,305 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 21:48:12,547 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 21:48:12,573 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 21:49:04,064 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 21:49:05,040 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 21:49:12,404 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 21:49:12,429 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 21:49:21,373 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 21:49:22,374 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 21:49:30,730 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 21:49:30,821 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 21:49:40,055 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 21:49:41,051 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 21:49:48,088 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 21:49:48,112 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:05:07,841 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 22:05:08,795 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:05:15,716 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:05:15,737 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:05:33,178 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:05:33] "[33mPOST /api/reset HTTP/1.1[0m" 404 -
+2025-06-07 22:05:38,059 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:05:38,060 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 22:05:38,062 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 22:05:42,187 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 22:05:42,189 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 22:05:42,191 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:05:44,981 - main_pipeline - DEBUG - Image description extracted: back_bone='Fantasy Shield Graphic Art - Fantasy themed image between smoke and flames. - Graphics', current_text='MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics'
+2025-06-07 22:05:44,982 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:05:48,862 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 22:05:48,863 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 22:05:48,863 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 22:05:56,975 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 22:05:58,232 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 22:05:58,233 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 22:05:58,233 - main_pipeline - DEBUG - Extracting tags from current text: 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics'
+2025-06-07 22:06:00,463 - main_pipeline - DEBUG - Extracted tags: ['MSI', 'Dragon Shield', 'Graphic', 'Blue', 'Orange']
+2025-06-07 22:06:00,465 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 22:06:00,467 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:06:00] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 22:06:19,076 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='Dragon Shield is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:06:19,077 - main_pipeline - DEBUG - Initial state: current_text='MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics', back_bone='Fantasy Shield Graphic Art - Fantasy themed image between smoke and flames. - Graphics'
+2025-06-07 22:06:19,079 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:06:19,081 - main_pipeline - DEBUG - Modified query: 'Dragon Shield is optional'
+2025-06-07 22:06:21,778 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Dragon Shield', 'special': 'is optional'}
+2025-06-07 22:06:21,779 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 22:06:21,781 - main_pipeline - DEBUG - Updating current_text with general query: 'Dragon Shield'
+2025-06-07 22:06:22,647 - main_pipeline - DEBUG - Text updated: 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics' -> 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics Dragon Shield'
+2025-06-07 22:06:22,649 - main_pipeline - DEBUG - Processing special case from query: is optional
+2025-06-07 22:06:22,655 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:06:22] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 22:06:30,805 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='Dragon Shield is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:06:30,806 - main_pipeline - DEBUG - Initial state: current_text='MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics Dragon Shield', back_bone='Fantasy Shield Graphic Art - Fantasy themed image between smoke and flames. - Graphics'
+2025-06-07 22:06:30,807 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:06:30,808 - main_pipeline - DEBUG - Modified query: 'Dragon Shield is optional'
+2025-06-07 22:06:33,551 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Dragon Shield', 'special': 'is optional'}
+2025-06-07 22:06:33,551 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 22:06:33,552 - main_pipeline - DEBUG - Updating current_text with general query: 'Dragon Shield'
+2025-06-07 22:06:34,445 - main_pipeline - DEBUG - Text updated: 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics Dragon Shield' -> 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics Dragon Shield'
+2025-06-07 22:06:34,449 - main_pipeline - DEBUG - Processing special case from query: is optional
+2025-06-07 22:06:34,454 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:06:34] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 22:06:56,053 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='Blue is optional, Orange is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:06:56,069 - main_pipeline - DEBUG - Initial state: current_text='MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics Dragon Shield', back_bone='Fantasy Shield Graphic Art - Fantasy themed image between smoke and flames. - Graphics'
+2025-06-07 22:06:56,072 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:06:56,074 - main_pipeline - DEBUG - Modified query: 'Blue is optional, Orange is optional'
+2025-06-07 22:06:58,903 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Blue is optional, Orange is optional', 'special': ''}
+2025-06-07 22:06:58,905 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 22:06:58,908 - main_pipeline - DEBUG - Updating current_text with general query: 'Blue is optional, Orange is optional'
+2025-06-07 22:06:59,809 - main_pipeline - DEBUG - Text updated: 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool blue smoke and vibrant orange fire. - MSI Blue, Orange Graphics Dragon Shield' -> 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool smoke and vibrant fire. - MSI Graphics Dragon Shield'
+2025-06-07 22:06:59,810 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 22:07:00,965 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 22:07:00,967 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 22:07:00,967 - main_pipeline - DEBUG - Extracting tags from current text: 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool smoke and vibrant fire. - MSI Graphics Dragon Shield'
+2025-06-07 22:07:03,290 - main_pipeline - DEBUG - Extracted tags: ['MSI', 'Dragon Shield', 'Graphic Image', 'Digital graphic art', 'smoke', 'fire']
+2025-06-07 22:07:03,295 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 22:07:03,304 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:07:03] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 22:07:07,806 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:07:07] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 22:07:34,234 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='Graphic Image is optional, Digital graphic art is optional, Dragon Shield is optional, smoke is optional, fire is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:07:34,238 - main_pipeline - DEBUG - Initial state: current_text='MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool smoke and vibrant fire. - MSI Graphics Dragon Shield', back_bone='Fantasy Shield Graphic Art - Fantasy themed image between smoke and flames. - Graphics'
+2025-06-07 22:07:34,241 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:07:34,243 - main_pipeline - DEBUG - Modified query: 'Graphic Image is optional, Digital graphic art is optional, Dragon Shield is optional, smoke is optional, fire is optional'
+2025-06-07 22:07:37,037 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Graphic Image is optional, Digital graphic art is optional, Dragon Shield is optional, smoke is optional, fire is optional', 'special': ''}
+2025-06-07 22:07:37,040 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 22:07:37,041 - main_pipeline - DEBUG - Updating current_text with general query: 'Graphic Image is optional, Digital graphic art is optional, Dragon Shield is optional, smoke is optional, fire is optional'
+2025-06-07 22:07:37,780 - main_pipeline - DEBUG - Text updated: 'MSI Dragon Shield Graphic Image - Digital graphic art showing the MSI logo shield between cool smoke and vibrant fire. - MSI Graphics Dragon Shield' -> 'MSI logo shield'
+2025-06-07 22:07:37,781 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 22:07:38,622 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 22:07:38,626 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 22:07:38,627 - main_pipeline - DEBUG - Extracting tags from current text: 'MSI logo shield'
+2025-06-07 22:07:40,785 - main_pipeline - DEBUG - Extracted tags: ['MSI', 'logo']
+2025-06-07 22:07:40,787 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 22:07:40,788 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:07:40] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 22:07:45,462 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:07:45] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 22:09:12,211 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\special_case_handler.py', reloading
+2025-06-07 22:09:15,003 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:09:21,648 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:09:21,675 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:09:36,891 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\main_pipeline.py', reloading
+2025-06-07 22:09:37,517 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:09:43,715 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:09:43,741 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:09:56,105 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.86:5000
+2025-06-07 22:09:56,105 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 22:09:56,110 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:10:02,544 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:10:02,582 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:10:02,630 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:02] "GET / HTTP/1.1" 200 -
+2025-06-07 22:10:02,752 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-07 22:10:02,753 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:02] "GET /static/js/cart.js HTTP/1.1" 200 -
+2025-06-07 22:10:02,999 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:02] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-07 22:10:03,351 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-07 22:10:05,764 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:05] "GET / HTTP/1.1" 200 -
+2025-06-07 22:10:06,103 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:10:06,109 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:06] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:10:06,124 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:06] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:10:20,131 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:10:20,132 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 22:10:20,135 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 22:10:24,627 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 22:10:24,631 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 22:10:24,642 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:10:27,621 - main_pipeline - DEBUG - Image description extracted: back_bone='Mens Dress Shirt - Classic shirt, buttons, collar, pocket. - Clothing', current_text='Arrow Dress Shirt Slim Fit - Arrow slim fit dress shirt featuring a button-down collar and chest pocket, in white. - Arrow White Clothing'
+2025-06-07 22:10:27,625 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:10:32,494 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 22:10:32,497 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 22:10:32,568 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:32] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 22:10:32,607 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\main_pipeline.py', reloading
+2025-06-07 22:10:32,607 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\main_pipeline.py', reloading
+2025-06-07 22:10:33,188 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:10:35,275 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:10:38,958 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:10:38,981 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:10:40,955 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:10:40,990 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:10:43,380 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:43] "GET / HTTP/1.1" 200 -
+2025-06-07 22:10:43,556 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:10:43,596 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:43] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:10:43,789 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:10:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:10:54,608 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:10:54,609 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 22:10:54,611 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 22:11:00,097 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 22:11:00,106 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 22:11:00,112 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:11:03,285 - main_pipeline - DEBUG - Image description extracted: back_bone='Oxford long sleeve shirt - Classic shirt, long sleeved, button closure. - Apparel', current_text='Uniqlo White Oxford Long Sleeve - This Uniqlo long sleeve shirt features a classic oxford weave in white. - Uniqlo White Apparel'
+2025-06-07 22:11:03,286 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:11:08,841 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 22:11:08,844 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 22:11:08,855 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:11:08] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 22:11:35,914 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 22:11:35,918 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 22:11:36,629 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:11:38,574 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:11:42,465 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:11:42,484 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:11:44,298 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:11:44,334 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:11:46,643 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:11:46] "GET / HTTP/1.1" 200 -
+2025-06-07 22:11:46,753 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:11:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:11:46,904 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:11:46] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:11:47,057 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:11:47] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:11:56,824 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:11:56,826 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 22:11:56,832 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 22:12:01,317 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 22:12:01,317 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 22:12:01,320 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:12:04,773 - main_pipeline - DEBUG - Image description extracted: back_bone='Men's Button-up Shirt - A long-sleeved shirt with a pocket. - Apparel', current_text='Unbranded Men's Long Sleeve Shirt - A classic, button-up long sleeve shirt, with chest pocket, in white color. - Unbranded White Apparel'
+2025-06-07 22:12:04,774 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:12:08,463 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 22:12:08,466 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 22:12:08,561 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:12:08] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 22:13:11,810 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\src\\frontend\\app.py', reloading
+2025-06-07 22:13:12,536 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:13:18,947 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:13:18,968 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:13:26,816 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\suggested_prompts.py', reloading
+2025-06-07 22:13:27,496 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:13:33,619 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:13:33,638 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:13:54,199 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.86:5000
+2025-06-07 22:13:54,200 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 22:13:54,207 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:14:00,653 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:14:00,686 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:14:00,732 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:00] "GET / HTTP/1.1" 200 -
+2025-06-07 22:14:00,840 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:14:00,841 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:00] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:14:01,230 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:01] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-07 22:14:03,222 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:03] "GET / HTTP/1.1" 200 -
+2025-06-07 22:14:03,249 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:14:03,476 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:03] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:14:03,565 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:03] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:14:11,356 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:14:11,363 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 22:14:11,382 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 22:14:15,685 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 22:14:15,690 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 22:14:15,696 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:14:18,235 - main_pipeline - DEBUG - Image description extracted: back_bone='Dragon crest emblem - Embossed emblem represents power and technology. - Logo', current_text='MSI Dragon Shield logo emblem - MSI's logo showcases a dragon shield, vividly split between blue ice and fiery orange flames. - MSI Blue, Orange Logo'
+2025-06-07 22:14:18,238 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:14:22,822 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 22:14:22,823 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 22:14:22,830 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:14:22] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 22:15:02,982 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\main_pipeline.py', reloading
+2025-06-07 22:15:02,982 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\main_pipeline.py', reloading
+2025-06-07 22:15:03,601 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:15:05,662 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:17:13,576 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.86:5000
+2025-06-07 22:17:13,576 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 22:17:13,580 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:17:19,934 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:17:19,963 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:17:20,010 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:20] "GET / HTTP/1.1" 200 -
+2025-06-07 22:17:20,136 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:17:20,138 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:20] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:17:20,367 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:17:22,221 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:22] "GET / HTTP/1.1" 200 -
+2025-06-07 22:17:22,251 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:17:22,489 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:22] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:17:22,573 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:17:31,409 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:17:31,410 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 22:17:31,413 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 22:17:35,413 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 22:17:35,414 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 22:17:35,416 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:17:38,343 - main_pipeline - DEBUG - Image description extracted: back_bone='Dress Shirt - A button-up shirt, long sleeved. - Apparel', current_text='Unbranded Long Sleeve Dress Shirt - Classic dress shirt with long sleeves, button-down front, and chest pocket in white. - Unbranded White Apparel'
+2025-06-07 22:17:38,346 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:17:42,994 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 22:17:42,996 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 22:17:43,011 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:17:43] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 22:19:36,905 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\main_pipeline.py', reloading
+2025-06-07 22:19:39,735 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:19:45,972 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:19:46,011 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:19:48,265 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:19:48] "GET / HTTP/1.1" 200 -
+2025-06-07 22:19:48,351 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:19:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:19:48,507 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:19:48] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:19:48,609 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:19:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:19:57,326 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:19:57,328 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 22:19:57,331 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 22:20:01,709 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 22:20:01,712 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 22:20:01,728 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:20:04,986 - main_pipeline - DEBUG - Image description extracted: back_bone='Long Sleeve Shirt - Formal wear, buttoned closure, and a pocket. - Apparel', current_text='Unbranded White Dress Shirt - Classic button-down dress shirt, with a front pocket and buttons, white. - Unbranded White Apparel'
+2025-06-07 22:20:04,987 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:20:10,401 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 22:20:10,404 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 22:20:10,407 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 22:20:16,908 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 22:20:17,985 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 22:20:17,987 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 22:20:17,987 - main_pipeline - DEBUG - Extracting tags from current text: 'Unbranded White Dress Shirt - Classic button-down dress shirt, with a front pocket and buttons, white. - Unbranded White Apparel'
+2025-06-07 22:20:20,521 - main_pipeline - DEBUG - Extracted tags: ['Dress shirt', 'button-down', 'front pocket', 'buttons', 'white', 'unbranded', 'apparel']
+2025-06-07 22:20:20,523 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 22:20:20,532 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:20:20] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 22:20:34,700 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='front pocket is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:20:34,700 - main_pipeline - DEBUG - Initial state: current_text='Unbranded White Dress Shirt - Classic button-down dress shirt, with a front pocket and buttons, white. - Unbranded White Apparel', back_bone='Long Sleeve Shirt - Formal wear, buttoned closure, and a pocket. - Apparel'
+2025-06-07 22:20:34,703 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\RC_image.jpg
+2025-06-07 22:20:34,706 - main_pipeline - DEBUG - Modified query: 'front pocket is optional'
+2025-06-07 22:20:37,299 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'front pocket is optional', 'special': ''}
+2025-06-07 22:20:37,301 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-07 22:20:37,303 - main_pipeline - DEBUG - Updating current_text with general query: 'front pocket is optional'
+2025-06-07 22:20:38,103 - main_pipeline - DEBUG - Text updated: 'Unbranded White Dress Shirt - Classic button-down dress shirt, with a front pocket and buttons, white. - Unbranded White Apparel' -> 'Unbranded White Dress Shirt - Classic button-down dress shirt, with buttons, white. - Unbranded White Apparel'
+2025-06-07 22:20:38,107 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 22:20:38,900 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 22:20:38,906 - main_pipeline - DEBUG - No special filtering needed
+2025-06-07 22:20:38,908 - main_pipeline - DEBUG - Extracting tags from current text: 'Unbranded White Dress Shirt - Classic button-down dress shirt, with buttons, white. - Unbranded White Apparel'
+2025-06-07 22:20:41,243 - main_pipeline - DEBUG - Extracted tags: ['dress shirt', 'button-down', 'buttons', 'white', 'Unbranded']
+2025-06-07 22:20:41,250 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 22:20:41,266 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:20:41] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 22:20:47,919 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:20:47] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-07 22:43:14,470 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.66:5000
+2025-06-07 22:43:14,470 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 22:43:14,473 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 22:43:20,244 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 22:43:20,264 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 22:43:20,306 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:20] "GET / HTTP/1.1" 200 -
+2025-06-07 22:43:20,536 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:43:20,571 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:20] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:43:20,883 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:43:21,516 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-07 22:43:22,547 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:22] "GET / HTTP/1.1" 200 -
+2025-06-07 22:43:22,583 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:43:22,809 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:22] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:43:22,889 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 22:43:57,612 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:43:57] "[33mPOST /api/reset HTTP/1.1[0m" 404 -
+2025-06-07 22:44:03,353 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:44:03,354 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 22:44:03,358 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 22:44:07,314 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 22:44:07,318 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 22:44:07,321 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:44:09,816 - main_pipeline - DEBUG - Image description extracted: back_bone='Decorative Shield Emblem - A stylish emblem for display. - Art', current_text='MSI Dragon Shield Emblem - This MSI shield features a dragon logo with a blue and orange flame design. - MSI Blue, Orange Art'
+2025-06-07 22:44:09,819 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\background_msi.jpg
+2025-06-07 22:44:13,721 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 22:44:13,725 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 22:44:13,726 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 22:44:23,514 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 22:44:24,508 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 22:44:24,509 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 22:44:24,509 - main_pipeline - DEBUG - Extracting tags from current text: 'MSI Dragon Shield Emblem - This MSI shield features a dragon logo with a blue and orange flame design. - MSI Blue, Orange Art'
+2025-06-07 22:44:26,716 - main_pipeline - DEBUG - Extracted tags: ['MSI', 'dragon', 'blue', 'orange']
+2025-06-07 22:44:26,716 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 22:44:26,718 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:44:26] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 22:49:22,165 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:49:22] "GET /cart HTTP/1.1" 200 -
+2025-06-07 22:49:22,247 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:49:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 22:49:22,486 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:49:22] "GET /static/css/cart.css HTTP/1.1" 200 -
+2025-06-07 22:49:22,513 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:49:22] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 22:49:22,556 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:49:22] "GET /static/js/cartPage.js HTTP/1.1" 200 -
+2025-06-07 22:49:22,567 - cart_suggestions - DEBUG - Getting suggestions for 2 cart items
+2025-06-07 22:49:22,625 - cart_suggestions - DEBUG - Combined cart query: Axor Apex Venomous Dull Black Grey Helmet-M  STRIFF Mpad Mouse Mat 230X190X3mm Gaming Mouse Pad, Non-Slip Rubber Base, Waterproof Surface, Premium-Textured, Compatible... 
+2025-06-07 22:49:24,584 - cart_suggestions - ERROR - Error getting cart suggestions: module 'blocks.retrival' has no attribute 'load_indexes'
+2025-06-07 22:49:24,606 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:49:24] "POST /api/cart/suggestions HTTP/1.1" 200 -
+2025-06-07 22:49:39,942 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 22:49:39] "GET / HTTP/1.1" 200 -
+2025-06-07 23:01:18,133 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.66:5000
+2025-06-07 23:01:18,133 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 23:01:18,136 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 23:01:24,546 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 23:01:24,566 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 23:01:24,614 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:24] "GET / HTTP/1.1" 200 -
+2025-06-07 23:01:24,741 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:01:24,742 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:24] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:01:24,973 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 23:01:26,781 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:26] "GET / HTTP/1.1" 200 -
+2025-06-07 23:01:26,820 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:01:27,045 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:27] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:01:27,144 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:27] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 23:01:37,498 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 23:01:37,500 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 23:01:37,501 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 23:01:37,504 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 23:01:40,117 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 23:01:40,122 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-07 23:01:40,162 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:40] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-07 23:01:48,347 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:01:48] "[33mPOST /api/reset HTTP/1.1[0m" 404 -
+2025-06-07 23:01:54,734 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 23:01:54,738 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-07 23:01:54,752 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 23:01:58,289 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 23:01:58,291 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 23:01:58,293 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 23:02:00,595 - main_pipeline - DEBUG - Image description extracted: back_bone='Dry Iron - Iron for clothing and fabric. - Appliance', current_text='Prestige Dry Iron - Prestige dry iron, features include adjustable temperature control, non-stick soleplate, white and turquoise. - Prestige Turquoise Appliance'
+2025-06-07 23:02:00,602 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 23:02:05,222 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 23:02:05,222 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 23:02:05,223 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 23:02:09,802 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 23:02:11,013 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 23:02:11,014 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 23:02:11,015 - main_pipeline - DEBUG - Extracting tags from current text: 'Prestige Dry Iron - Prestige dry iron, features include adjustable temperature control, non-stick soleplate, white and turquoise. - Prestige Turquoise Appliance'
+2025-06-07 23:02:13,141 - main_pipeline - DEBUG - Extracted tags: ['adjustable temperature control', 'non-stick soleplate', 'white', 'turquoise', 'Prestige']
+2025-06-07 23:02:13,142 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 23:02:13,144 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:02:13] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 23:09:08,814 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:08] "GET / HTTP/1.1" 200 -
+2025-06-07 23:09:08,918 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:08] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-07 23:09:08,922 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:08] "GET /static/js/cart.js HTTP/1.1" 200 -
+2025-06-07 23:09:08,925 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:08] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-07 23:09:09,091 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-07 23:09:12,377 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:12] "GET /cart HTTP/1.1" 200 -
+2025-06-07 23:09:12,408 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:09:12,419 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:12] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:09:12,436 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:12] "GET /static/css/cart.css HTTP/1.1" 200 -
+2025-06-07 23:09:12,448 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:12] "GET /static/js/cartPage.js HTTP/1.1" 200 -
+2025-06-07 23:09:23,905 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 23:09:23,906 - main_pipeline - DEBUG - Initial state: current_text='Prestige Dry Iron - Prestige dry iron, features include adjustable temperature control, non-stick soleplate, white and turquoise. - Prestige Turquoise Appliance', back_bone='Dry Iron - Iron for clothing and fabric. - Appliance'
+2025-06-07 23:09:23,909 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-07 23:09:27,188 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-07 23:09:27,189 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-07 23:09:27,190 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 23:09:29,477 - main_pipeline - DEBUG - Image description extracted: back_bone='Basic Dry Iron - Clothes iron, with adjustable temperature control. - Home Appliance', current_text='Prestige Dry Iron, Powerful and Efficient - Prestige dry iron ensures crisp results in white and turquoise, simple design. - Prestige White, Turquoise Home Appliance'
+2025-06-07 23:09:29,478 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-07 23:09:34,471 - main_pipeline - DEBUG - Modified query: ''
+2025-06-07 23:09:34,472 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-07 23:09:34,474 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-07 23:09:39,099 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-07 23:09:39,986 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-07 23:09:39,986 - main_pipeline - DEBUG - No special filtering applied
+2025-06-07 23:09:39,987 - main_pipeline - DEBUG - Extracting tags from current text: 'Prestige Dry Iron, Powerful and Efficient - Prestige dry iron ensures crisp results in white and turquoise, simple design. - Prestige White, Turquoise Home Appliance'
+2025-06-07 23:09:42,292 - main_pipeline - DEBUG - Extracted tags: ['Prestige', 'Dry Iron', 'White', 'Turquoise', 'Home Appliance']
+2025-06-07 23:09:42,295 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-07 23:09:42,303 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:42] "POST /api/search HTTP/1.1" 200 -
+2025-06-07 23:09:56,199 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:56] "GET /cart HTTP/1.1" 200 -
+2025-06-07 23:09:56,250 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:09:56,262 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:56] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-07 23:09:56,270 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:56] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:09:56,271 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:56] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-07 23:09:56,288 - cart_suggestions - DEBUG - Getting suggestions for 1 cart items
+2025-06-07 23:09:56,343 - cart_suggestions - DEBUG - Combined cart query: Wipro Vesta 1200 Watt GD203 Heavyweight Automatic Dry Iron| Quick Heat Up| Anti bacterial German Weilburger Double Coated ... 
+2025-06-07 23:09:59,346 - cart_suggestions - ERROR - Error getting cart suggestions: list index out of range
+2025-06-07 23:09:59,385 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:09:59] "POST /api/cart/suggestions HTTP/1.1" 200 -
+2025-06-07 23:10:58,764 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\cart_index_helper.py', reloading
+2025-06-07 23:11:01,753 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 23:11:09,250 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 23:11:09,275 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 23:11:10,447 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\cart_suggestions.py', reloading
+2025-06-07 23:11:13,073 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 23:11:19,335 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 23:11:19,364 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 23:11:19,420 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:19] "GET / HTTP/1.1" 200 -
+2025-06-07 23:11:19,524 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:11:19,526 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:19] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:11:19,756 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 23:11:20,516 - werkzeug - INFO -  * Detected change in 'C:\\Users\\monar\\Python_projects\\Self\\appian-2\\github - Copy\\Bytestorm-appian-2-imp\\blocks\\cart_suggestions.py', reloading
+2025-06-07 23:11:22,323 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 23:11:29,189 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 23:11:29,236 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 23:11:29,287 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:29] "GET / HTTP/1.1" 200 -
+2025-06-07 23:11:29,390 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:11:29,433 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:29] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:11:29,677 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:29] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 23:11:31,473 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:31] "GET / HTTP/1.1" 200 -
+2025-06-07 23:11:31,514 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:11:31,728 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:31] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:11:31,833 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 23:11:34,246 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:34] "GET /cart HTTP/1.1" 200 -
+2025-06-07 23:11:34,300 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:11:34,513 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:34] "GET /static/css/cart.css HTTP/1.1" 200 -
+2025-06-07 23:11:34,633 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:34] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:11:34,634 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:34] "GET /static/js/cartPage.js HTTP/1.1" 200 -
+2025-06-07 23:11:35,002 - cart_suggestions - DEBUG - Getting suggestions for 2 cart items
+2025-06-07 23:11:35,077 - cart_suggestions - DEBUG - Combined cart query: Axor Apex Venomous Dull Black Grey Helmet-M  STRIFF Mpad Mouse Mat 230X190X3mm Gaming Mouse Pad, Non-Slip Rubber Base, Waterproof Surface, Premium-Textured, Compatible... 
+2025-06-07 23:11:37,251 - cart_suggestions - ERROR - Error getting cart suggestions: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-06-07 23:11:37,286 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:11:37] "POST /api/cart/suggestions HTTP/1.1" 200 -
+2025-06-07 23:14:42,081 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.66:5000
+2025-06-07 23:14:42,082 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-07 23:14:42,087 - werkzeug - INFO -  * Restarting with stat
+2025-06-07 23:14:48,894 - werkzeug - WARNING -  * Debugger is active!
+2025-06-07 23:14:48,914 - werkzeug - INFO -  * Debugger PIN: 881-999-907
+2025-06-07 23:14:48,956 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:14:48] "GET / HTTP/1.1" 200 -
+2025-06-07 23:14:49,077 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:14:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:14:49,078 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:14:49] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:14:49,291 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:14:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 23:14:51,778 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:14:51] "GET / HTTP/1.1" 200 -
+2025-06-07 23:14:51,818 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:14:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:14:52,045 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:14:52] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:14:52,135 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:14:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-07 23:15:01,361 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:01] "GET /cart HTTP/1.1" 200 -
+2025-06-07 23:15:01,412 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:15:01,618 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:01] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-07 23:15:01,722 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:01] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:15:01,725 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:01] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-07 23:15:01,763 - cart_suggestions - DEBUG - Getting suggestions for 2 cart items
+2025-06-07 23:15:01,833 - cart_suggestions - DEBUG - Combined cart query: Axor Apex Venomous Dull Black Grey Helmet-M  STRIFF Mpad Mouse Mat 230X190X3mm Gaming Mouse Pad, Non-Slip Rubber Base, Waterproof Surface, Premium-Textured, Compatible... 
+2025-06-07 23:15:04,297 - cart_suggestions - ERROR - Error getting cart suggestions: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-06-07 23:15:04,323 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:04] "POST /api/cart/suggestions HTTP/1.1" 200 -
+2025-06-07 23:15:14,790 - cart_suggestions - DEBUG - Getting suggestions for 2 cart items
+2025-06-07 23:15:14,839 - cart_suggestions - DEBUG - Combined cart query: Axor Apex Venomous Dull Black Grey Helmet-M  STRIFF Mpad Mouse Mat 230X190X3mm Gaming Mouse Pad, Non-Slip Rubber Base, Waterproof Surface, Premium-Textured, Compatible... 
+2025-06-07 23:15:16,888 - cart_suggestions - ERROR - Error getting cart suggestions: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-06-07 23:15:16,905 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:16] "POST /api/cart/suggestions HTTP/1.1" 200 -
+2025-06-07 23:15:19,477 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:19] "POST /api/checkout HTTP/1.1" 200 -
+2025-06-07 23:15:19,857 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:19] "GET /checkout/f80eb5dc-61bb-4c01-816d-6b307c30d826 HTTP/1.1" 200 -
+2025-06-07 23:15:19,886 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:15:20,060 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:20] "[33mGET /static/css/checkout.css HTTP/1.1[0m" 404 -
+2025-06-07 23:15:20,221 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:20] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:15:20,233 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:20] "GET /static/css/ai-checkout.css HTTP/1.1" 200 -
+2025-06-07 23:15:25,906 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:25] "GET / HTTP/1.1" 200 -
+2025-06-07 23:15:25,962 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-07 23:15:26,154 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:26] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-07 23:15:26,277 - werkzeug - INFO - 127.0.0.1 - - [07/Jun/2025 23:15:26] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 00:35:54,369 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.29.66:3000
+2025-06-10 00:35:54,369 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 00:35:54,376 - werkzeug - INFO -  * Restarting with stat
+2025-06-10 00:36:00,228 - werkzeug - WARNING -  * Debugger is active!
+2025-06-10 00:36:00,262 - werkzeug - INFO -  * Debugger PIN: 292-838-702
+2025-06-10 00:36:38,101 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:38] "GET / HTTP/1.1" 200 -
+2025-06-10 00:36:38,209 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:38] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-06-10 00:36:38,338 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:38] "GET /static/css/new-style.css HTTP/1.1" 200 -
+2025-06-10 00:36:38,454 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:38] "GET /static/js/cart.js HTTP/1.1" 200 -
+2025-06-10 00:36:38,454 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:38] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-06-10 00:36:38,835 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:38] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 00:36:39,079 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-10 00:36:43,318 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:43] "GET / HTTP/1.1" 200 -
+2025-06-10 00:36:43,624 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:36:43,657 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:43] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:36:43,660 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 00:36:43,661 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:43] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 00:36:43,980 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:43] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 00:36:55,307 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:55] "GET / HTTP/1.1" 200 -
+2025-06-10 00:36:55,612 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:36:55,647 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:55] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:36:55,648 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:55] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 00:36:55,648 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:55] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 00:36:55,969 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:36:55] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 00:37:11,798 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:37:11] "GET / HTTP/1.1" 200 -
+2025-06-10 00:37:12,116 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:37:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:37:12,194 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:37:12] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 00:37:12,195 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:37:12] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:37:12,195 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:37:12] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 00:37:12,201 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:37:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 00:38:43,498 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:38:43] "GET /login HTTP/1.1" 200 -
+2025-06-10 00:38:43,539 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:38:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:38:45,859 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:38:45] "GET /register HTTP/1.1" 200 -
+2025-06-10 00:38:46,177 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:38:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:39:22,379 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:22] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-06-10 00:39:22,403 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:22] "GET /login HTTP/1.1" 200 -
+2025-06-10 00:39:22,459 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:39:35,017 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-06-10 00:39:35,033 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:35] "GET / HTTP/1.1" 200 -
+2025-06-10 00:39:35,063 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:39:35,438 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:35] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 00:39:35,439 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:35] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 00:39:35,441 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:35] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 00:39:35,526 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:39:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 00:45:15,076 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:45:15,078 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-10 00:45:15,080 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 00:45:21,865 - main_pipeline - DEBUG - Intent result: {'intent': 1, 'recommendations_query': 'ergonomic mouse, laptop stand, monitor riser, wireless keyboard, desk pad'}
+2025-06-10 00:45:21,867 - main_pipeline - DEBUG - Special intent detected
+2025-06-10 00:45:21,867 - main_pipeline - DEBUG - Intent is special, current_text is now: ergonomic mouse, laptop stand, monitor riser, wireless keyboard, desk pad
+2025-06-10 00:45:21,868 - main_pipeline - DEBUG - No image path, extracting from text
+2025-06-10 00:45:23,013 - main_pipeline - DEBUG - Text split: back_bone='mouse, laptop stand, monitor riser, keyboard, desk pad', current_text='ergonomic mouse, laptop stand, monitor riser, wireless keyboard, desk pad'
+2025-06-10 00:45:30,303 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Dragon Shield gaming mouse blue or orange MSI keyboard monitor riser desk pad', 'special': ''}
+2025-06-10 00:45:30,303 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:45:30,305 - main_pipeline - DEBUG - Updating current_text with general query: 'Dragon Shield gaming mouse blue or orange MSI keyboard monitor riser desk pad'
+2025-06-10 00:45:31,246 - main_pipeline - DEBUG - Text updated: 'ergonomic mouse, laptop stand, monitor riser, wireless keyboard, desk pad' -> 'Dragon Shield gaming mouse blue or orange MSI keyboard, laptop stand, monitor riser, desk pad'
+2025-06-10 00:45:31,249 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 00:45:33,703 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:45:35,276 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:45:35,280 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:45:35,283 - main_pipeline - DEBUG - Extracting tags from current text: 'Dragon Shield gaming mouse blue or orange MSI keyboard, laptop stand, monitor riser, desk pad'
+2025-06-10 00:45:37,700 - main_pipeline - DEBUG - Extracted tags: ['gaming mouse', 'blue', 'orange', 'MSI', 'keyboard', 'laptop stand', 'monitor riser', 'desk pad']
+2025-06-10 00:45:37,705 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:45:37,709 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:45:37] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:46:44,057 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='give me laptops like this a', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:46:44,058 - main_pipeline - DEBUG - Initial state: current_text='Dragon Shield gaming mouse blue or orange MSI keyboard, laptop stand, monitor riser, desk pad', back_bone='mouse, laptop stand, monitor riser, keyboard, desk pad'
+2025-06-10 00:46:44,064 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 00:46:46,558 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-10 00:46:46,560 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-10 00:46:46,562 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:46:48,316 - main_pipeline - DEBUG - Image description extracted: back_bone='Slim Portable Laptop - Portable device for work or entertainment. - Laptop', current_text='Xiaomi Notebook Pro Laptop - Xiaomi Notebook Pro laptop, silver, with a vibrant wallpaper and sleek, modern design. - Xiaomi Silver Laptop'
+2025-06-10 00:46:48,318 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:46:53,399 - main_pipeline - DEBUG - Modified query: 'give me laptops like this a'
+2025-06-10 00:46:55,345 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'laptops like this a', 'special': ''}
+2025-06-10 00:46:55,348 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:46:55,350 - main_pipeline - DEBUG - Updating current_text with general query: 'laptops like this a'
+2025-06-10 00:46:56,206 - main_pipeline - DEBUG - Text updated: 'Xiaomi Notebook Pro Laptop - Xiaomi Notebook Pro laptop, silver, with a vibrant wallpaper and sleek, modern design. - Xiaomi Silver Laptop' -> 'Xiaomi Notebook Pro Laptop - Xiaomi Notebook Pro laptop, silver, with a vibrant wallpaper and sleek, modern design. - Xiaomi Silver Laptop'
+2025-06-10 00:46:56,208 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 00:46:58,665 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:46:59,415 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:46:59,416 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:46:59,416 - main_pipeline - DEBUG - Extracting tags from current text: 'Xiaomi Notebook Pro Laptop - Xiaomi Notebook Pro laptop, silver, with a vibrant wallpaper and sleek, modern design. - Xiaomi Silver Laptop'
+2025-06-10 00:47:01,785 - main_pipeline - DEBUG - Extracted tags: ['Laptop', 'Silver', 'Xiaomi', 'Notebook Pro']
+2025-06-10 00:47:01,786 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:47:01,787 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:47:01] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:47:06,683 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:47:06] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:48:00,504 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='give laptops like this image', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:48:00,505 - main_pipeline - DEBUG - Initial state: current_text='Xiaomi Notebook Pro Laptop - Xiaomi Notebook Pro laptop, silver, with a vibrant wallpaper and sleek, modern design. - Xiaomi Silver Laptop', back_bone='Slim Portable Laptop - Portable device for work or entertainment. - Laptop'
+2025-06-10 00:48:00,509 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 00:48:02,046 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-10 00:48:02,047 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-10 00:48:02,048 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:48:03,636 - main_pipeline - DEBUG - Image description extracted: back_bone='Slim Portable Laptop
+            GENERIC_DESC: A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin', current_text='Xiaomi Mi Notebook Pro Laptop
+            DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish.
+            GENERIC_TITLE: Slim Portable Laptop
+            GENERIC_DESC: A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish.
+            GENERIC_TITLE: Slim Portable Laptop
+            GENERIC_DESC: A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin Silver
+            KEY_SPECS: Lightweight, portable, compact, thin Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin'
+2025-06-10 00:48:03,639 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:48:08,457 - main_pipeline - DEBUG - Modified query: 'give laptops like this image'
+2025-06-10 00:48:10,412 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'laptops like this image', 'special': ''}
+2025-06-10 00:48:10,413 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:48:10,414 - main_pipeline - DEBUG - Updating current_text with general query: 'laptops like this image'
+2025-06-10 00:48:11,609 - main_pipeline - DEBUG - Text updated: 'Xiaomi Mi Notebook Pro Laptop
+            DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish.
+            GENERIC_TITLE: Slim Portable Laptop
+            GENERIC_DESC: A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish.
+            GENERIC_TITLE: Slim Portable Laptop
+            GENERIC_DESC: A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin Silver
+            KEY_SPECS: Lightweight, portable, compact, thin Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin' -> 'Xiaomi Mi Notebook Pro Laptop DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish. GENERIC_TITLE: Slim Portable Laptop GENERIC_DESC: A portable device used for work. CATEGORY: Laptop BRAND: Xiaomi COLOR: Silver KEY_SPECS: Lightweight, portable, compact, thin'
+2025-06-10 00:48:11,611 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 00:48:13,847 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:48:14,939 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:48:14,940 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:48:14,940 - main_pipeline - DEBUG - Extracting tags from current text: 'Xiaomi Mi Notebook Pro Laptop DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish. GENERIC_TITLE: Slim Portable Laptop GENERIC_DESC: A portable device used for work. CATEGORY: Laptop BRAND: Xiaomi COLOR: Silver KEY_SPECS: Lightweight, portable, compact, thin'
+2025-06-10 00:48:15,908 - main_pipeline - DEBUG - Extracted tags: ['Xiaomi', 'Silver', 'Lightweight', 'Portable', 'Compact', 'Thin']
+2025-06-10 00:48:15,909 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:48:15,911 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:48:15] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:48:21,783 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:48:21] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:49:22,281 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='give only laptops', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:49:22,288 - main_pipeline - DEBUG - Initial state: current_text='Xiaomi Mi Notebook Pro Laptop DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish. GENERIC_TITLE: Slim Portable Laptop GENERIC_DESC: A portable device used for work. CATEGORY: Laptop BRAND: Xiaomi COLOR: Silver KEY_SPECS: Lightweight, portable, compact, thin', back_bone='Slim Portable Laptop
+            GENERIC_DESC: A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin'
+2025-06-10 00:49:22,297 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 00:49:22,306 - main_pipeline - DEBUG - Modified query: 'give only laptops'
+2025-06-10 00:49:24,858 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'give only laptops', 'special': ''}
+2025-06-10 00:49:24,860 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:49:24,860 - main_pipeline - DEBUG - Updating current_text with general query: 'give only laptops'
+2025-06-10 00:49:25,973 - main_pipeline - DEBUG - Text updated: 'Xiaomi Mi Notebook Pro Laptop DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish. GENERIC_TITLE: Slim Portable Laptop GENERIC_DESC: A portable device used for work. CATEGORY: Laptop BRAND: Xiaomi COLOR: Silver KEY_SPECS: Lightweight, portable, compact, thin' -> 'Xiaomi Mi Notebook Pro Laptop DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish. GENERIC_TITLE: Slim Portable Laptop GENERIC_DESC: A portable device used for work. CATEGORY: Laptop BRAND: Xiaomi COLOR: Silver KEY_SPECS: Lightweight, portable, compact, thin'
+2025-06-10 00:49:25,975 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 00:49:27,388 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:49:27,388 - main_pipeline - DEBUG - No special filtering needed
+2025-06-10 00:49:27,389 - main_pipeline - DEBUG - Extracting tags from current text: 'Xiaomi Mi Notebook Pro Laptop DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish. GENERIC_TITLE: Slim Portable Laptop GENERIC_DESC: A portable device used for work. CATEGORY: Laptop BRAND: Xiaomi COLOR: Silver KEY_SPECS: Lightweight, portable, compact, thin'
+2025-06-10 00:49:29,869 - main_pipeline - DEBUG - Extracted tags: ['Xiaomi', 'Silver', 'Lightweight', 'portable', 'compact', 'thin']
+2025-06-10 00:49:29,870 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:49:29,871 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:49:29] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:49:35,338 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:49:35] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:50:17,243 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\iron.webp
+2025-06-10 00:50:17,247 - main_pipeline - DEBUG - Initial state: current_text='Xiaomi Mi Notebook Pro Laptop DETAIL_DESC: The Xiaomi Mi Notebook Pro is a laptop in a sleek silver finish. GENERIC_TITLE: Slim Portable Laptop GENERIC_DESC: A portable device used for work. CATEGORY: Laptop BRAND: Xiaomi COLOR: Silver KEY_SPECS: Lightweight, portable, compact, thin', back_bone='Slim Portable Laptop
+            GENERIC_DESC: A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - A portable device used for work.
+            CATEGORY: Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin - Laptop
+            BRAND: Xiaomi
+            COLOR: Silver
+            KEY_SPECS: Lightweight, portable, compact, thin'
+2025-06-10 00:50:17,253 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 00:50:19,770 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-10 00:50:19,771 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-10 00:50:19,772 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\iron.webp
+2025-06-10 00:50:21,439 - main_pipeline - DEBUG - Image description extracted: back_bone='Compact Dry Iron - A simple appliance for removing wrinkles. - Appliance', current_text='Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red. - Bajaj Red Appliance'
+2025-06-10 00:50:21,441 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\iron.webp
+2025-06-10 00:50:26,384 - main_pipeline - DEBUG - Modified query: ''
+2025-06-10 00:50:26,385 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-10 00:50:26,387 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 00:50:29,391 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:50:30,725 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:50:30,726 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:50:30,726 - main_pipeline - DEBUG - Extracting tags from current text: 'Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red. - Bajaj Red Appliance'
+2025-06-10 00:50:33,036 - main_pipeline - DEBUG - Extracted tags: ['Bajaj', 'Majesty DX 5', 'dry iron', 'red', 'compact']
+2025-06-10 00:50:33,038 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:50:33,041 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:50:33] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:52:41,638 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='give irons with power greater than 1200 watts', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\iron.webp
+2025-06-10 00:52:41,640 - main_pipeline - DEBUG - Initial state: current_text='Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red. - Bajaj Red Appliance', back_bone='Compact Dry Iron - A simple appliance for removing wrinkles. - Appliance'
+2025-06-10 00:52:41,645 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\iron.webp
+2025-06-10 00:52:41,648 - main_pipeline - DEBUG - Modified query: 'give irons with power greater than 1200 watts'
+2025-06-10 00:52:44,326 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'give irons', 'special': 'with power greater than 1200 watts'}
+2025-06-10 00:52:44,327 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:52:44,329 - main_pipeline - DEBUG - Updating current_text with general query: 'give irons'
+2025-06-10 00:52:45,221 - main_pipeline - DEBUG - Text updated: 'Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red. - Bajaj Red Appliance' -> 'Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red. - Bajaj Red Appliance give irons'
+2025-06-10 00:52:45,222 - main_pipeline - DEBUG - Processing special case from query: with power greater than 1200 watts
+2025-06-10 00:52:45,992 - main_pipeline - DEBUG - Special case dictionary: {'price': None, 'rating': None, 'rating_count': None}
+2025-06-10 00:52:45,994 - main_pipeline - DEBUG - Special case dictionary: {'price': None, 'rating': None, 'rating_count': None}
+2025-06-10 00:52:46,000 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 00:52:47,100 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:52:47,104 - main_pipeline - DEBUG - Applying special case filtering
+2025-06-10 00:52:47,110 - main_pipeline - DEBUG - Extracting tags from current text: 'Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red. - Bajaj Red Appliance give irons'
+2025-06-10 00:52:47,133 - main_pipeline - DEBUG - Applying fast special filter with 1 filters
+2025-06-10 00:53:12,280 - main_pipeline - DEBUG - Extracted tags: ['Bajaj', 'Majesty DX 5', 'dry iron', 'red', 'compact']
+2025-06-10 00:53:12,282 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:53:12,284 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:53:12] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:53:17,167 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:53:17] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:53:44,265 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='give irons with power greater than 1200 watts in different colors', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\iron.webp
+2025-06-10 00:53:44,267 - main_pipeline - DEBUG - Initial state: current_text='Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red. - Bajaj Red Appliance give irons', back_bone='Compact Dry Iron - A simple appliance for removing wrinkles. - Appliance'
+2025-06-10 00:53:44,270 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\iron.webp
+2025-06-10 00:53:44,272 - main_pipeline - DEBUG - Modified query: 'give irons with power greater than 1200 watts in different colors'
+2025-06-10 00:53:48,200 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'give irons in different colors', 'special': 'with power greater than 1200 watts'}
+2025-06-10 00:53:48,209 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:53:48,222 - main_pipeline - DEBUG - Updating current_text with general query: 'give irons in different colors'
+2025-06-10 00:53:49,157 - main_pipeline - DEBUG - Text updated: 'Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red. - Bajaj Red Appliance give irons' -> 'Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red and give irons in different colors. - Bajaj Red Appliance give irons'
+2025-06-10 00:53:49,159 - main_pipeline - DEBUG - Processing special case from query: with power greater than 1200 watts
+2025-06-10 00:53:49,910 - main_pipeline - DEBUG - Special case dictionary: {'price': None, 'rating': None, 'rating_count': None}
+2025-06-10 00:53:49,913 - main_pipeline - DEBUG - Special case dictionary: {'price': None, 'rating': None, 'rating_count': None}
+2025-06-10 00:53:49,915 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 00:53:50,704 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:53:50,706 - main_pipeline - DEBUG - Applying special case filtering
+2025-06-10 00:53:50,707 - main_pipeline - DEBUG - Extracting tags from current text: 'Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red and give irons in different colors. - Bajaj Red Appliance give irons'
+2025-06-10 00:53:50,710 - main_pipeline - DEBUG - Applying fast special filter with 1 filters
+2025-06-10 00:54:16,739 - main_pipeline - DEBUG - Extracted tags: ['Bajaj', 'Majesty DX 5', 'dry iron', 'red', 'compact']
+2025-06-10 00:54:16,742 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:54:16,750 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:54:16] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:54:21,308 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:54:21] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:55:05,298 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='give decor matching the tile', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\living_room.jpg
+2025-06-10 00:55:05,301 - main_pipeline - DEBUG - Initial state: current_text='Bajaj Majesty DX 5 Dry Iron - The Bajaj Majesty DX 5 dry iron is compact and comes in red and give irons in different colors. - Bajaj Red Appliance give irons', back_bone='Compact Dry Iron - A simple appliance for removing wrinkles. - Appliance'
+2025-06-10 00:55:05,304 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 00:55:06,921 - main_pipeline - DEBUG - Intent result: {'intent': 1, 'recommendations_query': 'beige linen curtains, light wood flooring, off-white sectional sofa, modern pendant lighting, decorative throw pillows, glass partition wall'}
+2025-06-10 00:55:06,921 - main_pipeline - DEBUG - Special intent detected
+2025-06-10 00:55:06,922 - main_pipeline - DEBUG - Intent is special, current_text is now: beige linen curtains, light wood flooring, off-white sectional sofa, modern pendant lighting, decorative throw pillows, glass partition wall
+2025-06-10 00:55:06,923 - main_pipeline - DEBUG - No image path, extracting from text
+2025-06-10 00:55:07,895 - main_pipeline - DEBUG - Text split: back_bone='curtains, flooring, sofa, lighting, pillows, wall', current_text='beige linen curtains, light wood flooring, off-white sectional sofa, modern pendant lighting, decorative throw pillows, glass partition wall'
+2025-06-10 00:55:14,999 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Colorful curtains and pillows, modern sofa, bright lighting, durable flooring, no black or white', 'special': ''}
+2025-06-10 00:55:15,001 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:55:15,003 - main_pipeline - DEBUG - Updating current_text with general query: 'Colorful curtains and pillows, modern sofa, bright lighting, durable flooring, no black or white'
+2025-06-10 00:55:15,895 - main_pipeline - DEBUG - Text updated: 'beige linen curtains, light wood flooring, off-white sectional sofa, modern pendant lighting, decorative throw pillows, glass partition wall' -> 'Colorful linen curtains, durable wood flooring, modern sofa, bright pendant lighting, colorful throw pillows, glass partition wall, no black or white'
+2025-06-10 00:55:15,897 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 00:55:18,241 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:55:19,189 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:55:19,191 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:55:19,193 - main_pipeline - DEBUG - Extracting tags from current text: 'Colorful linen curtains, durable wood flooring, modern sofa, bright pendant lighting, colorful throw pillows, glass partition wall, no black or white'
+2025-06-10 00:55:20,265 - main_pipeline - DEBUG - Extracted tags: ['linen', 'wood', 'modern', 'pendant', 'glass', 'colorful']
+2025-06-10 00:55:20,265 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:55:20,267 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:55:20] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:55:25,014 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:55:25] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:55:56,930 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\living_room.jpg
+2025-06-10 00:55:56,931 - main_pipeline - DEBUG - Initial state: current_text='Colorful linen curtains, durable wood flooring, modern sofa, bright pendant lighting, colorful throw pillows, glass partition wall, no black or white', back_bone='curtains, flooring, sofa, lighting, pillows, wall'
+2025-06-10 00:55:56,932 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 00:55:58,035 - main_pipeline - DEBUG - Intent result: {'intent': 1, 'recommendations_query': 'modern sofa, sheer curtains, room divider, bar stools, minimalist lighting, decorative cushions'}
+2025-06-10 00:55:58,036 - main_pipeline - DEBUG - Special intent detected
+2025-06-10 00:55:58,036 - main_pipeline - DEBUG - Intent is special, current_text is now: modern sofa, sheer curtains, room divider, bar stools, minimalist lighting, decorative cushions
+2025-06-10 00:55:58,036 - main_pipeline - DEBUG - No image path, extracting from text
+2025-06-10 00:55:59,192 - main_pipeline - DEBUG - Text split: back_bone='sofa, curtains, room divider, bar stools, lighting, cushions', current_text='modern sofa, sheer curtains, room divider, bar stools, minimalist lighting, decorative cushions'
+2025-06-10 00:56:05,589 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'decorative cushions bold patterns, jewel tones, no black, no white', 'special': ''}
+2025-06-10 00:56:05,590 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:56:05,590 - main_pipeline - DEBUG - Updating current_text with general query: 'decorative cushions bold patterns, jewel tones, no black, no white'
+2025-06-10 00:56:06,506 - main_pipeline - DEBUG - Text updated: 'modern sofa, sheer curtains, room divider, bar stools, minimalist lighting, decorative cushions' -> 'modern sofa, sheer curtains, room divider, bar stools, minimalist lighting, decorative cushions bold patterns, jewel tones, no black, no white'
+2025-06-10 00:56:06,508 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 00:56:08,152 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:56:08,877 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:56:08,878 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:56:08,880 - main_pipeline - DEBUG - Extracting tags from current text: 'modern sofa, sheer curtains, room divider, bar stools, minimalist lighting, decorative cushions bold patterns, jewel tones, no black, no white'
+2025-06-10 00:56:11,234 - main_pipeline - DEBUG - Extracted tags: ['modern', 'sheer', 'bar stools', 'minimalist', 'decorative cushions', 'bold patterns', 'jewel tones', 'no black', 'no white']
+2025-06-10 00:56:11,235 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:56:11,236 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:56:11] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:56:54,240 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:56:54,240 - main_pipeline - DEBUG - Initial state: current_text='modern sofa, sheer curtains, room divider, bar stools, minimalist lighting, decorative cushions bold patterns, jewel tones, no black, no white', back_bone='sofa, curtains, room divider, bar stools, lighting, cushions'
+2025-06-10 00:56:54,241 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 00:56:55,861 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-10 00:56:55,862 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-10 00:56:55,863 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:56:57,559 - main_pipeline - DEBUG - Image description extracted: back_bone='Wall Air Conditioner Unit - Mountable unit, temperature regulation, energy efficient for cooling. - Appliance', current_text='Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand White Appliance'
+2025-06-10 00:56:57,559 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:57:02,700 - main_pipeline - DEBUG - Modified query: ''
+2025-06-10 00:57:02,702 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-10 00:57:02,704 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 00:57:04,024 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:57:04,743 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:57:04,747 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:57:04,750 - main_pipeline - DEBUG - Extracting tags from current text: 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand White Appliance'
+2025-06-10 00:57:06,988 - main_pipeline - DEBUG - Extracted tags: ['AC', 'Wall Mounted', 'Split', 'Air Conditioning', 'White', 'Small', 'Medium']
+2025-06-10 00:57:06,990 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:57:06,995 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:57:06] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:57:18,987 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='White is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:57:18,988 - main_pipeline - DEBUG - Initial state: current_text='Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand White Appliance', back_bone='Wall Air Conditioner Unit - Mountable unit, temperature regulation, energy efficient for cooling. - Appliance'
+2025-06-10 00:57:18,990 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:57:18,992 - main_pipeline - DEBUG - Modified query: 'White is optional'
+2025-06-10 00:57:20,743 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'White is optional', 'special': ''}
+2025-06-10 00:57:20,746 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 00:57:20,749 - main_pipeline - DEBUG - Updating current_text with general query: 'White is optional'
+2025-06-10 00:57:21,642 - main_pipeline - DEBUG - Text updated: 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand White Appliance' -> 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand Appliance'
+2025-06-10 00:57:21,643 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 00:57:22,635 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:57:22,636 - main_pipeline - DEBUG - No special filtering needed
+2025-06-10 00:57:22,636 - main_pipeline - DEBUG - Extracting tags from current text: 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand Appliance'
+2025-06-10 00:57:23,576 - main_pipeline - DEBUG - Extracted tags: ['AC', 'Wall Mounted', 'Split', 'Air Conditioning', 'White', 'Small', 'Medium', 'Brand Appliance']
+2025-06-10 00:57:23,576 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:57:23,578 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:57:23] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:57:28,711 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:57:28] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:57:50,434 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='white color is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:57:50,435 - main_pipeline - DEBUG - Initial state: current_text='Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand Appliance', back_bone='Wall Air Conditioner Unit - Mountable unit, temperature regulation, energy efficient for cooling. - Appliance'
+2025-06-10 00:57:50,439 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:57:50,444 - main_pipeline - DEBUG - Modified query: 'white color is optional'
+2025-06-10 00:57:51,976 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'white color is optional', 'special': ''}
+2025-06-10 00:57:51,977 - main_pipeline - DEBUG - Conflict detected: True
+2025-06-10 00:57:51,979 - main_pipeline - DEBUG - Updating current_text with general query: 'white color is optional'
+2025-06-10 00:57:52,813 - main_pipeline - DEBUG - Text updated: 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand Appliance' -> 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand Appliance'
+2025-06-10 00:57:52,818 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=True or reset=False
+2025-06-10 00:57:55,007 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:57:55,720 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:57:55,720 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:57:55,720 - main_pipeline - DEBUG - Extracting tags from current text: 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand Appliance'
+2025-06-10 00:57:57,940 - main_pipeline - DEBUG - Extracted tags: ['AC', 'Wall Mounted', 'Split', 'Air Conditioning', 'White', 'Brand Appliance']
+2025-06-10 00:57:57,941 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:57:57,944 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:57:57] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:58:02,684 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:58:02] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:58:20,029 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='red color', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:58:20,032 - main_pipeline - DEBUG - Initial state: current_text='Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand Appliance', back_bone='Wall Air Conditioner Unit - Mountable unit, temperature regulation, energy efficient for cooling. - Appliance'
+2025-06-10 00:58:20,038 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac.webp
+2025-06-10 00:58:20,041 - main_pipeline - DEBUG - Modified query: 'red color'
+2025-06-10 00:58:21,553 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'red color', 'special': ''}
+2025-06-10 00:58:21,554 - main_pipeline - DEBUG - Conflict detected: True
+2025-06-10 00:58:21,555 - main_pipeline - DEBUG - Updating current_text with general query: 'red color'
+2025-06-10 00:58:22,374 - main_pipeline - DEBUG - Text updated: 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in white, cooling small to medium spaces. - Brand Appliance' -> 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in red, cooling small to medium spaces. - Brand Appliance'
+2025-06-10 00:58:22,374 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=True or reset=False
+2025-06-10 00:58:24,536 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:58:25,297 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:58:25,300 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:58:25,302 - main_pipeline - DEBUG - Extracting tags from current text: 'Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in red, cooling small to medium spaces. - Brand Appliance'
+2025-06-10 00:58:27,576 - main_pipeline - DEBUG - Extracted tags: ['AC', 'Wall Mounted', 'Split', 'Air Conditioning', 'Red', 'Small', 'Medium', 'Brand Appliance']
+2025-06-10 00:58:27,576 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:58:27,580 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:58:27] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 00:58:33,142 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:58:33] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 00:59:11,671 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 00:59:11,675 - main_pipeline - DEBUG - Initial state: current_text='Brand AC Wall Mounted Unit - Brand wall mounted split air conditioning unit in red, cooling small to medium spaces. - Brand Appliance', back_bone='Wall Air Conditioner Unit - Mountable unit, temperature regulation, energy efficient for cooling. - Appliance'
+2025-06-10 00:59:11,683 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 00:59:14,091 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-10 00:59:14,092 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-10 00:59:14,093 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 00:59:16,486 - main_pipeline - DEBUG - Image description extracted: back_bone='Clothes Dry Iron - Electric tool designed to press fabric. - Home appliance', current_text='Prestige Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body in white/aqua. - Prestige White, Aqua Home appliance'
+2025-06-10 00:59:16,488 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 00:59:21,506 - main_pipeline - DEBUG - Modified query: ''
+2025-06-10 00:59:21,507 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-10 00:59:21,508 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 00:59:24,413 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 00:59:25,381 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 00:59:25,382 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 00:59:25,383 - main_pipeline - DEBUG - Extracting tags from current text: 'Prestige Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body in white/aqua. - Prestige White, Aqua Home appliance'
+2025-06-10 00:59:26,296 - main_pipeline - DEBUG - Extracted tags: ['Prestige', 'Dry Iron', 'Light Weight', 'White', 'Aqua']
+2025-06-10 00:59:26,296 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 00:59:26,299 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 00:59:26] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 01:00:19,082 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='philips brand, , Aqua is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 01:00:19,085 - main_pipeline - DEBUG - Initial state: current_text='Prestige Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body in white/aqua. - Prestige White, Aqua Home appliance', back_bone='Clothes Dry Iron - Electric tool designed to press fabric. - Home appliance'
+2025-06-10 01:00:19,087 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 01:00:19,090 - main_pipeline - DEBUG - Modified query: 'philips brand, , Aqua is optional'
+2025-06-10 01:00:20,820 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'philips brand, Aqua is optional', 'special': ''}
+2025-06-10 01:00:20,822 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 01:00:20,824 - main_pipeline - DEBUG - Updating current_text with general query: 'philips brand, Aqua is optional'
+2025-06-10 01:00:22,190 - main_pipeline - DEBUG - Text updated: 'Prestige Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body in white/aqua. - Prestige White, Aqua Home appliance' -> 'Philips Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body in white. - Prestige White Home appliance'
+2025-06-10 01:00:22,191 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 01:00:23,202 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 01:00:23,207 - main_pipeline - DEBUG - No special filtering needed
+2025-06-10 01:00:23,208 - main_pipeline - DEBUG - Extracting tags from current text: 'Philips Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body in white. - Prestige White Home appliance'
+2025-06-10 01:00:25,691 - main_pipeline - DEBUG - Extracted tags: ['Philips', 'Dry Iron', 'Light Weight', 'Prestige', 'White']
+2025-06-10 01:00:25,692 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 01:00:25,695 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:00:25] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 01:00:30,737 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:00:30] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 01:01:09,304 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='under 1000 rupees, White is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 01:01:09,305 - main_pipeline - DEBUG - Initial state: current_text='Philips Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body in white. - Prestige White Home appliance', back_bone='Clothes Dry Iron - Electric tool designed to press fabric. - Home appliance'
+2025-06-10 01:01:09,308 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 01:01:09,311 - main_pipeline - DEBUG - Modified query: 'under 1000 rupees, White is optional'
+2025-06-10 01:01:10,913 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'White is optional', 'special': 'under 1000 rupees'}
+2025-06-10 01:01:10,916 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 01:01:10,917 - main_pipeline - DEBUG - Updating current_text with general query: 'White is optional'
+2025-06-10 01:01:11,783 - main_pipeline - DEBUG - Text updated: 'Philips Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body in white. - Prestige White Home appliance' -> 'Philips Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body. - Prestige Home appliance'
+2025-06-10 01:01:11,783 - main_pipeline - DEBUG - Processing special case from query: under 1000 rupees
+2025-06-10 01:01:14,001 - main_pipeline - DEBUG - Special case dictionary: {'price': [0, 1000], 'rating': None, 'rating_count': None}
+2025-06-10 01:01:14,011 - main_pipeline - DEBUG - Special case dictionary: {'price': [0, 1000], 'rating': None, 'rating_count': None}
+2025-06-10 01:01:14,026 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 01:01:14,848 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 01:01:14,858 - main_pipeline - DEBUG - Applying special case filtering
+2025-06-10 01:01:14,871 - main_pipeline - DEBUG - Extracting tags from current text: 'Philips Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body. - Prestige Home appliance'
+2025-06-10 01:01:17,085 - main_pipeline - DEBUG - Extracted tags: ['Philips', 'Dry Iron', 'Light Weight', 'Prestige', 'Home appliance']
+2025-06-10 01:01:17,087 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 01:01:17,089 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:01:17] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 01:01:21,783 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:01:21] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 01:02:07,364 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:07] "GET /cart HTTP/1.1" 200 -
+2025-06-10 01:02:07,483 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:02:07,622 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:07] "GET /static/css/cart.css HTTP/1.1" 200 -
+2025-06-10 01:02:07,791 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:07] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:02:07,792 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:07] "GET /static/js/cartPage.js HTTP/1.1" 200 -
+2025-06-10 01:02:13,582 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:13] "GET /profile HTTP/1.1" 200 -
+2025-06-10 01:02:13,649 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:02:19,910 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:19] "GET /profile HTTP/1.1" 200 -
+2025-06-10 01:02:19,968 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:02:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:03:21,619 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:21] "[32mPOST /profile HTTP/1.1[0m" 302 -
+2025-06-10 01:03:21,629 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:21] "GET /profile HTTP/1.1" 200 -
+2025-06-10 01:03:21,876 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:03:25,000 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:25] "GET / HTTP/1.1" 200 -
+2025-06-10 01:03:25,077 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:03:25,254 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:25] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:03:25,351 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:25] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:03:25,354 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:25] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 01:03:25,356 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 01:03:30,475 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:30] "GET /cart HTTP/1.1" 200 -
+2025-06-10 01:03:30,792 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:03:30,838 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:30] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:03:30,839 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:30] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-10 01:03:30,839 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:30] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-10 01:03:35,771 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:35] "POST /api/checkout HTTP/1.1" 200 -
+2025-06-10 01:03:36,212 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:36] "GET /checkout/43f16483-8e73-4fdb-b4e4-3b33fa6e25de HTTP/1.1" 200 -
+2025-06-10 01:03:36,253 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:03:36,578 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:36] "GET /static/css/promocode.css HTTP/1.1" 200 -
+2025-06-10 01:03:36,579 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:36] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:03:36,579 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:36] "GET /static/css/ai-checkout.css HTTP/1.1" 200 -
+2025-06-10 01:03:36,581 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:03:36] "GET /static/css/checkout.css HTTP/1.1" 200 -
+2025-06-10 01:04:38,531 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:04:38] "[32mPOST /checkout/complete/43f16483-8e73-4fdb-b4e4-3b33fa6e25de HTTP/1.1[0m" 302 -
+2025-06-10 01:04:38,561 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:04:38] "GET /checkout/success/43f16483-8e73-4fdb-b4e4-3b33fa6e25de HTTP/1.1" 200 -
+2025-06-10 01:04:51,708 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:04:51] "GET / HTTP/1.1" 200 -
+2025-06-10 01:04:52,024 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:04:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:04:52,069 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:04:52] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:04:52,077 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:04:52] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:04:52,091 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:04:52] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 01:04:52,096 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:04:52] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 01:18:06,617 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 01:18:06,621 - main_pipeline - DEBUG - Initial state: current_text='Philips Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body. - Prestige Home appliance', back_bone='Clothes Dry Iron - Electric tool designed to press fabric. - Home appliance'
+2025-06-10 01:18:06,627 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img2.jpg
+2025-06-10 01:18:06,630 - main_pipeline - DEBUG - Modified query: ''
+2025-06-10 01:18:08,665 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-10 01:18:08,666 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 01:18:09,624 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 01:18:09,625 - main_pipeline - DEBUG - No special filtering needed
+2025-06-10 01:18:09,625 - main_pipeline - DEBUG - Extracting tags from current text: 'Philips Dry Iron - Light Weight - Prestige Dry Iron for crisp results, featuring a light weight body. - Prestige Home appliance'
+2025-06-10 01:18:11,739 - main_pipeline - DEBUG - Extracted tags: ['Philips', 'Dry Iron', 'Light Weight', 'Prestige', 'Home appliance']
+2025-06-10 01:18:11,740 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 01:18:11,743 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:18:11] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 01:18:23,193 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:18:23] "GET /cart HTTP/1.1" 200 -
+2025-06-10 01:18:23,498 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:18:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:18:23,550 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:18:23] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-10 01:18:23,550 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:18:23] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:18:23,551 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:18:23] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-10 01:19:40,701 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:19:40] "POST /api/checkout HTTP/1.1" 200 -
+2025-06-10 01:19:40,975 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:19:40] "GET /checkout/70c2cb35-8fbf-46ab-a6c0-68301e78a88e HTTP/1.1" 200 -
+2025-06-10 01:19:41,033 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:19:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:19:41,327 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:19:41] "[36mGET /static/css/promocode.css HTTP/1.1[0m" 304 -
+2025-06-10 01:19:41,327 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:19:41] "[36mGET /static/css/ai-checkout.css HTTP/1.1[0m" 304 -
+2025-06-10 01:19:41,331 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:19:41] "[36mGET /static/css/checkout.css HTTP/1.1[0m" 304 -
+2025-06-10 01:19:41,334 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:19:41] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:20:46,985 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:20:46] "[32mPOST /checkout/complete/70c2cb35-8fbf-46ab-a6c0-68301e78a88e HTTP/1.1[0m" 302 -
+2025-06-10 01:20:46,996 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:20:46] "GET /checkout/success/70c2cb35-8fbf-46ab-a6c0-68301e78a88e HTTP/1.1" 200 -
+2025-06-10 01:58:31,773 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.29.66:3000
+2025-06-10 01:58:31,778 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-10 01:58:31,806 - werkzeug - INFO -  * Restarting with stat
+2025-06-10 01:58:49,827 - werkzeug - WARNING -  * Debugger is active!
+2025-06-10 01:58:49,963 - werkzeug - INFO -  * Debugger PIN: 292-838-702
+2025-06-10 01:59:32,324 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:32] "GET / HTTP/1.1" 200 -
+2025-06-10 01:59:33,282 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:59:33,534 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:33] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:59:33,828 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:33] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 01:59:33,849 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:33] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:59:33,915 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:33] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 01:59:34,315 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-10 01:59:37,947 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:37] "GET /cart HTTP/1.1" 200 -
+2025-06-10 01:59:38,215 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:59:38,373 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:38] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:59:38,382 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:38] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-10 01:59:38,390 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:38] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-10 01:59:45,761 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:45] "GET / HTTP/1.1" 200 -
+2025-06-10 01:59:46,027 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:59:46,183 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:46] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 01:59:46,193 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:46] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:59:46,203 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:46] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:59:46,209 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 01:59:50,945 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:50] "GET / HTTP/1.1" 200 -
+2025-06-10 01:59:51,051 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:59:51,216 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:51] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 01:59:51,389 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:51] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 01:59:51,398 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:51] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 01:59:51,557 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 01:59:51] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 02:00:02,182 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:02] "GET /cart HTTP/1.1" 200 -
+2025-06-10 02:00:02,423 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:00:02,457 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:02] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-10 02:00:02,575 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:02] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 02:00:02,588 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:02] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-10 02:00:04,951 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:04] "GET / HTTP/1.1" 200 -
+2025-06-10 02:00:05,263 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:00:05,425 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:05] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:00:05,428 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:05] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 02:00:05,430 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 02:00:05,779 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:00:05] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 02:00:54,782 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img3.jpg
+2025-06-10 02:00:54,790 - main_pipeline - DEBUG - Initial state: current_text='', back_bone=''
+2025-06-10 02:00:54,811 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 02:00:59,024 - main_pipeline - DEBUG - Intent result: {'intent': 1, 'recommendations_query': 'modern fireplace insert, decorative wall art, indoor lighting, stylish door, hardwood floor'}
+2025-06-10 02:00:59,034 - main_pipeline - DEBUG - Special intent detected
+2025-06-10 02:00:59,048 - main_pipeline - DEBUG - Intent is special, current_text is now: modern fireplace insert, decorative wall art, indoor lighting, stylish door, hardwood floor
+2025-06-10 02:00:59,051 - main_pipeline - DEBUG - No image path, extracting from text
+2025-06-10 02:01:00,043 - main_pipeline - DEBUG - Text split: back_bone='fireplace insert, wall art, indoor lighting, door, hardwood floor', current_text='modern fireplace insert, decorative wall art, indoor lighting, stylish door, hardwood floor'
+2025-06-10 02:01:09,411 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, hardwood floor coordinating with tile', 'special': ''}
+2025-06-10 02:01:09,414 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 02:01:09,419 - main_pipeline - DEBUG - Updating current_text with general query: 'Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, hardwood floor coordinating with tile'
+2025-06-10 02:01:10,281 - main_pipeline - DEBUG - Text updated: 'modern fireplace insert, decorative wall art, indoor lighting, stylish door, hardwood floor' -> 'Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, hardwood floor coordinating with tile'
+2025-06-10 02:01:10,284 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 02:01:12,558 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 02:01:13,668 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:01:13,672 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 02:01:13,674 - main_pipeline - DEBUG - Extracting tags from current text: 'Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, hardwood floor coordinating with tile'
+2025-06-10 02:01:16,042 - main_pipeline - DEBUG - Extracted tags: ['Red', 'Fireplace insert', 'Rustic', 'Wall art', 'Tile', 'Bright', 'Indoor lighting', 'Door', 'Hardwood floor']
+2025-06-10 02:01:16,044 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:01:16,049 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:01:16] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:02:35,078 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='give decor that matches the image flooring', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\img3.jpg
+2025-06-10 02:02:35,121 - main_pipeline - DEBUG - Initial state: current_text='Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, hardwood floor coordinating with tile', back_bone='fireplace insert, wall art, indoor lighting, door, hardwood floor'
+2025-06-10 02:02:35,199 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\img3.jpg
+2025-06-10 02:02:35,230 - main_pipeline - DEBUG - Modified query: 'give decor that matches the image flooring'
+2025-06-10 02:02:37,845 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'decor that matches the image flooring', 'special': ''}
+2025-06-10 02:02:37,850 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 02:02:37,855 - main_pipeline - DEBUG - Updating current_text with general query: 'decor that matches the image flooring'
+2025-06-10 02:02:38,754 - main_pipeline - DEBUG - Text updated: 'Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, hardwood floor coordinating with tile' -> 'Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, decor that matches the image flooring'
+2025-06-10 02:02:38,758 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 02:02:39,783 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:02:39,788 - main_pipeline - DEBUG - No special filtering needed
+2025-06-10 02:02:39,795 - main_pipeline - DEBUG - Extracting tags from current text: 'Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, decor that matches the image flooring'
+2025-06-10 02:02:42,246 - main_pipeline - DEBUG - Extracted tags: ['red', 'accent', 'fireplace insert', 'rustic', 'wall art', 'tile', 'bright', 'indoor lighting', 'door', 'flooring']
+2025-06-10 02:02:42,249 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:02:42,256 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:02:42] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:02:46,968 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:02:46] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 02:03:13,956 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:13] "GET /cart HTTP/1.1" 200 -
+2025-06-10 02:03:14,229 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:03:14,344 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:14] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 02:03:14,344 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:14] "[36mGET /static/css/cart.css HTTP/1.1[0m" 304 -
+2025-06-10 02:03:14,348 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:14] "[36mGET /static/js/cartPage.js HTTP/1.1[0m" 304 -
+2025-06-10 02:03:25,564 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:25] "POST /api/checkout HTTP/1.1" 200 -
+2025-06-10 02:03:25,953 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:25] "GET /checkout/bf45285e-96e3-4599-9002-76d3bf591e02 HTTP/1.1" 200 -
+2025-06-10 02:03:26,067 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:03:26,429 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:26] "[36mGET /static/css/promocode.css HTTP/1.1[0m" 304 -
+2025-06-10 02:03:26,434 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:26] "[36mGET /static/css/ai-checkout.css HTTP/1.1[0m" 304 -
+2025-06-10 02:03:26,438 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:26] "[36mGET /static/css/checkout.css HTTP/1.1[0m" 304 -
+2025-06-10 02:03:26,444 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:03:26] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 02:04:18,265 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:18] "GET /checkout/bf45285e-96e3-4599-9002-76d3bf591e02 HTTP/1.1" 200 -
+2025-06-10 02:04:18,322 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:04:18,510 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:18] "[36mGET /static/css/checkout.css HTTP/1.1[0m" 304 -
+2025-06-10 02:04:18,640 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:18] "[36mGET /static/css/promocode.css HTTP/1.1[0m" 304 -
+2025-06-10 02:04:18,642 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:18] "[36mGET /static/css/ai-checkout.css HTTP/1.1[0m" 304 -
+2025-06-10 02:04:18,644 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:18] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 02:04:43,464 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:43] "GET /checkout/bf45285e-96e3-4599-9002-76d3bf591e02 HTTP/1.1" 200 -
+2025-06-10 02:04:43,549 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:04:43,710 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:43] "[36mGET /static/css/checkout.css HTTP/1.1[0m" 304 -
+2025-06-10 02:04:43,900 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:43] "[36mGET /static/css/ai-checkout.css HTTP/1.1[0m" 304 -
+2025-06-10 02:04:43,906 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:43] "[36mGET /static/css/promocode.css HTTP/1.1[0m" 304 -
+2025-06-10 02:04:43,908 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:04:43] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 02:06:49,114 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:06:49] "[32mPOST /checkout/complete/bf45285e-96e3-4599-9002-76d3bf591e02 HTTP/1.1[0m" 302 -
+2025-06-10 02:06:49,191 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:06:49] "GET /checkout/success/bf45285e-96e3-4599-9002-76d3bf591e02 HTTP/1.1" 200 -
+2025-06-10 02:08:35,731 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:08:35] "GET / HTTP/1.1" 200 -
+2025-06-10 02:08:36,022 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:08:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:08:36,112 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:08:36] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 02:08:36,116 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:08:36] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 02:08:36,119 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:08:36] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:08:36,119 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:08:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 02:09:55,225 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\ac2.jpg
+2025-06-10 02:09:55,228 - main_pipeline - DEBUG - Initial state: current_text='Red accent fireplace insert, rustic wall art matching tile, bright indoor lighting, red door options, decor that matches the image flooring', back_bone='fireplace insert, wall art, indoor lighting, door, hardwood floor'
+2025-06-10 02:09:55,233 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 02:09:59,467 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-10 02:09:59,472 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-10 02:09:59,486 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac2.jpg
+2025-06-10 02:10:03,394 - main_pipeline - DEBUG - Image description extracted: back_bone='Wall Mounted Air Conditioner - Provides cooling for indoor spaces. - Appliances', current_text='LG Dual Inverter Air Conditioner - LG Dual Inverter AC, providing efficient cooling in white finish. - LG White Appliances'
+2025-06-10 02:10:03,398 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac2.jpg
+2025-06-10 02:10:08,404 - main_pipeline - DEBUG - Modified query: ''
+2025-06-10 02:10:08,406 - main_pipeline - DEBUG - No modification text provided, query_dict will be empty
+2025-06-10 02:10:08,409 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 02:10:13,520 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 02:10:14,659 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:10:14,661 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 02:10:14,671 - main_pipeline - DEBUG - Extracting tags from current text: 'LG Dual Inverter Air Conditioner - LG Dual Inverter AC, providing efficient cooling in white finish. - LG White Appliances'
+2025-06-10 02:10:15,853 - main_pipeline - DEBUG - Extracted tags: ['LG', 'Dual Inverter', 'Air Conditioner', 'AC', 'White']
+2025-06-10 02:10:15,856 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:10:15,873 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:10:15] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:11:43,323 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='LG is optional', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\ac2.jpg
+2025-06-10 02:11:43,337 - main_pipeline - DEBUG - Initial state: current_text='LG Dual Inverter Air Conditioner - LG Dual Inverter AC, providing efficient cooling in white finish. - LG White Appliances', back_bone='Wall Mounted Air Conditioner - Provides cooling for indoor spaces. - Appliances'
+2025-06-10 02:11:43,376 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac2.jpg
+2025-06-10 02:11:43,391 - main_pipeline - DEBUG - Modified query: 'LG is optional'
+2025-06-10 02:11:45,685 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'LG is optional', 'special': ''}
+2025-06-10 02:11:45,686 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 02:11:45,689 - main_pipeline - DEBUG - Updating current_text with general query: 'LG is optional'
+2025-06-10 02:11:46,605 - main_pipeline - DEBUG - Text updated: 'LG Dual Inverter Air Conditioner - LG Dual Inverter AC, providing efficient cooling in white finish. - LG White Appliances' -> 'Dual Inverter Air Conditioner - Dual Inverter AC, providing efficient cooling in white finish. - White Appliances'
+2025-06-10 02:11:46,606 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 02:11:47,495 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:11:47,504 - main_pipeline - DEBUG - No special filtering needed
+2025-06-10 02:11:47,511 - main_pipeline - DEBUG - Extracting tags from current text: 'Dual Inverter Air Conditioner - Dual Inverter AC, providing efficient cooling in white finish. - White Appliances'
+2025-06-10 02:11:49,908 - main_pipeline - DEBUG - Extracted tags: ['Dual Inverter', 'Air Conditioner', 'White']
+2025-06-10 02:11:49,911 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:11:49,916 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:11:49] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:11:55,419 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:11:55] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 02:12:53,193 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='greater than 1.5ton and 5 star effiency', reset=False, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\ac2.jpg
+2025-06-10 02:12:53,196 - main_pipeline - DEBUG - Initial state: current_text='Dual Inverter Air Conditioner - Dual Inverter AC, providing efficient cooling in white finish. - White Appliances', back_bone='Wall Mounted Air Conditioner - Provides cooling for indoor spaces. - Appliances'
+2025-06-10 02:12:53,200 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\ac2.jpg
+2025-06-10 02:12:53,205 - main_pipeline - DEBUG - Modified query: 'greater than 1.5ton and 5 star effiency'
+2025-06-10 02:12:55,628 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'greater than 1.5ton', 'special': '5 star effiency'}
+2025-06-10 02:12:55,634 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 02:12:55,639 - main_pipeline - DEBUG - Updating current_text with general query: 'greater than 1.5ton'
+2025-06-10 02:12:56,446 - main_pipeline - DEBUG - Text updated: 'Dual Inverter Air Conditioner - Dual Inverter AC, providing efficient cooling in white finish. - White Appliances' -> 'Dual Inverter Air Conditioner - Dual Inverter AC, providing efficient cooling in white finish, greater than 1.5ton. - White Appliances'
+2025-06-10 02:12:56,447 - main_pipeline - DEBUG - Processing special case from query: 5 star effiency
+2025-06-10 02:12:57,264 - main_pipeline - DEBUG - Special case dictionary: {'price': None, 'rating': [5, 5], 'rating_count': None}
+2025-06-10 02:12:57,267 - main_pipeline - DEBUG - Special case dictionary: {'price': None, 'rating': [5, 5], 'rating_count': None}
+2025-06-10 02:12:57,269 - main_pipeline - DEBUG - No conflict/reset - using rerank_only path
+2025-06-10 02:12:58,292 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:12:58,296 - main_pipeline - DEBUG - Applying special case filtering
+2025-06-10 02:12:58,299 - main_pipeline - DEBUG - Extracting tags from current text: 'Dual Inverter Air Conditioner - Dual Inverter AC, providing efficient cooling in white finish, greater than 1.5ton. - White Appliances'
+2025-06-10 02:12:58,306 - main_pipeline - DEBUG - Applying fast special filter with 1 filters
+2025-06-10 02:13:27,986 - main_pipeline - DEBUG - Extracted tags: ['Dual Inverter', 'Air Conditioner', 'AC', 'White', '1.5ton', 'Appliances']
+2025-06-10 02:13:27,991 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:13:27,997 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:13:27] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:13:33,930 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:13:33] "POST /api/suggest-questions HTTP/1.1" 200 -
+2025-06-10 02:14:45,288 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:14:45] "GET / HTTP/1.1" 200 -
+2025-06-10 02:14:45,386 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:14:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:14:45,534 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:14:45] "[36mGET /static/css/new-style.css HTTP/1.1[0m" 304 -
+2025-06-10 02:14:45,712 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:14:45] "[36mGET /static/js/cart.js HTTP/1.1[0m" 304 -
+2025-06-10 02:14:45,716 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:14:45] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-06-10 02:14:45,896 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:14:45] "[33mGET /src%0Frontendstaticimghero-pattern.svg HTTP/1.1[0m" 404 -
+2025-06-10 02:16:47,483 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\images_4.jpeg.jpg
+2025-06-10 02:16:47,486 - main_pipeline - DEBUG - Initial state: current_text='Dual Inverter Air Conditioner - Dual Inverter AC, providing efficient cooling in white finish, greater than 1.5ton. - White Appliances', back_bone='Wall Mounted Air Conditioner - Provides cooling for indoor spaces. - Appliances'
+2025-06-10 02:16:47,492 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 02:16:49,895 - main_pipeline - DEBUG - Intent result: {'intent': 1, 'recommendations_query': 'modern recessed lighting, LED ceiling panel, decorative ceiling trim, minimalist chandelier'}
+2025-06-10 02:16:49,897 - main_pipeline - DEBUG - Special intent detected
+2025-06-10 02:16:49,900 - main_pipeline - DEBUG - Intent is special, current_text is now: modern recessed lighting, LED ceiling panel, decorative ceiling trim, minimalist chandelier
+2025-06-10 02:16:49,902 - main_pipeline - DEBUG - No image path, extracting from text
+2025-06-10 02:16:50,947 - main_pipeline - DEBUG - Text split: back_bone='recessed lighting, LED ceiling panel, ceiling trim, chandelier', current_text='modern recessed lighting, LED ceiling panel, decorative ceiling trim, minimalist chandelier'
+2025-06-10 02:16:57,691 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'Philips LED ceiling panel warm white, matching decor, optional chandelier', 'special': 'under 1000 rupees'}
+2025-06-10 02:16:57,694 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 02:16:57,699 - main_pipeline - DEBUG - Updating current_text with general query: 'Philips LED ceiling panel warm white, matching decor, optional chandelier'
+2025-06-10 02:16:58,488 - main_pipeline - DEBUG - Text updated: 'modern recessed lighting, LED ceiling panel, decorative ceiling trim, minimalist chandelier' -> 'modern recessed lighting, Philips LED ceiling panel warm white, decorative ceiling trim, matching decor'
+2025-06-10 02:16:58,490 - main_pipeline - DEBUG - Processing special case from query: under 1000 rupees
+2025-06-10 02:17:00,691 - main_pipeline - DEBUG - Special case dictionary: {'price': [0, 1000], 'rating': None, 'rating_count': None}
+2025-06-10 02:17:00,698 - main_pipeline - DEBUG - Special case dictionary: {'price': [0, 1000], 'rating': None, 'rating_count': None}
+2025-06-10 02:17:00,702 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 02:17:03,196 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 02:17:04,063 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:17:04,071 - main_pipeline - DEBUG - Applying special case filtering
+2025-06-10 02:17:04,080 - main_pipeline - DEBUG - Extracting tags from current text: 'modern recessed lighting, Philips LED ceiling panel warm white, decorative ceiling trim, matching decor'
+2025-06-10 02:17:06,537 - main_pipeline - DEBUG - Extracted tags: ['modern', 'recessed lighting', 'Philips', 'LED', 'ceiling panel', 'warm white', 'decorative', 'ceiling trim']
+2025-06-10 02:17:06,540 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:17:06,542 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:17:06] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:21:11,172 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\images_4.jpeg.jpg
+2025-06-10 02:21:11,178 - main_pipeline - DEBUG - Initial state: current_text='modern recessed lighting, Philips LED ceiling panel warm white, decorative ceiling trim, matching decor', back_bone='recessed lighting, LED ceiling panel, ceiling trim, chandelier'
+2025-06-10 02:21:11,191 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 02:21:13,924 - main_pipeline - DEBUG - Intent result: {'intent': 1, 'recommendations_query': 'modern recessed lighting, LED ceiling panel, drop ceiling tiles, decorative ceiling trim'}
+2025-06-10 02:21:13,927 - main_pipeline - DEBUG - Special intent detected
+2025-06-10 02:21:13,930 - main_pipeline - DEBUG - Intent is special, current_text is now: modern recessed lighting, LED ceiling panel, drop ceiling tiles, decorative ceiling trim
+2025-06-10 02:21:13,934 - main_pipeline - DEBUG - No image path, extracting from text
+2025-06-10 02:21:14,939 - main_pipeline - DEBUG - Text split: back_bone='recessed lighting, LED ceiling panel, drop ceiling tiles, decorative ceiling trim', current_text='modern recessed lighting, LED ceiling panel, drop ceiling tiles, decorative ceiling trim'
+2025-06-10 02:21:15,013 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:21:15] "[35m[1mPOST /api/search HTTP/1.1[0m" 500 -
+2025-06-10 02:23:31,982 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\images_4.jpeg.jpg
+2025-06-10 02:23:31,984 - main_pipeline - DEBUG - Initial state: current_text='modern recessed lighting, LED ceiling panel, drop ceiling tiles, decorative ceiling trim', back_bone='recessed lighting, LED ceiling panel, drop ceiling tiles, decorative ceiling trim'
+2025-06-10 02:23:31,987 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 02:23:34,469 - main_pipeline - DEBUG - Intent result: {'intent': 1, 'recommendations_query': 'modern ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light'}
+2025-06-10 02:23:34,473 - main_pipeline - DEBUG - Special intent detected
+2025-06-10 02:23:34,476 - main_pipeline - DEBUG - Intent is special, current_text is now: modern ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light
+2025-06-10 02:23:34,483 - main_pipeline - DEBUG - No image path, extracting from text
+2025-06-10 02:23:35,359 - main_pipeline - DEBUG - Text split: back_bone='ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light', current_text='modern ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light'
+2025-06-10 02:23:42,200 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'ceiling light Philips blue', 'special': 'under 3000 rs'}
+2025-06-10 02:23:42,201 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 02:23:42,207 - main_pipeline - DEBUG - Updating current_text with general query: 'ceiling light Philips blue'
+2025-06-10 02:23:43,028 - main_pipeline - DEBUG - Text updated: 'modern ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light' -> 'Philips blue ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light'
+2025-06-10 02:23:43,031 - main_pipeline - DEBUG - Processing special case from query: under 3000 rs
+2025-06-10 02:23:45,288 - main_pipeline - DEBUG - Special case dictionary: {'price': [0, 3000], 'rating': None, 'rating_count': None}
+2025-06-10 02:23:45,291 - main_pipeline - DEBUG - Special case dictionary: {'price': [0, 3000], 'rating': None, 'rating_count': None}
+2025-06-10 02:23:45,293 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 02:23:47,092 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 02:23:48,063 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:23:48,066 - main_pipeline - DEBUG - Applying special case filtering
+2025-06-10 02:23:48,068 - main_pipeline - DEBUG - Extracting tags from current text: 'Philips blue ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light'
+2025-06-10 02:23:49,009 - main_pipeline - DEBUG - Extracted tags: ['Philips', 'blue', 'ceiling light', 'recessed lighting', 'pendant light', 'chandelier', 'ceiling fan with light']
+2025-06-10 02:23:49,012 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:23:49,018 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:23:49] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:25:32,138 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 02:25:32,139 - main_pipeline - DEBUG - Initial state: current_text='Philips blue ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light', back_bone='ceiling light, recessed lighting, pendant light, chandelier, ceiling fan with light'
+2025-06-10 02:25:32,142 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 02:25:34,708 - main_pipeline - DEBUG - Intent result: {'intent': 1, 'recommendations_query': 'ergonomic mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard'}
+2025-06-10 02:25:34,709 - main_pipeline - DEBUG - Special intent detected
+2025-06-10 02:25:34,710 - main_pipeline - DEBUG - Intent is special, current_text is now: ergonomic mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard
+2025-06-10 02:25:34,711 - main_pipeline - DEBUG - No image path, extracting from text
+2025-06-10 02:25:35,875 - main_pipeline - DEBUG - Text split: back_bone='mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard', current_text='ergonomic mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard'
+2025-06-10 02:25:42,455 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard', 'special': ''}
+2025-06-10 02:25:42,457 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 02:25:42,460 - main_pipeline - DEBUG - Updating current_text with general query: 'mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard'
+2025-06-10 02:25:43,270 - main_pipeline - DEBUG - Text updated: 'ergonomic mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard' -> 'mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard'
+2025-06-10 02:25:43,271 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 02:25:44,903 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 02:25:47,064 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:25:47,067 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 02:25:47,069 - main_pipeline - DEBUG - Extracting tags from current text: 'mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard'
+2025-06-10 02:25:49,141 - main_pipeline - DEBUG - Extracted tags: ['mouse pad', 'laptop stand', 'desk organizer', 'monitor riser', 'wireless keyboard']
+2025-06-10 02:25:49,143 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:25:49,151 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:25:49] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:26:55,184 - main_pipeline - DEBUG - Starting main_pipeline with: modification_text='give me laptop like this', reset=True, image_path=C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 02:26:55,186 - main_pipeline - DEBUG - Initial state: current_text='mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard', back_bone='mouse pad, laptop stand, desk organizer, monitor riser, wireless keyboard'
+2025-06-10 02:26:55,189 - main_pipeline - DEBUG - Reset is True: extracting base description
+2025-06-10 02:26:57,603 - main_pipeline - DEBUG - Intent result: {'intent': 0}
+2025-06-10 02:26:57,606 - main_pipeline - DEBUG - No special intent, proceeding with image extraction
+2025-06-10 02:26:57,608 - main_pipeline - DEBUG - Extracting description from image: C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 02:26:58,669 - main_pipeline - DEBUG - Image description extracted: back_bone=' -  - ', current_text=' -  -   '
+2025-06-10 02:26:58,672 - main_pipeline - DEBUG - Modifying query based on image: C:\Users\monar\AppData\Local\Temp\appain_uploads\laptop.jpg
+2025-06-10 02:27:02,845 - main_pipeline - DEBUG - Modified query: 'give me laptop like this'
+2025-06-10 02:27:05,819 - main_pipeline - DEBUG - Query dict after splitting: {'general': 'laptop like this', 'special': ''}
+2025-06-10 02:27:05,821 - main_pipeline - DEBUG - Conflict detected: False
+2025-06-10 02:27:05,825 - main_pipeline - DEBUG - Updating current_text with general query: 'laptop like this'
+2025-06-10 02:27:06,568 - main_pipeline - DEBUG - Text updated: ' -  -   ' -> 'laptop like this'
+2025-06-10 02:27:06,570 - main_pipeline - DEBUG - Retrieving and reranking due to conflict=False or reset=True
+2025-06-10 02:27:08,436 - main_pipeline - DEBUG - Reranking with voyage_rerank
+2025-06-10 02:27:09,499 - main_pipeline - DEBUG - Reranked to 50 items
+2025-06-10 02:27:09,501 - main_pipeline - DEBUG - No special filtering applied
+2025-06-10 02:27:09,503 - main_pipeline - DEBUG - Extracting tags from current text: 'laptop like this'
+2025-06-10 02:27:11,733 - main_pipeline - DEBUG - Extracted tags: ['laptop']
+2025-06-10 02:27:11,733 - main_pipeline - DEBUG - Pipeline completed. Returning 50 items
+2025-06-10 02:27:11,735 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:27:11] "POST /api/search HTTP/1.1" 200 -
+2025-06-10 02:27:15,914 - werkzeug - INFO - 127.0.0.1 - - [10/Jun/2025 02:27:15] "POST /api/suggest-questions HTTP/1.1" 200 -

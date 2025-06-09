@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | ByteMart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/checkout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/promocode.css') }}">
+    {% if ai_checkout_enabled %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ai-checkout.css') }}">
+    {% endif %}
+    <style>
+        :root {
+            --background: #ffffff;
+            --foreground: #0f172a;
+            --muted: #f1f5f9;
+            --muted-foreground: #64748b;
+            --border: #e2e8f0;
+            --input: #e2e8f0;
+            --primary: #0f172a;
+            --primary-foreground: #ffffff;
+            --secondary: #f1f5f9;
+            --secondary-foreground: #0f172a;
+            --accent: #f1f5f9;
+            --accent-foreground: #0f172a;
+            --destructive: #ef4444;
+            --destructive-foreground: #f8fafc;
+            --radius: 0.5rem;
+            --card: #ffffff;
+            --card-foreground: #0f172a;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #0f172a;
+                --foreground: #f8fafc;
+                --muted: #1e293b;
+                --muted-foreground: #94a3b8;
+                --border: #1e293b;
+                --input: #1e293b;
+                --primary: #f8fafc;
+                --primary-foreground: #0f172a;
+                --secondary: #1e293b;
+                --secondary-foreground: #f8fafc;
+                --accent: #1e293b;
+                --accent-foreground: #f8fafc;
+                --destructive: #ef4444;
+                --destructive-foreground: #f8fafc;
+                --radius: 0.5rem;
+                --card: #1e293b;
+                --card-foreground: #f8fafc;
+            }
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        .checkout-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .checkout-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background-color: var(--card);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .checkout-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--foreground);
+            text-decoration: none;
+        }
+        
+        .checkout-logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .checkout-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .nav-line-1 {
+            font-size: 12px;
+            color: var(--muted-foreground);
+        }
+        
+        .nav-line-2 a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-line-2 a:hover {
+            text-decoration: underline;
+        }
+        
+        .cart-icon-container {
+            position: relative;
+        }
+        
+        .cart-icon {
+            font-size: 20px;
+            color: var(--foreground);
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .checkout-progress {
+            padding: 1.5rem 2rem;
+            margin-bottom: 0;
+            background-color: var(--background);
+        }
+        
+        .checkout-steps {
+            display: flex;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .checkout-steps::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--border);
+            z-index: 1;
+        }
+        
+        .step {
+            flex: 1;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--primary);
+            z-index: 1;
+            transition: width 0.3s ease;
+        }
+        
+        .step.completed::after {
+            width: 100%;
+        }
+        
+        .step.active::after {
+            width: 50%;
+            background-color: var(--primary);
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            border: 2px solid var(--border);
+            color: var(--muted-foreground);
+            font-weight: 500;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        
+        .step.active .step-number {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--primary-foreground);
+            box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.1);
+        }
+        
+        .step.completed .step-number {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+        
+        .step-title {
+            font-size: 14px;
+            color: var(--muted-foreground);
+            font-weight: 500;
+        }
+        
+        .step.active .step-title {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .step.completed .step-title {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .checkout-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 2rem 2rem;
+            flex: 1;
+            background-color: var(--background);
+        }
+        
+        .checkout-main {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .checkout-sidebar {
+            width: 350px;
+            min-width: 300px;
+        }
+        
+        .checkout-panel {
+            background-color: var(--card);
+            border-radius: var(--radius);
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        
+        .checkout-panel:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 50%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .checkout-panel:hover {
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+        
+        .checkout-panel:hover:before {
+            opacity: 1;
+        }
+        
+        .panel-header {
+            padding: 1.25rem;
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .panel-header i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+        
+        .panel-content {
+            padding: 1.5rem;
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: var(--foreground);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            background-color: var(--background);
+            color: var(--foreground);
+            transition: all 0.15s ease;
+            line-height: 1.5;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-control::placeholder {
+            color: var(--muted-foreground);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.1);
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: var(--foreground);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            background-color: var(--background);
+            color: var(--foreground);
+            transition: all 0.15s ease;
+            line-height: 1.5;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-control::placeholder {
+            color: var(--muted-foreground);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.1);
+        }
+        
+        .form-control:hover:not(:focus) {
+            border-color: var(--muted-foreground);
+        }
+        
+        .form-hint {
+            margin-top: 0.5rem;
+            font-size: 0.8125rem;
+            color: var(--muted-foreground);
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            height: 2.5rem;
+            padding: 0 1rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+            gap: 0.5rem;
+        }
+        
+        .btn::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            transform: scale(10, 10);
+            opacity: 0;
+            transition: transform 0.5s, opacity 0.8s;
+        }
+        
+        .btn:active::after {
+            transform: scale(0, 0);
+            opacity: 0.3;
+            transition: 0s;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+        
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border-color: var(--border);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--muted);
+            border-color: var(--primary);
+        }
+        
+        .btn-large {
+            height: 3rem;
+            padding: 0 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .promo-message {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            transition: opacity 0.5s ease;
+            width: 100%;
+        }
+        
+        .promo-message.success {
+            background-color: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10b981;
+        }
+        
+        .promo-message.error {
+            background-color: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            margin-top: 1rem;
+            height: 3.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            background: linear-gradient(to right, var(--primary), #2d3748);
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+        }
+        
+        .checkout-btn:hover {
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
+        }
+        
+        /* Checkbox Styles */
+        .checkbox-group {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding-left: 1.75rem;
+            cursor: pointer;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .checkbox-group label {
+            color: var(--foreground);
+            font-size: 0.875rem;
+            line-height: 1.4;
+            cursor: pointer;
+        }
+        
+        .checkbox-group label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.125rem;
+            width: 1.125rem;
+            height: 1.125rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+            background-color: var(--background);
+        }
+        
+        .checkbox-group input[type="checkbox"]:checked + label::before {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .checkbox-group input[type="checkbox"]:checked + label::after {
+            content: '';
+            position: absolute;
+            left: 0.375rem;
+            top: 0.5rem;
+            width: 0.375rem;
+            height: 0.75rem;
+            border: solid var(--primary-foreground);
+            border-width: 0 2px 2px 0;
+            transform: translateY(-65%) rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <header class="checkout-header">
+            <a href="/" class="checkout-logo">
+                <h1>ShopSmart</h1>
+            </a>
+            <div class="checkout-nav">
+                <div class="nav-item">
+                    <span class="nav-line-1">Hello, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Guest{% endif %}</span>
+                    <span class="nav-line-2">
+                        {% if current_user.is_authenticated %}
+                            <a href="{{ url_for('profile') }}">Your Account</a>
+                        {% else %}
+                            <a href="{{ url_for('login') }}">Account & Lists</a>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="cart-icon-container">
+                    <a href="/cart" style="text-decoration: none;">
+                        <i class="fas fa-shopping-cart cart-icon"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <div class="checkout-progress">
+        <div class="checkout-steps">
+            <div class="step completed">
+                <div class="step-number"><i class="fas fa-check"></i></div>
+                <div class="step-title">Cart</div>
+            </div>
+            <div class="step active">
+                <div class="step-number">2</div>
+                <div class="step-title">Checkout</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-title">Confirmation</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="checkout-content">
+            <div class="checkout-main">
+                <form id="checkout-form" action="/checkout/complete/{{ session_id }}" method="POST">
+                    
+                    <!-- Shipping Information -->
+                    <div class="checkout-panel">
+                        <div class="panel-header">
+                            <span><i class="fas fa-map-marker-alt"></i> 1. Shipping Information</span>
+                            {% if current_user.is_authenticated %}
+                            <span style="font-size: 13px; color: var(--muted-foreground);">
+                                <i class="fas fa-user-check"></i> Logged in as {{ current_user.username }}
+                            </span>
+                            {% endif %}
+                        </div>
+                        <div class="panel-content">
+                            {% if not current_user.is_authenticated %}
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+                                <div class="form-hint">
+                                    <a href="{{ url_for('login') }}" class="text-link">
+                                        <i class="fas fa-sign-in-alt"></i> Already have an account? Sign in
+                                    </a>
+                                </div>
+                            </div>
+                            {% endif %}
+                            
+                            {% if shipping_address %}
+                            <!-- Saved addresses -->
+                            <div class="address-card selected">
+                                <div class="address-header">
+                                    <div class="address-title"><i class="fas fa-home"></i> Default Address</div>
+                                    <div class="address-actions">
+                                        <a href="#"><i class="fas fa-pencil-alt"></i> Edit</a>
+                                    </div>
+                                </div>
+                                <div class="address-content">
+                                    <p>
+                                        {{ shipping_address.name }}<br>
+                                        {{ shipping_address.street }}<br>
+                                        {{ shipping_address.city }}, {{ shipping_address.state }} {{ shipping_address.zip }}<br>
+                                        {{ shipping_address.country }}
+                                    </p>
+                                </div>
+                                <input type="hidden" name="shipping_name" value="{{ shipping_address.name }}">
+                                <input type="hidden" name="shipping_street" value="{{ shipping_address.street }}">
+                                <input type="hidden" name="shipping_city" value="{{ shipping_address.city }}">
+                                <input type="hidden" name="shipping_state" value="{{ shipping_address.state }}">
+                                <input type="hidden" name="shipping_zip" value="{{ shipping_address.zip }}">
+                                <input type="hidden" name="shipping_country" value="{{ shipping_address.country }}">
+                            </div>
+                            <button type="button" id="add-new-address" class="btn btn-outline">
+                                <i class="fas fa-plus"></i> Add New Address
+                            </button>
+                            {% else %}
+                            <!-- New address form -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="shipping_name" class="form-label">Full Name</label>
+                                    <input type="text" id="shipping_name" name="shipping_name" class="form-control" placeholder="John Doe" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="shipping_street" class="form-label">Street Address</label>
+                                <input type="text" id="shipping_street" name="shipping_street" class="form-control" placeholder="123 Main St" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="shipping_city" class="form-label">City</label>
+                                    <input type="text" id="shipping_city" name="shipping_city" class="form-control" placeholder="New York" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="shipping_state" class="form-label">State/Province</label>
+                                    <input type="text" id="shipping_state" name="shipping_state" class="form-control" placeholder="NY" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="shipping_zip" class="form-label">ZIP/Postal Code</label>
+                                    <input type="text" id="shipping_zip" name="shipping_zip" class="form-control" placeholder="10001" required>
+                                </div>
+                                <input type="hidden" name="shipping_country" value="India">
+                            </div>
+                            {% if current_user.is_authenticated %}
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="save_address" name="save_address" checked>
+                                <label for="save_address">Save this address for future orders</label>
+                            </div>
+                            {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <!-- Shipping Method -->
+                    <div class="checkout-panel">
+                        <div class="panel-header">
+                            <span><i class="fas fa-truck"></i> 2. Shipping Method</span>
+                        </div>
+                        <div class="panel-content">
+                            <div class="shipping-options">
+                                <div class="shipping-option selected">
+                                    <input type="radio" id="shipping_standard" name="shipping_method" value="standard" checked>
+                                    <div class="shipping-details">
+                                        <div class="shipping-name">Standard Shipping</div>
+                                        <div class="shipping-description">Delivery in 5-7 business days</div>
+                                    </div>
+                                    <div class="shipping-price">₹25</div>
+                                </div>
+                                <div class="shipping-option">
+                                    <input type="radio" id="shipping_express" name="shipping_method" value="express">
+                                    <div class="shipping-details">
+                                        <div class="shipping-name">Express Shipping</div>
+                                        <div class="shipping-description">Delivery in 2-3 business days</div>
+                                    </div>
+                                    <div class="shipping-price">₹50</div>
+                                </div>
+                                <div class="shipping-option">
+                                    <input type="radio" id="shipping_next_day" name="shipping_method" value="next_day">
+                                    <div class="shipping-details">
+                                        <div class="shipping-name">Next Day Delivery</div>
+                                        <div class="shipping-description">Order before 2pm for next day delivery</div>
+                                    </div>
+                                    <div class="shipping-price">₹100</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Billing & Payment -->
+                    <div class="checkout-panel">
+                        <div class="panel-header">
+                            <span><i class="fas fa-credit-card"></i> 3. Billing & Payment</span>
+                        </div>
+                        <div class="panel-content">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="same_as_shipping" name="same_as_shipping" checked>
+                                <label for="same_as_shipping">Billing address same as shipping address</label>
+                            </div>
+                            
+                            <div id="billing_address_form" style="display: none;">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="billing_name" class="form-label">Full Name</label>
+                                        <input type="text" id="billing_name" name="billing_name" class="form-control" placeholder="John Doe">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="billing_street" class="form-label">Street Address</label>
+                                    <input type="text" id="billing_street" name="billing_street" class="form-control" placeholder="123 Main St">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="billing_city" class="form-label">City</label>
+                                        <input type="text" id="billing_city" name="billing_city" class="form-control" placeholder="New York">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billing_state" class="form-label">State/Province</label>
+                                        <input type="text" id="billing_state" name="billing_state" class="form-control" placeholder="NY">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="billing_zip" class="form-label">ZIP/Postal Code</label>
+                                        <input type="text" id="billing_zip" name="billing_zip" class="form-control" placeholder="10001">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="billing_country" class="form-label">Country</label>
+                                        <select id="billing_country" name="billing_country" class="form-control">
+                                            <option value="United States">United States</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="India">India</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-section">
+                                <div class="payment-header">Payment Method</div>
+                                <div class="card-icons">
+                                    <img src="https://img.icons8.com/color/48/000000/visa.png" class="card-icon" alt="Visa">
+                                    <img src="https://img.icons8.com/color/48/000000/mastercard.png" class="card-icon" alt="Mastercard">
+                                    <img src="https://img.icons8.com/color/48/000000/amex.png" class="card-icon" alt="American Express">
+                                    <img src="https://img.icons8.com/color/48/000000/discover.png" class="card-icon" alt="Discover">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card_holder" class="form-label">Name on Card</label>
+                                    <input type="text" id="card_holder" name="card_holder" class="form-control" placeholder="John Doe" required value="{{ card_details.holder if card_details else '' }}">
+                                </div>
+                                <div class="form-group card-number-group">
+                                    <label for="card_number" class="form-label">Card Number</label>
+                                    <div class="card-input-wrapper">
+                                    <input type="text" id="card_number" name="card_number" class="form-control" placeholder="1234 5678 9012 3456" required value="{{ card_details.number if card_details else '' }}">
+                                        <i class="fas fa-credit-card card-icon-input"></i>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card_expiry" class="form-label">Expiration Date</label>
+                                        <input type="text" id="card_expiry" name="card_expiry" class="form-control" placeholder="MM/YY" required value="{{ card_details.expiry if card_details else '' }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card_cvv" class="form-label">Security Code (CVV)</label>
+                                        <div class="cvv-input-wrapper">
+                                        <input type="text" id="card_cvv" name="card_cvv" class="form-control" placeholder="123" required value="{{ card_details.cvv if card_details else '' }}">
+                                            <span class="cvv-tooltip" data-tooltip="3-digit code on the back of your card"><i class="fas fa-question-circle"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {% if current_user.is_authenticated %}
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="save_card" name="save_card" checked>
+                                    <label for="save_card">Save this card for future purchases</label>
+                                </div>
+                                {% endif %}
+                                
+                                <div class="security-badge">
+                                    <i class="fas fa-lock"></i>
+                                    <span>Your payment information is secure. We use industry-standard encryption to protect your data.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Options -->
+                    <div class="checkout-panel">
+                        <div class="panel-header">
+                            <span><i class="fas fa-cog"></i> 4. Additional Options</span>
+                        </div>
+                        <div class="panel-content">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <label for="newsletter">Subscribe to our newsletter for exclusive offers and updates</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="order_notes" class="form-label">Order Notes (Optional)</label>
+                                <textarea id="order_notes" name="order_notes" class="form-control" rows="3" placeholder="Special instructions for delivery or additional information"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <div class="checkout-actions">
+                            <button type="submit" class="btn btn-primary btn-large checkout-btn">
+                                <i class="fas fa-lock"></i> Complete Order
+                            </button>
+                        <p class="terms-agreement">
+                            By completing your order, you agree to our <a href="#" class="text-link">Terms of Service</a> and <a href="#" class="text-link">Privacy Policy</a>.
+                        </p>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="checkout-sidebar">
+                <div class="checkout-panel order-summary-panel">
+                    <div class="panel-header">
+                        <span><i class="fas fa-shopping-basket"></i> Order Summary</span>
+                    </div>
+                    <div class="panel-content">
+                        {% if session_data.cart_items %}
+                            {% for item in session_data.cart_items %}
+                        <div class="order-summary-item">
+                                <img src="{{ item.image_url }}" alt="{{ item.title }}" class="item-image" onerror="this.src='/static/img/product-placeholder.svg';">
+                                <div class="item-details">
+                                    <div class="item-title">{{ item.title }}</div>
+                                    <div class="item-quantity">Quantity: {{ item.quantity }}</div>
+                                    <div class="item-price">{{ item.price }}</div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="order-summary-item">
+                                <img src="{{ product.image_url }}" alt="{{ product.title }}" class="item-image" onerror="this.src='/static/img/product-placeholder.svg';">
+                            <div class="item-details">
+                                <div class="item-title">{{ product.title }}</div>
+                                    <div class="item-quantity">Quantity: 1</div>
+                                <div class="item-price">{{ product.price }}</div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        
+                        <div class="promo-section">
+                        <div class="promo-code">
+                                <input type="text" id="promo_code" name="promo_code" class="form-control" placeholder="Enter Promo Code">
+                            <button type="button" id="apply_promo" class="btn btn-primary">Apply</button>
+                        </div>
+                        
+                            <div id="available-coupons" class="available-coupons">
+                                <div class="coupon-toggle" onclick="toggleCoupons()">
+                                <i class="fas fa-tag"></i> Available Coupons <i id="coupon-toggle-icon" class="fas fa-chevron-down"></i>
+                            </div>
+                                <div id="coupon-list" class="coupon-list">
+                                    <div class="coupon-item" onclick="applyCoupon('WELCOME10')">
+                                        <div class="coupon-code">WELCOME10</div>
+                                        <div class="coupon-description">10% off your first order</div>
+                                </div>
+                                    <div class="coupon-item" onclick="applyCoupon('FREESHIP')">
+                                        <div class="coupon-code">FREESHIP</div>
+                                        <div class="coupon-description">Free shipping on your order</div>
+                                </div>
+                                    <div class="coupon-item" onclick="applyCoupon('SAVE20')">
+                                        <div class="coupon-code">SAVE20</div>
+                                        <div class="coupon-description">₹20 off orders over ₹100</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-totals">
+                            <div class="total-row">
+                                <span>Subtotal</span>
+                                <span id="subtotal">{{ order_summary.subtotal }}</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Shipping</span>
+                                <span id="shipping">₹25</span>
+                            </div>
+                            <div class="total-row" id="discount-row">
+                                <span>Discount</span>
+                                <span id="discount">-₹0</span>
+                            </div>
+                            <div class="total-row">
+                                <span>Tax</span>
+                                <span id="tax">{{ order_summary.tax }}</span>
+                            </div>
+                            <div class="total-row final">
+                                <span>Total</span>
+                                <span id="total">{{ order_summary.total }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+    <script>
+        // Toggle coupon list visibility
+        function toggleCoupons() {
+            const couponList = document.getElementById('coupon-list');
+            const toggleIcon = document.getElementById('coupon-toggle-icon');
+            
+            if (couponList.style.display === 'none') {
+                couponList.style.display = 'block';
+                toggleIcon.className = 'fas fa-chevron-up';
+            } else {
+                couponList.style.display = 'none';
+                toggleIcon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        // Function to apply promocode
+        function applyCoupon(code) {
+            document.getElementById('promo_code').value = code;
+            applyPromoCode();
+        }
+        
+        // Function to handle promocode application
+        function applyPromoCode() {
+            const promoCodeInput = document.getElementById('promo_code');
+            const promoCode = promoCodeInput.value.trim().toUpperCase();
+            const subtotalElement = document.getElementById('subtotal');
+            const shippingElement = document.getElementById('shipping');
+            const discountElement = document.getElementById('discount');
+            const totalElement = document.getElementById('total');
+            const discountRow = document.getElementById('discount-row');
+            
+            if (!promoCode) {
+                // Show inline error message
+                const messageElement = document.createElement('div');
+                messageElement.className = 'promo-message error';
+                messageElement.textContent = 'Please enter a promocode';
+                
+                // Remove any existing message
+                const existingMessage = document.querySelector('.promo-message');
+                if (existingMessage) {
+                    existingMessage.remove();
+                }
+                
+                // Add the new message after the promo code input
+                document.querySelector('.promo-code').appendChild(messageElement);
+                
+                // Auto hide after 3 seconds
+                setTimeout(() => {
+                    messageElement.style.opacity = '0';
+                    setTimeout(() => messageElement.remove(), 500);
+                }, 3000);
+                
+                return;
+            }
+            
+            // Get original subtotal value
+            let subtotal = parseFloat(subtotalElement.innerText.replace(/[^0-9.]/g, ''));
+            let shipping = parseFloat(shippingElement.innerText.replace(/[^0-9.]/g, ''));
+            
+            // Apply discount based on promocode
+            let discountAmount = 0;
+            let message = '';
+            
+            switch(promoCode) {
+                case 'WELCOME10':
+                    discountAmount = subtotal * 0.1; // 10% discount
+                    message = '10% discount applied!';
+                    break;
+                    
+                case 'FREESHIP':
+                    discountAmount = shipping;
+                    shippingElement.innerText = '₹0';
+                    message = 'Free shipping applied!';
+                    break;
+                    
+                case 'SAVE20':
+                    discountAmount = 20;
+                    if (subtotal < 100) {
+                        // Show inline error message
+                        const messageElement = document.createElement('div');
+                        messageElement.className = 'promo-message error';
+                        messageElement.textContent = 'SAVE20 requires a minimum purchase of ₹100';
+                        
+                        // Remove any existing message
+                        const existingMessage = document.querySelector('.promo-message');
+                        if (existingMessage) {
+                            existingMessage.remove();
+                        }
+                        
+                        // Add the new message after the promo code input
+                        document.querySelector('.promo-code').appendChild(messageElement);
+                        
+                        // Auto hide after 3 seconds
+                        setTimeout(() => {
+                            messageElement.style.opacity = '0';
+                            setTimeout(() => messageElement.remove(), 500);
+                        }, 3000);
+                        
+                        return;
+                    }
+                    message = '₹20 discount applied!';
+                    break;
+                    
+                default:
+                    // Show inline error message
+                    const messageElement = document.createElement('div');
+                    messageElement.className = 'promo-message error';
+                    messageElement.textContent = 'Invalid promocode';
+                    
+                    // Remove any existing message
+                    const existingMessage = document.querySelector('.promo-message');
+                    if (existingMessage) {
+                        existingMessage.remove();
+                    }
+                    
+                    // Add the new message after the promo code input
+                    document.querySelector('.promo-code').appendChild(messageElement);
+                    
+                    // Auto hide after 3 seconds
+                    setTimeout(() => {
+                        messageElement.style.opacity = '0';
+                        setTimeout(() => messageElement.remove(), 500);
+                    }, 3000);
+                    
+                    return;
+            }
+            
+            // Format discount and update UI
+            discountElement.innerText = `-₹${discountAmount.toFixed(0)}`;
+            discountRow.style.display = 'flex';
+            
+            // Calculate new total
+            const tax = parseFloat(document.getElementById('tax').innerText.replace(/[^0-9.]/g, '')) || 0;
+            const newTotal = subtotal + shipping - discountAmount + tax;
+            totalElement.innerText = `₹${newTotal.toFixed(0)}`;
+            
+            // Add promocode to the form
+            const form = document.getElementById('checkout-form');
+            let promoInput = form.querySelector('input[name="promo_code"]');
+            if (!promoInput) {
+                promoInput = document.createElement('input');
+                promoInput.type = 'hidden';
+                promoInput.name = 'promo_code';
+                form.appendChild(promoInput);
+            }
+            promoInput.value = promoCode;
+            
+            // Show inline success message instead of alert
+            const messageElement = document.createElement('div');
+            messageElement.className = 'promo-message success';
+            messageElement.textContent = message;
+            
+            // Remove any existing message
+            const existingMessage = document.querySelector('.promo-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            
+            // Add the new message after the promo code input
+            document.querySelector('.promo-code').appendChild(messageElement);
+            
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                messageElement.style.opacity = '0';
+                setTimeout(() => messageElement.remove(), 500);
+            }, 5000);
+        }
+        
+        // Set up event listeners for promo code elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update cart count on page load
+            updateCartCount();
+            
+            // Function to update cart count badge
+            function updateCartCount() {
+                const cartCountElement = document.getElementById('cart-count');
+                if (window.shopsmartCart) {
+                    const count = window.shopsmartCart.getTotalItems();
+                    cartCountElement.textContent = count;
+                    cartCountElement.style.display = count > 0 ? 'flex' : 'none';
+                }
+            }
+            
+            // Initialize coupon list as hidden
+            const couponList = document.getElementById('coupon-list');
+            if (couponList) {
+                couponList.style.display = 'none';
+            }
+            
+            // Add event listener to the apply promo button
+            const applyPromoBtn = document.getElementById('apply_promo');
+            if (applyPromoBtn) {
+                applyPromoBtn.addEventListener('click', applyPromoCode);
+            }
+        });
+    </script>
+</body>
+</html>

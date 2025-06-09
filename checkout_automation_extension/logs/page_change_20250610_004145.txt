@@ -1,0 +1,15 @@
+=== Page Change Event ===
+Server Timestamp: 2025-06-10T00:41:45.224714
+Client Timestamp: 2025-06-09T19:11:45.216Z
+
+URL Information:
+Previous URL: https://www.bing.com/images/search?view=detailV2&ccid=NFykZnPF&id=4C010E3C97537F5CFD1E73F1695DFEE771BDF70E&thid=OIP.NFykZnPFTRdSMgjcPKv5RwHaFj&mediaurl=https%3A%2F%2Fi.natgeofe.com%2Fn%2F89f4353f-690b-4cba-bb59-8ab6cf853f28%2F17521.jpg&exph=2306&expw=3072&q=air+conditioner&simid=608024781636387364&FORM=IRPRST&ck=1335E2CAF85B782AF036C9BB7ADCE0CE&selectedIndex=20&itb=0&cw=1652&ch=836&ajaxhist=0&ajaxserp=0
+Current URL: https://www.bing.com/images/search?q=air+conditioner&form=HDRSC3&first=1
+URL Changed: True
+Is Checkout Page: False
+Should Restart: True
+
+Request Details:
+Remote IP: 127.0.0.1
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0
+Content Type: application/json
