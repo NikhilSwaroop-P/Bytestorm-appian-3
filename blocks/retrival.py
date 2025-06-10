@@ -5,7 +5,6 @@ Based on the working notebook version with fixes for dimension mismatch
 import os
 import pickle
 import numpy as np
-import torch
 import faiss
 import requests
 import base64
@@ -16,8 +15,6 @@ import io
 
 # Configuration constants
 INDEX_DIR = "indexes_final_jina"
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-
 # Jina API Configuration
 JINA_API_KEY = "jina_7f50a6d5bbbe45c6a75ff4dbfd946255mZMrkbGsQEH3dm8CONGY3yV6d1kv"
 JINA_API_URL = "https://api.jina.ai/v1/embeddings"
