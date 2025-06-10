@@ -1,7 +1,9 @@
 # Bytestorm AI Product Recommendation System
 
 An advanced AI-powered product recommendation and checkout automation system that combines multimodal search capabilities with intelligent form filling.
-
+Hosted the app in website:
+https://bytemart-bse2gbgub9acdxbn.canadacentral-01.azurewebsites.net/
+-Still the extension server should be run locally and extension should be loaded into the browser
 ## Features
 
 ### 🔍 Multimodal Search and Recommendations
