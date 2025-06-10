@@ -63,6 +63,10 @@ An advanced AI-powered product recommendation and checkout automation system tha
 
 ## Running the Application
 
+Hosted the app in website:
+https://bytemart-bse2gbgub9acdxbn.canadacentral-01.azurewebsites.net/
+-Still the extension server should be run locally and extension should be loaded into the browser
+
 ### Option 1: Using the all-in-one launcher (Recommended)
 
 This option automatically starts both the main application and the checkout automation server in separate terminal windows.
